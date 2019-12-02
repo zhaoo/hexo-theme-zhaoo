@@ -1,0 +1,50 @@
+.article
+  max-width 700px
+  margin 45px auto
+  box-shadow $color-shadow
+  @media (max-width: 576px)
+    margin 0
+  .article-head
+    position relative
+    .article-mask
+      position absolute
+      bottom 0
+      width 100%
+      background linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75))
+      padding 30px
+      .article-title
+        color $color-white
+        font-size 2em
+      .article-info
+        color $color-white
+        margin-top 10px
+        span
+          margin-right 10px
+          i
+            font-size 1em
+            margin-right 5px
+  .article-content
+    padding 30px
+    line-height 2
+    color $color-middle
+    for $i in 1 .. 6
+      h{$i}
+        font-size 1.6 - $i * 0.1 em
+        margin-bottom 1em
+        margin-top 2em
+        color $color-default
+        font-weight bold
+    code
+      font-size 1em
+      background-color $color-background-deep
+      padding 2px 5px
+      border-radius 2px
+      color $color-link
+    a
+      text-decoration underline !important
+    kbd
+      padding 0.2em 0.4em
+      font-size 87.5%
+      color $color-background
+      background-color $color-default
+      border-radius 0.2em

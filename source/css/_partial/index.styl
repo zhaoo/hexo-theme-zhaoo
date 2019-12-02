@@ -1,0 +1,48 @@
+.post
+  @media (min-width: 768px)
+    padding-top 45px
+    padding-bottom 45px
+  .post-item
+    margin-bottom 30px
+    .post-wrap:hover
+      box-shadow $color-shadow-active
+    .post-wrap
+      box-shadow $color-shadow
+      background-color $color-background
+      .post-image
+        display block
+        position relative
+        width 100%
+        height 0
+        padding-bottom 66%
+        img
+          position absolute
+          top 0
+          left 0
+          width 100%
+          height 100%
+        img, img:hover
+          transition $transition
+        img:hover
+          opacity 0.7
+      .post-content
+        padding 20px
+        height 170px
+        .post-title
+          font-size 1.5em
+          a
+            display -webkit-box
+            -webkit-box-orient vertical
+            -webkit-line-clamp 1
+            overflow hidden
+        .post-excerpt
+          height 80px
+          p
+            color $color-middle
+        .post-info
+          color $color-light
+          span
+            margin-right 10px
+            i
+              font-size 1em
+              margin-right 5px

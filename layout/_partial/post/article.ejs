@@ -1,0 +1,14 @@
+<article class="article">
+  <div class="article-head">
+    <%- image_tag(page.image || theme.post_image) %>
+    <div class="article-mask">
+      <h1 class="article-title"><%- page.title %></h1>
+      <div class="article-info">
+        <span><i class="iconfont iconcalendar"></i><%- date(page.date, "YYYY-MM-DD") %></span>
+        <span><i class="iconfont iconeye"></i>777</span>
+        <span><i class="iconfont iconmessage"></i>888</span>
+      </div>
+    </div>
+  </div>
+  <div class="article-content"><%- page.content %></div>
+</article>

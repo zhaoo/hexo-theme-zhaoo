@@ -1,0 +1,134 @@
+// Loading
+@keyframes bounce
+  0%, 100%
+    -webkit-transform scale(0)
+  50%
+    -webkit-transform scale(1)
+@keyframes bounce
+  0%, 100%
+    transform scale(0)
+    -webkit-transform scale(0)
+  50%
+    transform scale(1)
+    -webkit-transform scale(1)
+.loading
+  position fixed
+  width 100%
+  height 100%
+  top 0
+  background-color $color-background
+  z-index 2019
+  overflow hidden
+  .loading-wrap
+    position absolute
+    left 50%
+    top 50%
+    bottom auto
+    right auto
+    -webkit-transform translateX(-50%) translateY(-50%)
+    transform translateX(-50%) translateY(-50%)
+    text-align center
+    .loading-spinner
+      width 20px
+      height 20px
+      position relative
+      margin 100px auto
+      .loading-bounce1, .loading-bounce2
+        width 100%
+        height 100%
+        border-radius 50%
+        background-color $color-link
+        opacity 0.6
+        position absolute
+        top 0
+        left 0
+        -webkit-animation bounce 2s infinite ease-in-out
+        animation bounce 2s infinite ease-in-out
+      .loading-bounce2
+        -webkit-animation-delay -1s
+        animation-delay -1s
+// Preview
+.preview
+  .preview-image
+    z-index 40
+    height 90vh
+    width 100%
+    background-image url(hexo-config('welcome_image'))
+    background-repeat no-repeat
+    background-size 100% 100%
+    background-attachment fixed
+    position relative
+    display flex
+    justify-content center
+    align-items center
+    .preview-tagline
+      font-size 3em
+      font-weight 300
+      margin 0 10%
+      color $color-defalut
+      @media (max-width: 768px)
+        font-size 2em
+    .preview-overlay
+      width 100%
+      position absolute
+      bottom -1px
+      left 0
+      right 0
+  .preview-scroll
+    height 10vh
+    display flex
+    justify-content center
+    align-items center
+    i
+      font-size 32px
+// Fuction
+.substr-1, .substr-3
+  display -webkit-box
+  -webkit-box-orient vertical
+  overflow hidden
+.substr-1
+  -webkit-line-clamp 1
+.substr-3
+  -webkit-line-clamp 3
+.lock-screen
+  overflow hidden
+  height 100%
+  width 100%
+.blur
+  filter blur(10px)
+// Fab
+.fab
+  position fixed
+  bottom 15px
+  right 15px
+  width 45px
+  height 45px
+  line-height 45px
+  text-align center
+  border-radius 50%
+  background-color $color-default
+  color $color-white
+  transition $transition
+  box-shadow 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 1px 3px 1px rgba(60, 64, 67, 0.149)
+  i
+    font-size 1.5em
+.fab:hover
+  background-color $color-link
+  color $color-default
+  cursor pointer
+.fab-plus
+  z-index 100
+.fab-plus-active
+  transform rotate(45deg)
+.fab-up
+  z-index 90
+  visibility hidden
+.fab-up-active
+  bottom 125px
+  visibility visible
+.fab-menu
+  z-index 80
+  visibility hidden
+.fab-menu-active
+  bottom 70px
+  visibility visible

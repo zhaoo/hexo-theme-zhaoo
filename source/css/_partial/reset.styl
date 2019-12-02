@@ -1,0 +1,92 @@
+// Body
+*, *::before, *::after
+  box-sizing border-box
+body
+  margin 0
+  font-size 14px
+  color $color-default
+  font-family 'Hiragino Sans GB', 'Hiragino Sans GB W3', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif
+  a
+    color $color-default
+    text-decoration none
+  a:hover
+    color $color-link
+  a, a:hover
+    transition $transition
+  img
+    max-width 100%
+    max-height 100%
+    vertical-align middle
+    border-style none
+  for $i in 1 .. 6
+    h{$i}
+      margin-top 0
+      margin-bottom 0.5rem
+      font-weight normal
+  p
+    margin-top 0
+    margin-bottom 1rem
+// Browser
+::-webkit-scrollbar, ::-webkit-scrollbar-track
+  width 6px
+  height 6px
+  background-color $color-background
+::-webkit-scrollbar-thumb
+  background-color $color-default
+::-webkit-scrollbar-thumb:hover
+  background-color $color-link
+::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb:hover
+  transition $transition
+*::selection
+  background $color-link-light
+*::-moz-selection
+  background $color-link-light
+*::-webkit-selection
+  background $color-link-light
+// Container
+.container
+  width 100%
+  margin-right auto
+  margin-left auto
+  @media (min-width: 576px)
+    max-width 540px
+  @media (min-width: 768px)
+    max-width 720px
+  @media (min-width: 992px)
+    max-width 960px
+  @media (min-width: 1200px)
+    max-width 1140px
+// Grid
+.row
+  display -ms-flexbox
+  display flex
+  -ms-flex-wrap wrap
+  flex-wrap wrap
+for $i in 1 .. 12
+  .col-{$i}, .col-md-{$i}, .col-lg-{$i}
+    position relative
+    width 100%
+    padding-right 15px
+    padding-left 15px
+    @media (max-width: 576px)
+      padding-right 0
+      padding-left 0
+col-attr()
+  -ms-flex 0 0 arguments
+  flex 0 0 arguments
+  max-width arguments
+for $i in 1 .. 12
+  .col-{$i}
+    col-attr round(($i * 100 / 12) %, 6)
+@media (min-width: 576px)
+  for $i in 1 .. 12
+    .col-sm-{$i}
+      col-attr round(($i * 100 / 12) %, 6)
+@media (min-width: 768px)
+  for $i in 1 .. 12
+    .col-md-{$i}
+      col-attr round(($i * 100 / 12) %, 6)
+@media (min-width: 992px)
+  for $i in 1 .. 12
+    .col-lg-{$i}
+      col-attr round(($i * 100 / 12) %, 6)

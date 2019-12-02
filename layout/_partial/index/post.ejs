@@ -1,0 +1,25 @@
+<section class="row post">
+  <% page.posts.each(function (post) { %>
+  <div class="col-lg-4 col-md-6 col-sm-12 post-item">
+    <div class="post-wrap">
+      <a href="<%- url_for(post.path) %>" class="post-image">
+        <%- image_tag(post.image || theme.post_image) %>
+      </a>
+      <div class="post-content">
+        <h3 class="post-title"><a href="<%- url_for(post.path) %>"><%= post.title %></a></h3>
+        <% if(post.excerpt.length > 0) { %>
+        <% var excerpt = strip_html(post.excerpt).substr(0, 70) %>
+        <% } else { %>
+        <% var excerpt = strip_html(post.content).substr(0, 70) %>
+        <% } %>
+        <div class="post-excerpt"><p class="substr-3"><%- excerpt %></p></div>
+        <div class="post-info">
+          <span><i class="iconfont iconcalendar"></i><%- date(post.date, "YYYY-MM-DD") %></span>
+          <span><i class="iconfont iconeye"></i>777</span>
+          <span><i class="iconfont iconmessage"></i>888</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% }) %>
+</section>
