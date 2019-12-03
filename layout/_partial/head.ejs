@@ -14,7 +14,7 @@ var description = '';
       description += ',';
     }
     if (is_post()) {
-      description += strip_html(page.content).substr(0, 100);
+      description += truncate(strip_html(page.content), 100);
     }
 })();
 %>
@@ -25,7 +25,7 @@ var description = '';
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title><%= config.title %></title>
+  <title><%= page_title() %></title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
@@ -35,8 +35,7 @@ var description = '';
   <meta name="description" content="<%= description %>"> <% } %>
   <% if (config.author){ %>
   <meta name="author" content="<%= config.author %>"> <% } %>
-  <% if (theme.favicon){ %>
-  <link rel="icon" href="<%- url_for(theme.favicon) %>"> <% } %>
-  <%- css(['//at.alicdn.com/t/font_1445822_mbz2c8wbx7b.css'])%>
+  <%- favicon_tag(theme.favicon) %>
+  <%- css(['//at.alicdn.com/t/font_1445822_tnifccuqny.css', 'lib/fancybox/jquery.fancybox.min.css'])%>
   <%- css(['css/style']) %>
 </head>

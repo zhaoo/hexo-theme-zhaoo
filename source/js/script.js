@@ -81,6 +81,21 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       $(".fab-up").on("click", function () {
         Func.scroolToTop();
       })
+    },
+    fancybox: function () {
+      $(".fancybox").fancybox();
+      $(".article-content img").each(function () {
+        var e = document.createElement("a");
+        $(e).attr("data-fancybox", "images");
+        $(e).attr("href", $(this).attr("src"));
+        $(this).wrap(e);
+      });
+    },
+    pjax: function () {
+      $(document).pjax("a:not(.nav *)", '.container', {
+        fragment: '.container',
+        timeout: 6000
+      });
     }
   }
 
@@ -90,6 +105,8 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     Action.fab();
     Action.nav();
     Action.scroolToTop();
+    Action.fancybox();
+    Action.pjax();
   });
 
 })(jQuery);
