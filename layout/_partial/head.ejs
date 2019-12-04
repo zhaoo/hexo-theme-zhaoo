@@ -2,20 +2,20 @@
 var keywords = '';
 var description = '';
 (function() {
-    if (theme.keywords) {
-      keywords += theme.keywords;
-      keywords += ',';
-    }
-    if (page.keywords) {
-      keywords += page.keywords;
-    }
-    if (config.description) {
-      description += config.description;
-      description += ',';
-    }
-    if (is_post()) {
-      description += truncate(strip_html(page.content), 100);
-    }
+  if (theme.keywords) {
+    keywords += theme.keywords;
+    keywords += ',';
+  }
+  if (page.keywords) {
+    keywords += page.keywords;
+  }
+  if (config.description) {
+    description += config.description;
+    description += ',';
+  }
+  if (is_post()) {
+    description += truncate(strip_html(page.content), 100);
+  }
 })();
 %>
 <!DOCTYPE html>
@@ -36,6 +36,21 @@ var description = '';
   <% if (config.author){ %>
   <meta name="author" content="<%= config.author %>"> <% } %>
   <%- favicon_tag(theme.favicon) %>
-  <%- css(['//at.alicdn.com/t/font_1445822_tnifccuqny.css', 'lib/fancybox/jquery.fancybox.min.css'])%>
+  <%- css(['//at.alicdn.com/t/font_1445822_tnifccuqny.css'])%>
   <%- css(['css/style']) %>
+
+  <% if(theme.fancybox){ %>
+  <% if(theme.vendors.fancybox_css){ %>
+  <%- css(theme.vendors.fancybox_css) %>
+  <% }else{ %>
+  <%- css('lib/fancybox/fancybox.css')%>
+  <% }} %>
+
+  <script>
+    var CONFIG = window.CONFIG || {} 
+    CONFIG = {
+      fancybox: <%= theme.fancybox %>,
+      pjax: <%= theme.pjax %>
+    }
+  </script>
 </head>

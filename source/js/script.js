@@ -30,7 +30,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       $('body,html').animate({
         scrollTop: '0px'
       }, 800);
-    }
+    },
   }
 
   var Action = {
@@ -83,18 +83,27 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       })
     },
     fancybox: function () {
-      $(".fancybox").fancybox();
-      $(".article-content img").each(function () {
-        var e = document.createElement("a");
-        $(e).attr("data-fancybox", "images");
-        $(e).attr("href", $(this).attr("src"));
-        $(this).wrap(e);
+      $(function () {
+        $(".fancybox").fancybox();
+        $(".article-content img").each(function () {
+          var e = document.createElement("a");
+          $(e).attr("data-fancybox", "images");
+          $(e).attr("href", $(this).attr("src"));
+          $(this).wrap(e);
+        });
       });
     },
     pjax: function () {
-      $(document).pjax("a:not(.nav *)", '.container', {
-        fragment: '.container',
-        timeout: 6000
+      $(function () {
+        $(document).pjax("a:not(.nav *)", '#main', {
+          fragment: '#main',
+          timeout: 6000
+        });
+      });
+      $(document).on('pjax:complete', function () {
+        if (CONFIG.fancybox) {
+          Action.fancybox();
+        }
       });
     }
   }
@@ -105,8 +114,12 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     Action.fab();
     Action.nav();
     Action.scroolToTop();
-    Action.fancybox();
-    Action.pjax();
+    if (CONFIG.fancybox) {
+      Action.fancybox();
+    }
+    if (CONFIG.pjax) {
+      Action.pjax();
+    }
   });
 
 })(jQuery);

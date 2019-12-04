@@ -15,3 +15,14 @@ keywords:
 
 # 版权信息
 copyright:
+
+# 插件
+fancybox:
+pjax:
+
+# CDN
+vendors:
+  jquery_js:
+  fancybox_js:
+  pjax_js:
+  fancybox_css:

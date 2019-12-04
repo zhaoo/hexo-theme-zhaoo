@@ -1,2 +1,21 @@
-<%- js(['lib/jquery/jquery.min.js', 'lib/fancybox/jquery.fancybox.min.js', 'lib/pjax/jquery.pjax.min.js']) %>
+<% if(theme.vendors.jquery_js){ %>
+<%- js(theme.vendors.jquery_js) %>
+<% }else{ %>
+<%- js('lib/jquery/jquery.js')%>
+<% } %>
+
 <%- js(['js/script']) %>
+
+<% if(theme.fancybox){ %>
+<% if(theme.vendors.fancybox_js){ %>
+<%- js(theme.vendors.fancybox_js) %>
+<% }else{ %>
+<%- js('lib/fancybox/fancybox.js')%>
+<% }} %>
+
+<% if(theme.pjax){ %>
+<% if(theme.vendors.pjax_js){ %>
+<%- js(theme.vendors.pjax_js) %>
+<% }else{ %>
+<%- js('lib/pjax/pjax.js')%>
+<% }} %>
