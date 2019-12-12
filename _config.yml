@@ -22,7 +22,7 @@ pjax:
 
 # CDN
 vendors:
-  jquery_js:
+  query_js:
   fancybox_js:
   pjax_js:
   fancybox_css:

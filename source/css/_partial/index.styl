@@ -8,6 +8,28 @@
     .post-wrap
       box-shadow $color-shadow
       background-color $color-background
+      .post-top
+        z-index 10
+        width 80px
+        height 80px
+        overflow hidden
+        position absolute
+        top 0
+        div
+          line-height 18px
+          text-align center
+          -webkit-transform rotate(-45deg)
+          -moz-transform rotate(-45deg)
+          -ms-transform rotate(-45deg)
+          -o-transform rotate(-45deg)
+          position relative
+          padding 3px 0
+          top 10px
+          left -28px
+          width 100px
+          background-color #FF3B00
+          color $color-white
+          box-shadow -3px 5px 6px -5px rgba(0, 0, 0, 0.5)
       .post-image
         display block
         position relative

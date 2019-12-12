@@ -1,14 +1,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 post-item">
   <div class="post-wrap">
+    <% if(post.top) { %>
+    <div class="post-top">
+      <div>置顶</div>
+    </div>
+    <% } %>
     <a href="<%- url_for(post.path) %>" class="post-image">
       <%- image_tag(post.image || theme.post_image) %>
     </a>
     <div class="post-content">
       <h3 class="post-title"><a href="<%- url_for(post.path) %>"><%= post.title %></a></h3>
       <% if(post.excerpt.length > 0) { %>
-      <% var excerpt = truncate(strip_html(post.excerpt), 70) %>
+      <% var excerpt = truncate(strip_html(post.excerpt), {length: 100}) %>
       <% } else { %>
-      <% var excerpt = truncate(strip_html(post.content), 70) %>
+      <% var excerpt = truncate(strip_html(post.excerpt), {length: 100}) %>
       <% } %>
       <div class="post-excerpt">
         <p class="substr-3"><%- excerpt %></p>
