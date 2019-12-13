@@ -19,3 +19,10 @@
 <% }else{ %>
 <%- js('lib/pjax/pjax.js')%>
 <% }} %>
+
+<% if(theme.highlight){ %>
+<% if(theme.vendors.highlight_js){ %>
+<%- js(theme.vendors.highlight_js) %>
+<% }else{ %>
+<%- js('lib/highlight/highlight.js')%>
+<% }} %>

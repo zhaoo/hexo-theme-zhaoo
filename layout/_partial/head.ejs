@@ -46,11 +46,19 @@ var description = '';
   <%- css('lib/fancybox/fancybox.css')%>
   <% }} %>
 
+  <% if(theme.highlight){ %>
+  <% if(theme.vendors.highlight_css){ %>
+  <%- css(theme.vendors.highlight_css) %>
+  <% }else{ %>
+  <%- css('lib/highlight/a11y-dark.css')%>
+  <% }} %>
+
   <script>
-    var CONFIG = window.CONFIG || {} 
+    var CONFIG = window.CONFIG || {}
     CONFIG = {
       fancybox: <%= theme.fancybox %>,
-      pjax: <%= theme.pjax %>
+      pjax: <%= theme.pjax %>,
+      highlight: <%= theme.highlight %>
     }
   </script>
 </head>

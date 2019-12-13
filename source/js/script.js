@@ -105,7 +105,12 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
           Action.fancybox();
         }
       });
-    }
+    },
+    highlight: function () {
+      $('.code').each(function (i, e) {
+        hljs.highlightBlock(e)
+      });
+    },
   }
 
   $(function () {
@@ -119,6 +124,9 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     }
     if (CONFIG.pjax) {
       Action.pjax();
+    }
+    if (CONFIG.highlight) {
+      Action.highlight();
     }
   });
 
