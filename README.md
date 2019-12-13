@@ -32,6 +32,8 @@
 ### v0.0.191213
 
 * Add 新增代码高亮功能 (Highlight)
-* Add 新增评论功能 (Gitalk)
+* Add 新增文章评论功能 (Gitalk)
+* Add 新增文章标签功能
+* Add 新增文章导航功能
 * Fix 图片不可拖拽
 * Fix 新增区块样式

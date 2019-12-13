@@ -1,0 +1,10 @@
+<% if (page.prev || page.next){ %>
+<nav class="nav">
+  <% if (page.prev){ %>
+    <a href="<%- url_for(page.prev.path) %>"><i class="iconfont iconleft"></i><%= page.prev.title %></a>
+  <% } %>
+  <% if (page.next){ %>
+    <a href="<%- url_for(page.next.path) %>"><%= page.next.title %><i class="iconfont iconright"></i></a>
+  <% } %>
+</nav>
+<% } %>

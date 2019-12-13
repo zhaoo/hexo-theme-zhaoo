@@ -1,0 +1,11 @@
+<section class="head">
+  <%- image_tag(page.image || theme.post_image, { draggable: "false" }) %>
+  <div class="head-mask">
+    <h1 class="head-title"><%- page.title %></h1>
+    <div class="head-info">
+      <span><i class="iconfont iconcalendar"></i><%- date(page.date, "YYYY-MM-DD") %></span>
+      <span><i class="iconfont iconeye"></i>777</span>
+      <span><i class="iconfont iconmessage"></i>888</span>
+    </div>
+  </div>
+</section>

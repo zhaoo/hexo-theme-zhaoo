@@ -70,7 +70,31 @@
         border-left-width 6px
         p
           margin 0
+  .extra
+    margin-top 50px
+    .tag-list
+      padding 0 0 1em 0
+      border-bottom #DDDDDD dashed 1px
+      .tag-list-item
+        display inline-block
+        list-style-type none
+        margin-right 1em
+        padding 5px 10px
+        background-color $color-background-deep
+      .tag-list-item:hover
+        cursor pointer
+        background-color $color-link
+        transition $transition
+        a
+          color $color-white
+    .nav
+      margin-top: 1em
+      display flex
+      justify-content: space-between
+      i
+        font-size: 1em
   .comment
+    margin-top 50px
     .gitalk-container, .gt-header-textarea, .gt-btn
       border-radius 0 !important
     .gt-avatar

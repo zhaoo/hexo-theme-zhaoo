@@ -4,14 +4,14 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
   "use strict";
 
   var Func = {
-    showNav: function () {
-      $(".nav").addClass("nav-active").fadeIn(300);
+    showMenu: function () {
+      $(".menu").addClass("menu-active").fadeIn(300);
       $("body").addClass("lock-screen");
       $("main").addClass("blur");
       $(".preview").addClass("blur");
     },
-    hideNav: function () {
-      $(".nav").removeClass("nav-active").fadeOut(300);
+    hideMenu: function () {
+      $(".menu").removeClass("menu-active").fadeOut(300);
       $("body").removeClass("lock-screen");
       $("main").removeClass("blur");
       $(".preview").removeClass("blur");
@@ -62,19 +62,19 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         }
       });
       $(".fab-menu").on("click", function () {
-        if ($(".nav").hasClass("nav-active")) {
-          Func.hideNav();
+        if ($(".menu").hasClass("menu-active")) {
+          Func.hideMenu();
         } else {
-          Func.showNav();
+          Func.showMenu();
         }
       });
       $(".fab-menu, .fab-up").on("click", function () {
         Func.hideFab();
       });
     },
-    nav: function () {
-      $(".nav-close").on("click", function () {
-        Func.hideNav();
+    menu: function () {
+      $(".menu-close").on("click", function () {
+        Func.hideMenu();
       });
     },
     scroolToTop: function () {
@@ -95,7 +95,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     },
     pjax: function () {
       $(function () {
-        $(document).pjax("a:not(.nav *)", '#main', {
+        $(document).pjax("a:not(.menu *)", '#main', {
           fragment: '#main',
           timeout: 6000
         });
@@ -117,7 +117,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     Action.smoothScroll();
     Action.loading();
     Action.fab();
-    Action.nav();
+    Action.menu();
     Action.scroolToTop();
     if (CONFIG.fancybox) {
       Action.fancybox();
