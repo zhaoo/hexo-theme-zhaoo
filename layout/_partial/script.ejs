@@ -4,8 +4,6 @@
 <%- js('lib/jquery/jquery.js')%>
 <% } %>
 
-<%- js(['js/script']) %>
-
 <% if(theme.fancybox){ %>
 <% if(theme.vendors.fancybox_js){ %>
 <%- js(theme.vendors.fancybox_js) %>
@@ -26,3 +24,9 @@
 <% }else{ %>
 <%- js('lib/highlight/highlight.js')%>
 <% }} %>
+
+<% if(theme.leancloud.enable){ %>
+<%- partial('_partial/common/visitors') %>
+<% } %>
+
+<%- js(['js/script']) %>

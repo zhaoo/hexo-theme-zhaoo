@@ -2,7 +2,7 @@
 
  My personal theme for Hexo.
 
-[预览地址](https://note.izhaoo.com)
+[预览地址](https://www.izhaoo.com)
 
 [GitHub](https://github.com/izhaoo/hexo-theme-zhaoo)
 
@@ -37,3 +37,8 @@
 * Add 新增文章导航功能
 * Fix 图片不可拖拽
 * Fix 新增区块样式
+
+### v0.0.19.1214
+
+* Add 新增阅读量统计功能 (LeanCloud)
+* Add 新增文章内容字数统计功能

@@ -19,10 +19,29 @@ copyright:
 # 插件
 fancybox:
 pjax:
+highlight:
 
 # CDN
 vendors:
-  query_js:
+  jquery_js:
   fancybox_js:
+  highlight_js:
   pjax_js:
   fancybox_css:
+  highlight_css:
+
+# Gitalk
+gitalk:
+  enable:
+  owner:
+  repo:
+  admin:
+  clientID:
+  clientSecret:
+
+# LeanCloud
+leancloud:
+  enable:
+  appId:
+  appKey:
+  serverURLs:

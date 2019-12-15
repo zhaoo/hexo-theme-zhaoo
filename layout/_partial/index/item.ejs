@@ -19,9 +19,13 @@
         <p class="substr-3"><%- excerpt %></p>
       </div>
       <div class="post-info">
-        <span><i class="iconfont iconcalendar"></i><%- date(post.date, "YYYY-MM-DD") %></span>
-        <span><i class="iconfont iconeye"></i>777</span>
-        <span><i class="iconfont iconmessage"></i>888</span>
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i><%- date(post.date, "YYYY-MM-DD") %></span
+          class="post-info-item">
+        <% if(theme.leancloud.enable) { %>
+        <span class="post-info-item"><i class="iconfont iconeye"></i><span id="<%= url_for(post.path) %>"
+            class="leancloud" data-flag-title="<%- post.title %>"></span></span>
+        <% } %>
+        <span class="post-info-item"><i class="iconfont iconfont-size"></i><%- strip_html(post.content).length %></span>
       </div>
     </div>
   </div>
