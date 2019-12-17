@@ -1,3 +1,9 @@
+# Menu
+menu:
+  # home: / || 首页
+  # archives: /archives || 归档
+  # about: /about || 关于
+
 # 文章封面图片
 post_image:
 
@@ -45,3 +51,8 @@ leancloud:
   appId:
   appKey:
   serverURLs:
+
+# Custom
+custom:
+  head:
+  foot:

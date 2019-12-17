@@ -61,4 +61,9 @@ var description = '';
       highlight: <%= theme.highlight %>,
     }
   </script>
+
+  <% if(theme.custom.head) { %>
+  <%- theme.custom.head  %>
+  <% } %>
+
 </head>
