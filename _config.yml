@@ -4,6 +4,11 @@ menu:
   # archives: /archives || 归档
   # about: /about || 关于
 
+# Preview
+preview:
+  enable:
+  model:
+
 # 文章封面图片
 post_image:
 

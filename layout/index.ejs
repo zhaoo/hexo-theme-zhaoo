@@ -1,5 +1,7 @@
 <main id="main">
-  <%- partial('_partial/common/preview') %>
+  <% if (theme.preview.enable === true) { %>
+    <%- partial('_partial/common/preview') %>
+  <% } %>
   <div class="container" id="container">
     <%- partial('_partial/index/post') %>
     <%- partial('_partial/common/paginator') %>
