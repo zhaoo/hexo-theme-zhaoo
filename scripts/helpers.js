@@ -4,8 +4,7 @@ hexo.extend.helper.register('page_title', function () {
   //   title += ' - ' + this.config.subtitle;
   // }
   if (this.is_archive()) {
-    title = this.__("nav.archive");
-
+    title = this.__("nav.archive") + ' - ' + this.config.title;;
     if (this.is_month()) {
       title += ": " + this.page.year + "/" + this.page.month;
     } else if (this.is_year()) {
