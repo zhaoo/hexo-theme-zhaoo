@@ -9,12 +9,14 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       $("body").addClass("lock-screen");
       $("main").addClass("blur");
       $(".preview").addClass("blur");
+      $(".footer").addClass("blur");
     },
     hideMenu: function () {
       $(".menu").removeClass("menu-active").fadeOut(300);
       $("body").removeClass("lock-screen");
       $("main").removeClass("blur");
       $(".preview").removeClass("blur");
+      $(".footer").removeClass("blur");
     },
     showFab: function () {
       $(".fab-menu").addClass("fab-menu-active");

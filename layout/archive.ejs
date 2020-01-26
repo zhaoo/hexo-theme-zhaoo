@@ -1,23 +1,23 @@
 <main id="main">
   <section class="archive">
     <div class="archive-container">
-      <ul class="archive-post">
+      <div class="archive-post">
         <h3 class="archive-total">归档: <%= site.posts.length %>篇</h3>
         <% var posts = site.posts.sort('date', 'desc'); %>
-        <% for(let i = 0, year = -1; i < posts.data.length; ++i) { %>
+        <% for(var i = 0, year = -1; i < posts.data.length; ++i) { %>
         <%
-          const psg = posts.data[i];
-          if(psg.date.year() !== year) {
-            year = psg.date.year();
+          var post = posts.data[i];
+          if(post.date.year() !== year) {
+            year = post.date.year();
         %>
         <h3 class="archive-year"><%= year %></h3>
         <% } %>
-        <li class="archive-item">
-          <span class="archive-date"><%= date(psg.date, "MM/DD") %></span>
-          <a class="archive-title" href="<%- url_for(psg.path) %>"><%= psg.title %></a>
-        </li>
+        <div class="archive-item">
+          <a class="archive-date" href="<%- url_for(post.path) %>"><%= date(post.date, "MM/DD") %></a>
+          <a class="archive-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
+        </div>
         <% } %>
-      </ul>
+      </div>
     </div>
   </section>
 </main>

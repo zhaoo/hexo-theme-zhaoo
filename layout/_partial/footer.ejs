@@ -1,0 +1,11 @@
+<footer class="footer">
+  <div class="footer-social">
+    <% for (var i in theme.social) { %>
+    <% var arr = theme.social[i].split('||') %>
+    <% var url = arr[0] %>
+    <% var iconfont = arr[1] %>
+    <a href="<%- url %>" target="_blank"><i class="iconfont footer-social-item <%- iconfont %>"></i></a>
+    <% } %>
+  </div>
+  <div class="footer-copyright"><%- theme.copyright %></div>
+</footer>
