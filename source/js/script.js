@@ -87,7 +87,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     fancybox: function () {
       $(function () {
         $(".fancybox").fancybox();
-        $(".article-content img").each(function () {
+        $(".article .content img").each(function () {
           var e = document.createElement("a");
           $(e).attr("data-fancybox", "images");
           $(e).attr("href", $(this).attr("src"));
@@ -113,6 +113,17 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         hljs.highlightBlock(e)
       });
     },
+    donate: function () {
+      $(".donate .icon").on("mouseover", function () {
+        $(".donate .qrcode").show();
+      });
+      $(".donate .icon").children("a").on("mouseover", function () {
+        $(".donate .qrcode img").attr('src',eval('CONFIG.donate_'+$(this).attr('id')))
+      });
+      $(".donate .icon").on("mouseout", function () {
+        $(".donate .qrcode").hide();
+      });
+    }
   }
 
   $(function () {
@@ -129,6 +140,9 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     }
     if (CONFIG.highlight) {
       Action.highlight();
+    }
+    if (CONFIG.donate_alipay || CONFIG.donate_wechat) {
+      Action.donate();
     }
   });
 

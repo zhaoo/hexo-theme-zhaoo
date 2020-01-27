@@ -5,6 +5,9 @@
       <%- page.content %>
     </section>
     <section class="extra">
+      <% if (theme.donate.alipay || theme.donate.wechat) { %>
+        <%- partial('_partial/post/donate') %>
+      <% } %>
       <%- partial('_partial/post/tag') %>
       <%- partial('_partial/post/nav') %>
     </section>

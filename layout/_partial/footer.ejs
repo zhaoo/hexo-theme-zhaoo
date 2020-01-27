@@ -4,7 +4,11 @@
     <% var arr = theme.social[i].split('||') %>
     <% var url = arr[0] %>
     <% var iconfont = arr[1] %>
-    <a href="<%- url %>" target="_blank"><i class="iconfont footer-social-item <%- iconfont %>"></i></a>
+    <% var color = arr[2] || "'#FFBE5B'" %>
+    <a href="<%- url %>" target="_blank" onMouseOver="this.style.color=<%- color %>"
+      onMouseOut="this.style.color='#33333D'">
+      <i class="iconfont footer-social-item <%- iconfont %>"></i>
+    </a>
     <% } %>
   </div>
   <div class="footer-copyright"><%- theme.copyright %></div>

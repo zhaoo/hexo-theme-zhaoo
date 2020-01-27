@@ -72,6 +72,45 @@
           margin 0
   .extra
     margin-top 50px
+    .donate
+      display block
+      text-align center
+      margin-bottom 20px
+      position relative
+      .qrcode
+        padding 10px
+        width 200px
+        height 200px
+        box-shadow $color-shadow
+        position absolute
+        left calc(50% - 100px)
+        bottom 70px
+        z-index 10
+        display none
+        img
+          position absolute
+          top 0
+          left 0
+          display block
+      .icon
+        position relative
+        display inline-block
+        border 1px solid #E0E0E0
+        background-color #FFFFFF
+        border-radius 2em
+        padding 8px 16px
+        z-index 20
+        a, i
+          font-size 1.25em
+        #alipay:hover
+          color #108EE9
+        #wechat:hover
+          color #09BB07
+        #alipay
+          padding-right 8px
+          border-right 1px solid #E0E0E0
+        #wechat
+          padding-left 8px
     .tag-list
       padding 0 0 1em 0
       border-bottom #DDDDDD dashed 1px
@@ -88,11 +127,11 @@
         a
           color $color-white
     .nav
-      margin-top: 1em
+      margin-top 1em
       display flex
-      justify-content: space-between
+      justify-content space-between
       i
-        font-size: 1em
+        font-size 1em
   .comment
     margin-top 50px
     .gitalk-container, .gt-header-textarea, .gt-btn

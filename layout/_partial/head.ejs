@@ -36,8 +36,11 @@ var description = '';
   <% if (config.author){ %>
   <meta name="author" content="<%= config.author %>"> <% } %>
   <%- favicon_tag(theme.favicon) %>
-  <%- css(['//at.alicdn.com/t/font_1445822_8e1rew27cda.css'])%>
   <%- css(['css/style']) %>
+
+  <% if(theme.vendors.iconfont_css){ %>
+  <%- css(theme.vendors.iconfont_css) %>
+  <% } %>
 
   <% if(theme.fancybox){ %>
   <% if(theme.vendors.fancybox_css){ %>
@@ -59,6 +62,8 @@ var description = '';
       fancybox: <%= theme.fancybox %>,
       pjax: <%= theme.pjax %>,
       highlight: <%= theme.highlight %>,
+      donate_alipay: '<%= theme.donate.alipay %>',
+      donate_wechat: '<%= theme.donate.wechat %>',
     }
   </script>
 

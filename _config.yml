@@ -4,6 +4,18 @@ menu:
   # archives: /archives || 归档
   # about: /about || 关于
 
+# Social
+social:
+  # qq: tencent://message/?Menu=yes&uin=894519210 || iconQQ
+  # wechat: javascript:; || iconwechat-fill
+  # email: mailto:izhaoo@163.com || iconmail
+  # instagram: https://www.instagram.com/izhaoo/ || iconinstagram
+
+# Donate
+donate:
+  alipay:
+  wechat:
+
 # Preview
 preview:
   enable:
@@ -40,6 +52,7 @@ vendors:
   pjax_js:
   fancybox_css:
   highlight_css:
+  iconfont_css:
 
 # Gitalk
 gitalk:
