@@ -33,6 +33,10 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         scrollTop: '0px'
       }, 800);
     },
+    showGitalk: function () {
+      var gitalk = new Gitalk(CONFIG.gitalk)
+      gitalk.render('gitalk-container')
+    }
   }
 
   var Action = {
@@ -118,11 +122,27 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         $(".donate .qrcode").show();
       });
       $(".donate .icon").children("a").on("mouseover", function () {
-        $(".donate .qrcode img").attr('src',eval('CONFIG.donate_'+$(this).attr('id')))
+        $(".donate .qrcode img").attr('src', eval('CONFIG.donate_' + $(this).attr('id')))
       });
       $(".donate .icon").on("mouseout", function () {
         $(".donate .qrcode").hide();
       });
+    },
+    gitalk: function () {
+      $("#show-gitalk").on("click", function () {
+        $(this).hide();
+        Func.showGitalk();
+      })
+    },
+    motto: function () {
+      if (CONFIG.motto.api) {
+        $.get(CONFIG.motto.api, function (data) {
+          $("#motto").text(data);
+        });
+      } else {
+        console.log(CONFIG.motto.default)
+        $("#motto").text(CONFIG.motto.default);
+      }
     }
   }
 
@@ -132,6 +152,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     Action.fab();
     Action.menu();
     Action.scroolToTop();
+    Action.motto();
     if (CONFIG.fancybox) {
       Action.fancybox();
     }
@@ -143,6 +164,9 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     }
     if (CONFIG.donate_alipay || CONFIG.donate_wechat) {
       Action.donate();
+    }
+    if (CONFIG.gitalk.enable) {
+      Action.gitalk();
     }
   });
 

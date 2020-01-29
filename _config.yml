@@ -11,6 +11,11 @@ social:
   # email: mailto:izhaoo@163.com || iconmail
   # instagram: https://www.instagram.com/izhaoo/ || iconinstagram
 
+# Color
+color:
+  default:
+  link:
+
 # Donate
 donate:
   alipay:
@@ -27,9 +32,6 @@ post_image:
 # 欢迎图片
 welcome_image:
 
-# 欢迎标语
-welcome_title:
-
 # Favicon
 favicon:
 
@@ -38,6 +40,11 @@ keywords:
 
 # 版权信息
 copyright:
+
+# 格言
+motto:
+  api:
+  default:
 
 # 插件
 fancybox:
