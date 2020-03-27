@@ -135,14 +135,15 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       })
     },
     motto: function () {
+      var text = CONFIG.motto.default;
       if (CONFIG.motto.api) {
         $.get(CONFIG.motto.api, function (data) {
-          $("#motto").text(data);
+          if (data) {
+            text = data;
+          }
         });
-      } else {
-        console.log(CONFIG.motto.default)
-        $("#motto").text(CONFIG.motto.default);
       }
+      $("#motto").text(text);
     }
   }
 

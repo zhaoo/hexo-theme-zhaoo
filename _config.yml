@@ -1,69 +1,72 @@
+# Please refer to the example for modification
+
 # Menu
 menu:
-  # home: / || 首页
-  # archives: /archives || 归档
-  # about: /about || 关于
+  home: / || 首页
+  archives: /archives || 归档
+  about: /about || 关于
 
 # Social
 social:
-  # qq: tencent://message/?Menu=yes&uin=894519210 || iconQQ
-  # wechat: javascript:; || iconwechat-fill
-  # email: mailto:izhaoo@163.com || iconmail
-  # instagram: https://www.instagram.com/izhaoo/ || iconinstagram
+  qq: tencent://message/?Menu=yes&uin=894519210 || iconQQ || '#12B7F5'
+  wechat: javascript:; || iconwechat-fill || '#09BB07'
+  instagram: https://www.instagram.com/izhaoo/ || iconinstagram || '#DA2E76'
+  github: https://github.com/izhaoo || icongithub-fill || '#24292E'
+  email: mailto:izhaoo@163.com || iconmail
 
 # Color
 color:
-  default:
-  link:
+  default: "#33333D"
+  link: "#FFBE5B"
 
 # Donate
 donate:
-  alipay:
-  wechat:
+  alipay: https://pic.izhaoo.com/alipay.jpg
+  wechat: https://pic.izhaoo.com/wechat.jpg
 
 # Preview
 preview:
-  enable:
-  model:
+  enable: true
+  model: wave #cloud
 
 # 文章封面图片
-post_image:
+post_image: /image/post-image.jpg
 
 # 欢迎图片
-welcome_image:
+welcome_image: /image/welcome-image.jpg
 
 # Favicon
-favicon:
+favicon: /image/favicon.ico
 
 # 网站关键字
-keywords:
+keywords: zhaoo
 
 # 版权信息
-copyright:
+copyright: <p>Copyright© 2019-2019 | <a target="_blank" href="https://www.izhaoo.com">zhaoo</a> .AllRightsReserved</p>
 
 # 格言
 motto:
-  api:
-  default:
+  api: # 'http://localhost:3000/api/motto'   # use the hexo-plugin-motto
+  default: 我在开了灯的床头下，想问问自己的心啊。
 
 # 插件
-fancybox:
-pjax:
-highlight:
+fancybox: true
+pjax: false
+highlight: true
 
 # CDN
 vendors:
-  jquery_js:
-  fancybox_js:
-  highlight_js:
-  pjax_js:
-  fancybox_css:
-  highlight_css:
-  iconfont_css:
+  jquery_js: https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js
+  fancybox_js: https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.js
+  highlight_js: https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js
+  pjax_js: https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js
+  fancybox_css: https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css
+  highlight_css: https://cdn.bootcss.com/highlight.js/9.15.10/styles/a11y-dark.min.css
+  iconfont_css: //at.alicdn.com/t/font_1445822_58xq2j9v1id.css
 
 # Gitalk
 gitalk:
-  enable:
+  enable: false
   owner:
   repo:
   admin:
@@ -72,7 +75,7 @@ gitalk:
 
 # LeanCloud
 leancloud:
-  enable:
+  enable: false
   appId:
   appKey:
   serverURLs:
