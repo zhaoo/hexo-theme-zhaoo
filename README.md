@@ -4,14 +4,28 @@
   <a title="English" href="https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/README_EN.md">🇺🇸</a>
 </div>
 
-# zhaoo
+<div align="center">
+  <a href="https://github.com/izhaoo/hexo-theme-zhaoo/" target="_blank" rel="noopener noreferrer">
+    <img src="./source/image/zhaoo-logo.png" alt="zhaoo logo" width="100">
+  </a>
+</div>
 
-[![releases](https://img.shields.io/badge/releases-v1.0.0-blue?style=flat-square&longCache=true)](https://github.com/izhaoo/hexo-theme-zhaoo/releases)
-[![hexo](https://img.shields.io/badge/hexo-%3E=4.0.0-blue?style=flat-square&logo=hexo&longCache=true)](https://hexo.io)
-[![node](https://img.shields.io/badge/node-%3E=10.9.0-green?style=flat-square&logo=Node.js&longCache=true)](https://nodejs.org)
-[![license](https://img.shields.io/badge/license-MIT-green?style=flat-square&longCache=true)](https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/LICENSE)
+<h3 align="center">一款简约的 Hexo 主题</h3>  
 
-«zhaoo» 是一款简约的 Hexo 主题。
+<div align="center">
+  <a href="https://github.com/izhaoo/hexo-theme-zhaoo/releases" target="_blank" rel="noopener noreferrer">
+    <img alt="releases" src="https://img.shields.io/badge/releases-v1.0.0-blue.svg?style=flat-square&longCache=true">
+  </a>
+  <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">
+    <img alt="hexo" src="https://img.shields.io/badge/hexo-%3E=4.0.0-blue.svg?style=flat-square&logo=hexo&longCache=true">
+  </a>
+  <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer">
+    <img alt="node" src="https://img.shields.io/badge/node-%3E=10.9.0-green.svg?style=flat-square&logo=Node.js&longCache=true">
+  </a>
+  <a href="(https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">
+    <img alt="license" src="https://img.shields.io/badge/license-MIT-green.svg?style=flat-square&longCache=true">
+  </a>
+</div>
 
 ## 预览
 
