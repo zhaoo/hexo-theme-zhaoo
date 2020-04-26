@@ -6,6 +6,11 @@
 
 # zhaoo
 
+[![releases](https://img.shields.io/badge/releases-v1.0.0-blue?style=flat-square&longCache=true)](https://github.com/izhaoo/hexo-theme-zhaoo/releases)
+[![hexo](https://img.shields.io/badge/hexo-%3E=4.0.0-blue?style=flat-square&logo=hexo&longCache=true)](https://hexo.io)
+[![node](https://img.shields.io/badge/node-%3E=10.9.0-green?style=flat-square&logo=Node.js&longCache=true)](https://nodejs.org)
+[![license](https://img.shields.io/badge/license-MIT-green?style=flat-square&longCache=true)](https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/LICENSE)
+
 «zhaoo» 是一款简约的 Hexo 主题。
 
 ~~关于名称，最初只是想写一个自己的博客主题，就以自己命名了。~~
