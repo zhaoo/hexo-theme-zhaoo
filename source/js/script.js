@@ -28,15 +28,25 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       $(".fab-up").removeClass("fab-up-active");
       $(".fab-plus").removeClass("fab-plus-active");
     },
+    scroolFab: function () {
+      console.log
+      var height = $(window).height();
+      var scrollTop = $(window).scrollTop();
+      if (scrollTop > height) {
+        $(".fab").addClass("fab-show");
+      } else {
+        $(".fab").removeClass("fab-show");
+      }
+    },
     scroolToTop: function () {
       $('body,html').animate({
         scrollTop: '0px'
       }, 800);
     },
     showGitalk: function () {
-      var gitalk = new Gitalk(CONFIG.gitalk)
-      gitalk.render('gitalk-container')
-    }
+      var gitalk = new Gitalk(CONFIG.gitalk);
+      gitalk.render('gitalk-container');
+    },
   }
 
   var Action = {
@@ -77,6 +87,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       $(".fab-menu, .fab-up").on("click", function () {
         Func.hideFab();
       });
+      $(window).scroll(Func.scroolFab);
     },
     menu: function () {
       $(".menu-close").on("click", function () {
@@ -110,11 +121,6 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         if (CONFIG.fancybox) {
           Action.fancybox();
         }
-      });
-    },
-    highlight: function () {
-      $('.code').each(function (i, e) {
-        hljs.highlightBlock(e)
       });
     },
     donate: function () {
@@ -159,9 +165,6 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     }
     if (CONFIG.pjax) {
       Action.pjax();
-    }
-    if (CONFIG.highlight) {
-      Action.highlight();
     }
     if (CONFIG.donate_alipay || CONFIG.donate_wechat) {
       Action.donate();

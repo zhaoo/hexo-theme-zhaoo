@@ -1,77 +1,86 @@
-# hexo-theme-zhaoo
+<div align="right">
+  语言:
+  <a title="简体中文" href="https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/README.md">🇨🇳</a>
+  <a title="English" href=".https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/README_EN.md">🇺🇸</a>
+</div>
 
- My personal theme for Hexo.
+# zhaoo
 
-[预览地址](https://www.izhaoo.com)
+«zhaoo» 是一款简约的 Hexo 主题。
 
-[GitHub](https://github.com/izhaoo/hexo-theme-zhaoo)
+~~关于名称，最初只是想写一个自己的博客主题，就以自己命名了。~~
 
-# 开发日志
+## 预览
 
-### v0.0.191202
+- [zhaoo's Blog](https://www.izhaoo.com)
 
-* Add 创建项目
-* Add 完成部分功能
+（如果您正在使用 zhaoo 主题，欢迎展示您的博客哦，只需在 `README.md` 文件中加入您的博客，提交 PR 即可。）
 
-### v0.0.191203
 
-* Add 新增基础分页功能
-* Add 新增图片灯箱效果 (FancyBox)
-* Add 新增页面跳转效果 (pjax)
+## 安装
 
-### v0.0.191204
+安装 Hexo 后进入根目录：
 
-* Add 配置项新增插件配置、CDN配置
-* Fix 修复pjax与其他插件之间的冲突
+```bash
+$ cd hexo
+```
 
-### v0.0.191212
+安装 zhaoo 主题：
 
-* Add 新增文章置顶功能
-* Fix 修复文章列表摘录截断Bug
+```bash
+$ git clone https://github.com/izhaoo/hexo-theme-zhaoo.git themes/zhaoo
+```
 
-### v0.0.191213
+## 使用
 
-* Add 新增代码高亮功能 (Highlight)
-* Add 新增文章评论功能 (Gitalk)
-* Add 新增文章标签功能
-* Add 新增文章导航功能
-* Fix 图片不可拖拽
-* Fix 新增区块样式
+修改 Hexo 根目录下的 `_config.yml` 文件启用 zhaoo 主题：
 
-### v0.0.191214
+```yml
+theme: zhaoo
+```
 
-* Add 新增阅读量统计功能 (LeanCloud)
-* Add 新增文章内容字数统计功能
+建议将文章数量改为**9**篇，启用代码高亮效果：
 
-### v0.0.191217
+```yml
+index_generator:
+  path: ''
+  per_page: 9
+  order_by: -date
 
-* Add 配置项新增菜单配置
-* Add 新增用户代码配置
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: true
+  hljs: true
+  tab_replace:
+```
 
-### v0.0.191223
+启动 Hexo 服务器预览：
 
-* Add 头部新增水波模式
+```bash
+$ hexo clean && hexo s
+```
 
-### v0.0.200126
+## 配置
 
-* Add 新增归档页面
-* Add 新增页面底部（社交、版权）
+修改主题目录下的 `_config.yml` 文件，配置相关功能：
 
-### v0.0.200127
+建议参考 [_config.yml](https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/_config.yml) 进行配置
 
-* Add 新增捐赠功能
-* Fix 页面底部设计按钮自定义选中颜色
-* Fix 配置项CDN配置支持iconfont
+## 更新
 
-### v0.0.200128
+移动到 zhaoo 主题目录：
 
-* Fix 新增查看评论按钮
+```bash
+$ cd themes/zhaoo
+```
 
-### v0.0.200129
+从 GitHub 获取更新：
 
-* Add 一言支持外部API引入，需配合“hexo-plug-motto”插件使用
-* Fix 配置项支持颜色配置
+```bash
+$ git pull
+```
 
-### v0.0.200326
+## 协议
 
-* Fix 菜单关闭按钮样式美化
+[MIT](https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/LICENSE) License

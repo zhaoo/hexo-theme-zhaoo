@@ -35,12 +35,13 @@
           margin-top 2em
           color $color-default
           font-weight bold
-      code
-        font-size 1em
-        background-color $color-background-deep
-        padding 2px 5px
-        border-radius 2px
-        color $color-link
+      p
+        code
+          font-size 1em
+          background-color $color-background-deep
+          padding 2px 5px
+          border-radius 2px
+          color $color-link
       a
         text-decoration underline !important
       kbd
@@ -62,6 +63,12 @@
         margin 0
         overflow auto
         margin-bottom 20px
+        .code
+          padding 0
+          border none
+          code
+            background-color $color-background-deep
+            padding: 1em
         > *
           border-spacing 0px
         .gutter
