@@ -11,38 +11,38 @@
 [![node](https://img.shields.io/badge/node-%3E=10.9.0-green?style=flat-square&logo=Node.js&longCache=true)](https://nodejs.org)
 [![license](https://img.shields.io/badge/license-MIT-green?style=flat-square&longCache=true)](https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/LICENSE)
 
-«zhaoo» 是一款简约的 Hexo 主题。
+«zhaoo» is a simple theme for Hexo.
 
-## 预览
+## Rreview
 
 - [zhaoo's Blog](https://www.izhaoo.com)
 
-（如果您正在使用 zhaoo 主题，欢迎展示您的博客哦，只需在 `README.md` 文件中加入您的博客，提交 PR 即可。）
+（If you are using the zhaoo theme, welcome to show your blog, just add your blog to the `README.md` and PR.）
 
 
-## 安装
+## Install
 
-安装 Hexo 后进入根目录：
+After installing Hexo, go to the root directory:
 
 ```bash
 $ cd hexo
 ```
 
-安装 zhaoo 主题：
+To install zhaoo themes:
 
 ```bash
 $ git clone https://github.com/izhaoo/hexo-theme-zhaoo.git themes/zhaoo
 ```
 
-## 使用
+## Use
 
-修改 Hexo 根目录下的 `_config.yml` 文件启用 zhaoo 主题：
+Modify the file `_config.yml` in the Hexo root directory to enable the zhaoo theme:
 
 ```yml
 theme: zhaoo
 ```
 
-建议将文章数量改为**9**篇，启用代码高亮效果：
+It is recommended to change the number of articles to **9** and enable code highlighting:
 
 ```yml
 index_generator:
@@ -58,32 +58,32 @@ highlight:
   tab_replace:
 ```
 
-启动 Hexo 服务器预览：
+Start preview of Hexo server:
 
 ```bash
 $ hexo clean && hexo s
 ```
 
-## 配置
+## Config
 
-修改主题目录下的 `_config.yml` 文件，配置相关功能：
+Modify the file `_config.yml` in the theme directory to configure related functions:
 
-建议参考 [_config.yml](https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/_config.yml) 进行配置
+It is recommended to refer to [_config.yml](https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/_config.yml) for configuration
 
-## 更新
+## Update
 
-移动到 zhaoo 主题目录：
+Jump to the theme directory：
 
 ```bash
 $ cd themes/zhaoo
 ```
 
-从 GitHub 获取更新：
+Get update from GitHub：
 
 ```bash
 $ git pull
 ```
 
-## 协议
+## License
 
 [MIT](https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/LICENSE) License
