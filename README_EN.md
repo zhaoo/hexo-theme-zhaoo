@@ -30,6 +30,7 @@
 ## Rreview
 
 - [zhaoo's Blog](https://www.izhaoo.com)
+- [卞卞不是便便](https://www.bianxr.com/)
 
 （If you are using the zhaoo theme, welcome to show your blog, just add your blog to the `README.md` and PR.）
 
