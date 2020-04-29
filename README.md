@@ -34,6 +34,23 @@
 
 （如果您正在使用 zhaoo 主题，欢迎展示您的博客哦，只需在 `README.md` 文件中加入您的博客，提交 PR 即可。）
 
+## 特性
+
+* 简约 & 响应式 & 动效
+* 支持 `highlight` 代码高亮
+* 支持 `Gitalk` 评论
+* 支持 `FancyBox` 图片灯箱
+* 支持 `Pjax` 无刷新加载
+* 支持 `LeanCloud` 统计访问量
+* 支持 `支付宝、微信` 打赏
+* 支持格言，可配合插件 `hexo-plug-motto` 实现动态格言
+* 支持定制 `主题风格`、`CDN`、`埋点脚本`、`社交链接`、`版权说明` 等
+
+## 截图
+
+![首页](./screenshots/home.png)
+
+![文章页](./screenshots/article.png)
 
 ## 安装
 

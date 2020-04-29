@@ -18,24 +18,30 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       $(".preview").removeClass("blur");
       $(".footer").removeClass("blur");
     },
-    showFab: function () {
+    activeFab: function () {
       $(".fab-menu").addClass("fab-menu-active");
       $(".fab-up").addClass("fab-up-active");
       $(".fab-plus").addClass("fab-plus-active");
     },
-    hideFab: function () {
+    freezeFab: function () {
       $(".fab-menu").removeClass("fab-menu-active");
       $(".fab-up").removeClass("fab-up-active");
       $(".fab-plus").removeClass("fab-plus-active");
     },
+    showFab: function () {
+      $(".fab").removeClass("fab-hide").addClass("fab-show");
+    },
+    hideFab: function () {
+      $(".fab").addClass("fab-hide").removeClass("fab-show");
+    },
     scroolFab: function () {
-      console.log
       var height = $(window).height();
       var scrollTop = $(window).scrollTop();
       if (scrollTop > height) {
-        $(".fab").addClass("fab-show");
+        Func.showFab();
       } else {
-        $(".fab").removeClass("fab-show");
+        Func.freezeFab();
+        Func.hideFab();
       }
     },
     scroolToTop: function () {
@@ -72,9 +78,9 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     fab: function () {
       $(".fab-plus").on("click", function () {
         if ($(this).hasClass("fab-plus-active")) {
-          Func.hideFab();
+          Func.freezeFab();
         } else {
-          Func.showFab();
+          Func.activeFab();
         }
       });
       $(".fab-menu").on("click", function () {
@@ -82,10 +88,11 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
           Func.hideMenu();
         } else {
           Func.showMenu();
+          Func.hideFab();
         }
       });
       $(".fab-menu, .fab-up").on("click", function () {
-        Func.hideFab();
+        Func.freezeFab();
       });
       $(window).scroll(Func.scroolFab);
     },

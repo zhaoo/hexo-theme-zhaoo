@@ -34,6 +34,23 @@
 
 （If you are using the zhaoo theme, welcome to show your blog, just add your blog to the `README.md` and PR.）
 
+## Characteristic
+
+* Simple & Responsive & Animation
+* Support `highlight` code highlighting
+* Support `Gitalk` comment
+* Support `FancyBox` lightbox
+* Support `Pjax`
+* Support `LeanCloud` statistical pv & uv
+* Support `Alipay, Wechat` donate
+* Support motto, can use plugin `hexo-plug-motto`to achieve dynamic motto
+* Customized `Theme Style`、`CDN`、`Embedded Script`、`Social Link`、`Copyright` and more
+
+## Screenshots
+
+![home](./screenshots/home.png)
+
+![article](./screenshots/article.png)
 
 ## Install
 
