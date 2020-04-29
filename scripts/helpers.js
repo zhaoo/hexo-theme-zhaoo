@@ -11,9 +11,9 @@ hexo.extend.helper.register('page_title', function () {
       title += ": " + this.page.year;
     }
   } else if (this.is_category()) {
-    title = this.__("nav.category") + ": " + this.page.category + ' - ' + this.config.title;
+    title = this.page.category + ' - ' + this.config.title;
   } else if (this.is_tag()) {
-    title = this.__("nav.tag") + ": " + this.page.tag + ' - ' + this.config.title;
+    title = this.page.tag + ' - ' + this.config.title;
   } else if (this.is_post()) {
     title = this.page.title + ' - ' + this.config.title;
   }
