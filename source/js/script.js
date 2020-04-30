@@ -157,6 +157,12 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         });
       }
       $("#motto").text(text);
+    },
+    lazyload: function () {
+      $("img.lazyload").lazyload({
+        effect: "fadeIn",
+         threshold: 200,
+      });
     }
   }
 
@@ -172,6 +178,9 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     }
     if (CONFIG.pjax) {
       Action.pjax();
+    }
+    if (CONFIG.lazyload) {
+      Action.lazyload();
     }
     if (CONFIG.donate_alipay || CONFIG.donate_wechat) {
       Action.donate();

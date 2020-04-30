@@ -55,6 +55,7 @@ motto:
 fancybox: true
 pjax: false
 highlight: true
+lazyload: true
 
 # CDN
 vendors:
@@ -62,6 +63,7 @@ vendors:
   fancybox_js: https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.js
   highlight_js: https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js
   pjax_js: https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js
+  lazyload_js: https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js
   fancybox_css: https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css
   highlight_css: https://cdn.bootcss.com/highlight.js/9.15.10/styles/a11y-dark.min.css
   iconfont_css: //at.alicdn.com/t/font_1445822_58xq2j9v1id.css

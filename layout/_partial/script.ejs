@@ -18,6 +18,13 @@
 <%- js('lib/pjax/pjax.js')%>
 <% }} %>
 
+<% if(theme.lazyload){ %>
+<% if(theme.vendors.lazyload_js){ %>
+<%- js(theme.vendors.lazyload_js) %>
+<% }else{ %>
+<%- js('lib/lazyload/lazyload.js')%>
+<% }} %>
+
 <% if(theme.leancloud.enable){ %>
 <%- partial('_partial/common/visitors') %>
 <% } %>
