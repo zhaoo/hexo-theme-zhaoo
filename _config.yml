@@ -5,6 +5,7 @@ menu:
   home: / || 首页
   archives: /archives || 归档
   tags: /tags || 标签
+  categories: /categories || 分类
   about: /about || 关于
 
 # Social

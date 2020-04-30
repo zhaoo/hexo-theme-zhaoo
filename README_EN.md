@@ -36,15 +36,15 @@
 
 ## Characteristic
 
-* Simple & Responsive & Animation
-* Support `highlight` code highlighting
-* Support `Gitalk` comment
-* Support `FancyBox` lightbox
-* Support `Pjax`
-* Support `LeanCloud` statistical pv & uv
-* Support `Alipay, Wechat` donate
-* Support motto, can use plugin `hexo-plug-motto`to achieve dynamic motto
-* Customized `Theme Style`、`CDN`、`Embedded Script`、`Social Link`、`Copyright` and more
+- [x] Simple & Responsive & Animation
+- [x] `highlight` code highlighting
+- [x] `Gitalk` comment
+- [x] `FancyBox` lightbox
+- [x] `Pjax`
+- [x] `LeanCloud` statistical pv & uv
+- [x] `Alipay, Wechat` donate
+- [x] Motto, can use plugin `hexo-plug-motto`to achieve dynamic motto
+- [x] Customized `Theme Style`、`CDN`、`Embedded Script`、`Social Link`、`Copyright` and more
 
 ## Screenshots
 

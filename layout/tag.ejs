@@ -1,23 +1,23 @@
 <main id="main">
-    <section class="archive">
-      <div class="archive-container">
-        <div class="archive-post">
-          <h3 class="archive-total"><%= page.tag %>: <%= page.posts.length %> 篇</h3>
-          <% var posts = page.posts.sort('date', 'desc'); %>
-          <% for(var i = 0, year = -1; i < posts.data.length; ++i) { %>
-          <%
+  <section class="archive">
+    <div class="archive-container">
+      <div class="archive-post">
+        <h3 class="archive-total"># <%= page.tag %></h3>
+        <% var posts = page.posts.sort('date', 'desc'); %>
+        <% for(var i = 0, year = -1; i < posts.data.length; ++i) { %>
+        <%
             var post = posts.data[i];
             if(post.date.year() !== year) {
               year = post.date.year();
           %>
-          <h3 class="archive-year"><%= year %></h3>
-          <% } %>
-          <div class="archive-item">
-            <a class="archive-date" href="<%- url_for(post.path) %>"><%= date(post.date, "MM/DD") %></a>
-            <a class="archive-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
-          </div>
-          <% } %>
+        <h3 class="archive-year"><%= year %></h3>
+        <% } %>
+        <div class="archive-item">
+          <a class="archive-date" href="<%- url_for(post.path) %>"><%= date(post.date, "MM/DD") %></a>
+          <a class="archive-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
         </div>
+        <% } %>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+</main>
