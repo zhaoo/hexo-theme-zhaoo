@@ -41,6 +41,7 @@
 - [x] `Gitalk` comment
 - [x] `FancyBox` lightbox
 - [x] `Pjax`
+- [x] `lazyload`
 - [x] `LeanCloud` statistical pv & uv
 - [x] `Alipay, Wechat` donate
 - [x] Motto, can use plugin `hexo-plug-motto`to achieve dynamic motto

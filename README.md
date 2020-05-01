@@ -41,6 +41,7 @@
 - [x] `Gitalk` 评论
 - [x] `FancyBox` 图片灯箱
 - [x] `Pjax` 无刷新加载
+- [x] `lazyload` 图片懒加载
 - [x] `LeanCloud` 统计访问量
 - [x] `支付宝、微信` 打赏
 - [x] 格言，可配合插件 `hexo-plug-motto` 实现动态格言
