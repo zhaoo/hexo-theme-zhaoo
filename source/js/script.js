@@ -107,14 +107,12 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       })
     },
     fancybox: function () {
-      $(function () {
-        $(".fancybox").fancybox();
-        $(".article .content img").each(function () {
-          var e = document.createElement("a");
-          $(e).attr("data-fancybox", "images");
-          $(e).attr("href", $(this).attr("src"));
-          $(this).wrap(e);
-        });
+      $(".fancybox").fancybox();
+      $(".article .content img").each(function () {
+        var e = document.createElement("a");
+        $(e).attr("data-fancybox", "images");
+        $(e).attr("href", $(this).attr("src"));
+        $(this).wrap(e);
       });
     },
     pjax: function () {
@@ -161,7 +159,12 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     lazyload: function () {
       $("img.lazyload").lazyload({
         effect: "fadeIn",
-         threshold: 200,
+        threshold: 200,
+      });
+    },
+    fixLazyloadFancybox: function () {
+      $(document).find('.article img[data-original]').each(function () {
+        $(this).parent().attr("href", $(this).attr("data-original"));
       });
     }
   }
@@ -187,6 +190,9 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     }
     if (CONFIG.gitalk.enable) {
       Action.gitalk();
+    }
+    if (CONFIG.lazyload && CONFIG.fancybox) {
+      Action.fixLazyloadFancybox();
     }
   });
 

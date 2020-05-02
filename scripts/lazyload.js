@@ -1,8 +1,8 @@
 'use strict';
 
 function lazyload(data) {
-  var theme = hexo.theme.config;
-  if (!theme.lazyload) {
+  var config = hexo.theme.config;
+  if (!config.lazyload) {
     return;
   }
 
@@ -17,6 +17,7 @@ function lazyload(data) {
       return `<img ${attrBegin} class="${className}" data-original="${src}" src="${placeholder}" ${attrEnd}>`;
     }
   );
+
   return data
 }
 
