@@ -1,8 +1,7 @@
+'use strict';
+
 hexo.extend.helper.register('page_title', function () {
-  var title = this.config.title
-  // if (this.config.subtitle) {
-  //   title += ' - ' + this.config.subtitle;
-  // }
+  var title = this.config.title;
   if (this.is_archive()) {
     title = this.__("nav.archive") + ' - ' + this.config.title;;
     if (this.is_month()) {

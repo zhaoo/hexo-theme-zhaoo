@@ -2,7 +2,7 @@
   <section class="archive">
     <div class="archive-container">
       <div class="archive-post">
-        <h3 class="archive-total"># <%= page.tag %></h3>
+        <h2 class="archive-total"># <%= page.tag %></h2>
         <% var posts = page.posts.sort('date', 'desc'); %>
         <% for(var i = 0, year = -1; i < posts.data.length; ++i) { %>
         <%
