@@ -22,10 +22,7 @@ for (var i = 0, len = photos.length; i < len; i++) {
 
 <main id="main">
   <section class="gallery container">
-    <div class="gallery-head">
-      <h1><%- page.title %></h1>
-      <p><%- currentGallery.description %></p>
-    </div>
+    <%- partial('_partial/header', {title: page.title, subtitle: currentGallery.description}) %>
     <div id="gallery">
       <%- image %>
     </div>

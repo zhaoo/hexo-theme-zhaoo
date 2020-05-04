@@ -31,6 +31,12 @@ preview:
   enable: true
   model: wave #cloud
 
+# 相册
+galleries:
+  enable: true
+  title: 摄影
+  subtitle: Photography
+
 # 文章封面图片
 post_image: /image/post-image.jpg
 

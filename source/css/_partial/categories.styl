@@ -1,0 +1,24 @@
+.categories
+  max-width 576px
+  min-height calc(100vh - 350px)
+  margin 0 auto
+  @media (max-width: 576px)
+    margin 40px 20px 0 20px
+  ul
+    padding 0
+    text-align center
+    li
+      font-size 1rem
+      list-style none
+      margin 0 10px 10px 0
+      display inline-block
+      padding 5px 10px
+      background-color $color-background-deep
+      a
+        margin-right 5px
+      span
+        font-size 0.6rem
+      span::before
+        content '['
+      span::after
+        content ']'

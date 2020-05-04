@@ -1,9 +1,6 @@
 <main id="main">
   <section class="galleries container">
-    <div class="galleries-head">
-      <h1>摄影</h1>
-      <p>Photography</p>
-    </div>
+    <%- partial('_partial/header', {title: '摄影', subtitle: 'Photography'}) %>
     <% if (site.data && site.data.galleries) { %>
     <% var galleries = site.data.galleries; %>
     <div id="galleries">
