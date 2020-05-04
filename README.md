@@ -31,6 +31,7 @@
 
 - [zhaoo's Blog](https://www.izhaoo.com)
 - [卞卞不是便便](https://www.bianxr.com/)
+- [CodeGorgeous](https://codegorgeous.github.io/)
 
 （如果您正在使用 zhaoo 主题，欢迎展示您的博客哦，只需在 `README.md` 文件中加入您的博客，提交 PR 即可。）
 
@@ -44,6 +45,7 @@
 - [x] `lazyload` 图片懒加载
 - [x] `LeanCloud` 统计访问量
 - [x] `支付宝、微信` 打赏
+- [x] 相册页面，图片支持瀑布流加载（`justifiedGallery`）
 - [x] 格言，可配合插件 `hexo-plug-motto` 实现动态格言
 - [x] 定制 `主题风格`、`CDN`、`埋点脚本`、`社交链接`、`版权说明` 等
 

@@ -31,6 +31,7 @@
 
 - [zhaoo's Blog](https://www.izhaoo.com)
 - [卞卞不是便便](https://www.bianxr.com/)
+- [CodeGorgeous](https://codegorgeous.github.io/)
 
 （If you are using the zhaoo theme, welcome to show your blog, just add your blog to the `README.md` and PR.）
 
@@ -44,6 +45,7 @@
 - [x] `lazyload`
 - [x] `LeanCloud` statistical pv & uv
 - [x] `Alipay, Wechat` donate
+- [x] Galleries, pictures support waterfall (`justifiedGallery`)
 - [x] Motto, can use plugin `hexo-plug-motto`to achieve dynamic motto
 - [x] Customized `Theme Style`、`CDN`、`Embedded Script`、`Social Link`、`Copyright` and more
 
