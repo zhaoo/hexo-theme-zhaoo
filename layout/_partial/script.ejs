@@ -25,6 +25,13 @@
 <%- js('lib/lazyload/lazyload.js')%>
 <% }} %>
 
+<% if(theme.galleries.enable){ %>
+<% if(theme.vendors.justifiedGallery_js){ %>
+<%- js(theme.vendors.justifiedGallery_js) %>
+<% }else{ %>
+<%- js('lib/justifiedGallery/justifiedGallery.js')%>
+<% }} %>
+
 <% if(theme.leancloud.enable){ %>
 <%- partial('_partial/common/visitors') %>
 <% } %>

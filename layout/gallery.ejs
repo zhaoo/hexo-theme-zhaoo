@@ -1,0 +1,33 @@
+<%
+var galleries = [];
+if (site.data && site.data.galleries) {
+  galleries = site.data.galleries;
+}
+var pageTitle = page.title;
+function getCurrentGallery(galleries, pageTitle) {
+  for (let i = 0; i < galleries.length; i++) {
+    if (galleries[i]['name'] == pageTitle) {
+      return galleries[i];
+    }
+  }
+}
+var currentGallery = getCurrentGallery(galleries, pageTitle);
+var photos = currentGallery.photos;
+var image = ''
+for (var i = 0, len = photos.length; i < len; i++) {
+  var photo = photos[i];
+  image += `<a data-fancybox="images" href="${photo}"><img src="${photo}" alt="${photo}"></a>`
+}
+%>
+
+<main id="main">
+  <section class="gallery container">
+    <div class="gallery-head">
+      <h1><%- page.title %></h1>
+      <p><%- currentGallery.description %></p>
+    </div>
+    <div id="gallery">
+      <%- image %>
+    </div>
+  </section>
+</main>

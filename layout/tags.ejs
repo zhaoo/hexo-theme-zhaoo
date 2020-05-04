@@ -1,6 +1,9 @@
 <main id="main">
   <section class="tags">
-    <h3 class="tags-title">标签: <%- site.tags.length %> 个</h3>
+    <div class="tags-head">
+      <h1>标签</h1>
+      <p>共: <%- site.tags.length %> 个</p>
+    </div>
     <%- tagcloud({min_font: 14, max_font: 36, amount: 200, color: true, start_color: '#666666', end_color: '#212121'}) %>
   </section>
 </main>

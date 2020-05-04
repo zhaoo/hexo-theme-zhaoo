@@ -166,6 +166,18 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       $(document).find('.article img[data-original]').each(function () {
         $(this).parent().attr("href", $(this).attr("data-original"));
       });
+    },
+    galleries: function () {
+      $("#gallery").justifiedGallery({
+        margins: 5,
+        rowHeight: 200,
+        randomize: true
+      });
+      $("#galleries").justifiedGallery({
+        margins: 10,
+        rowHeight: 250,
+        lastRow: 'center'
+      });
     }
   }
 
@@ -190,6 +202,9 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     }
     if (CONFIG.gitalk.enable) {
       Action.gitalk();
+    }
+    if (CONFIG.galleries.enable) {
+      Action.galleries();
     }
     if (CONFIG.lazyload && CONFIG.fancybox) {
       Action.fixLazyloadFancybox();

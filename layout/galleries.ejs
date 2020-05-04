@@ -1,24 +1,17 @@
 <main id="main">
   <section class="galleries container">
-    <h2 class="galleries-title">相册</h2>
+    <div class="galleries-head">
+      <h1>摄影</h1>
+      <p>Photography</p>
+    </div>
     <% if (site.data && site.data.galleries) { %>
     <% var galleries = site.data.galleries; %>
-    <div class="row">
+    <div id="galleries">
       <% for (var i = 0, len = galleries.length; i < len; i++) { %>
       <% var gallery = galleries[i]; %>
-      <div class="col-lg-3 col-md-6 col-sm-12">
-        <div class="galleries-item">
-          <div class="image-box">
-            <div class="galleries-intro">
-              <h3><%- gallery.name %></h3>
-              <p><%- gallery.description %></p>
-            </div>
-            <a href="">
-              <img src="<%- gallery.cover %>" alt="<%- gallery.description %>">
-            </a>
-          </div>
-        </div>
-      </div>
+      <a href="./<%- gallery.name %>">
+        <img src="<%- gallery.cover %>" alt="<%- gallery.name %>" class="lazyload">
+      </a>
       <% } %>
     </div>
     <% } %>
