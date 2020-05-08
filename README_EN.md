@@ -14,7 +14,7 @@
 
 <div align="center">
   <a href="https://github.com/izhaoo/hexo-theme-zhaoo/releases" target="_blank" rel="noopener noreferrer">
-    <img alt="releases" src="https://img.shields.io/badge/releases-v1.0.0-blue.svg?style=flat-square&longCache=true">
+    <img alt="releases" src="https://img.shields.io/badge/releases-v1.1.0-blue.svg?style=flat-square&longCache=true">
   </a>
   <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">
     <img alt="hexo" src="https://img.shields.io/badge/hexo-%3E=4.0.0-blue.svg?style=flat-square&logo=hexo&longCache=true">
@@ -30,8 +30,9 @@
 ## Rreview
 
 - [zhaoo's Blog](https://www.izhaoo.com)
-- [卞卞不是便便](https://www.bianxr.com/)
 - [CodeGorgeous](https://codegorgeous.github.io/)
+- [你好我是王日天@](http://www.rt95.ink/)
+- [卞卞不是便便](https://www.bianxr.com/)
 
 （If you are using the zhaoo theme, welcome to show your blog, just add your blog to the `README.md` and PR.）
 
@@ -51,9 +52,13 @@
 
 ## Screenshots
 
-![home](./screenshots/home.png)
+![preview](./screenshots/preview.png)
+
+![index](./screenshots/index.png)
 
 ![article](./screenshots/article.png)
+
+![galleries](./screenshots/galleries.png)
 
 ## Install
 

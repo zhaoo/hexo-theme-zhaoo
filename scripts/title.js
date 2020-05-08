@@ -15,6 +15,8 @@ hexo.extend.helper.register('page_title', function () {
     title = this.page.tag + ' - ' + this.config.title;
   } else if (this.is_post()) {
     title = this.page.title + ' - ' + this.config.title;
+  } else if (this.is_page()) {
+    title = this.page.title + ' - ' + this.config.title;
   }
   return title;
 });

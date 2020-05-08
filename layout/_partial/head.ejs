@@ -68,7 +68,10 @@ var description = '';
     CONFIG = {
       fancybox: <%= theme.fancybox %>,
       pjax: <%= theme.pjax %>,
-      lazyload: <%= theme.lazyload %>,
+      lazyload: {
+        enable: <%= theme.lazyload.enable %>,
+        loadingImage: '<%= theme.lazyload.loadingImage %>',
+      },
       donate_alipay: '<%= theme.donate.alipay %>',
       donate_wechat: '<%= theme.donate.wechat %>',
       gitalk: {
@@ -94,4 +97,5 @@ var description = '';
   <%- theme.custom.head  %>
   <% } %>
 
+  <%- (theme.custom.css && css(theme.custom.css)) %>
 </head>

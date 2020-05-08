@@ -194,7 +194,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     if (CONFIG.pjax) {
       Action.pjax();
     }
-    if (CONFIG.lazyload) {
+    if (CONFIG.lazyload.enable) {
       Action.lazyload();
     }
     if (CONFIG.donate_alipay || CONFIG.donate_wechat) {

@@ -61,7 +61,11 @@ motto:
 fancybox: true
 pjax: false
 highlight: true
-lazyload: true
+
+lazyload:
+  enable: true
+  onlyPost: false
+  loadingImage: /image/loading.gif
 
 # CDN
 vendors:
@@ -95,3 +99,5 @@ leancloud:
 custom:
   head:
   foot:
+  css:
+  js:
