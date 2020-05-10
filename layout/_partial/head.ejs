@@ -18,6 +18,7 @@ var description = '';
   }
 })();
 %>
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -29,13 +30,31 @@ var description = '';
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
+
   <% if (keywords) { %>
   <meta name="keywords" content="<%= keywords %>"> <% } %>
   <% if (description) { %>
   <meta name="description" content="<%= description %>"> <% } %>
   <% if (config.author){ %>
   <meta name="author" content="<%= config.author %>"> <% } %>
-  <%- favicon_tag(theme.favicon) %>
+
+  <% if (theme.favicon.small) { %>
+    <link rel="icon" href="<%= theme.favicon.small %>" type="image/png" sizes="16x16">
+  <% } %>
+  <% if (theme.favicon.medium) { %>
+    <link rel="icon" href="<%= theme.favicon.medium %>" type="image/png" sizes="32x32">
+  <% } %>
+  <% if (theme.favicon.apple_touch_icon) { %>
+    <link rel="apple-touch-icon" href="<%= theme.favicon.apple_touch_icon %>" sizes="180x180">
+  <% } %>
+  <% if (theme.favicon.safari_pinned_tab) { %>
+    <meta rel="mask-icon" href="<%= theme.favicon.safari_pinned_tab %>" color="#333333">
+  <% } %>
+  <% if (theme.favicon.msapplication) { %>
+    <meta rel="msapplication-TileImage" content="<%= theme.favicon.msapplication %>">
+    <meta rel="msapplication-TileColor" content="#000000">
+  <% } %>
+
   <%- css(['css/style']) %>
 
   <% if(theme.vendors.iconfont_css){ %>
@@ -84,8 +103,8 @@ var description = '';
         admin: '<%= theme.gitalk.admin %>'
       },
       motto: {
-        api: '<%= theme.motto.api %>',
-        default: '<%= theme.motto.default %>'
+        api: '<%= theme.preview.motto.api %>',
+        default: '<%= theme.preview.motto.default %>'
       },
       galleries: {
         enable: '<%= theme.galleries.enable %>'

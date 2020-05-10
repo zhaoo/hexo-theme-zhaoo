@@ -1,12 +1,43 @@
-# Please refer to the example for modification
+# --------------------------------------------------
+# Site settings
+# --------------------------------------------------
+  
+# Color
+color:
+  default: "#33333D"
+  link: "#FFBE5B"
+
+# Favicon
+favicon:
+  small: /images/icons/favicon-16x16.png
+  medium: /images/icons/favicon-32x32.png
+  apple_touch_icon: /images/icons/apple-touch-icon.png
+  safari_pinned_tab: /images/icons/stun-logo.svg
+  msapplication: /images/icons/favicon-144x144.png
+
+# Keywords
+keywords: zhaoo, hexo-theme-zhaoo
+
+# Preview
+preview:
+  enable: true
+  model: wave  #cloud
+  welcome_image: /images/theme/welcome-image.jpg
+  motto:
+    default: 我在开了灯的床头下，想问问自己的心啊。
+    api:  #'http://localhost:3000/api/motto'
 
 # Menu
 menu:
   home: / || 首页
+  galleries: /galleries || 摄影
   archives: /archives || 归档
   tags: /tags || 标签
   categories: /categories || 分类
   about: /about || 关于
+
+# Copyright
+copyright: <p>Copyright© 2019-2020 | <a target="_blank" href="https://www.izhaoo.com">zhaoo</a> .AllRightsReserved</p>
 
 # Social
 social:
@@ -16,68 +47,37 @@ social:
   github: https://github.com/izhaoo || icongithub-fill || '#24292E'
   email: mailto:izhaoo@163.com || iconmail
 
-# Color
-color:
-  default: "#33333D"
-  link: "#FFBE5B"
+# --------------------------------------------------
+# Post settings
+# --------------------------------------------------
+
+# Post image
+post_image: /images/theme/post-image.jpg
 
 # Donate
 donate:
   alipay: https://pic.izhaoo.com/alipay.jpg
   wechat: https://pic.izhaoo.com/wechat.jpg
 
-# Preview
-preview:
-  enable: true
-  model: wave #cloud
+# --------------------------------------------------
+# Page settings
+# --------------------------------------------------
 
-# 相册
+# Galleries
 galleries:
   enable: true
   title: 摄影
   subtitle: Photography
 
-# 文章封面图片
-post_image: /image/post-image.jpg
+# --------------------------------------------------
+# Plugin settings
+# --------------------------------------------------
 
-# 欢迎图片
-welcome_image: /image/welcome-image.jpg
-
-# Favicon
-favicon: /image/favicon.ico
-
-# 网站关键字
-keywords: zhaoo
-
-# 版权信息
-copyright: <p>Copyright© 2019-2019 | <a target="_blank" href="https://www.izhaoo.com">zhaoo</a> .AllRightsReserved</p>
-
-# 格言
-motto:
-  api: # 'http://localhost:3000/api/motto'   # use the hexo-plugin-motto
-  default: 我在开了灯的床头下，想问问自己的心啊。
-
-# 插件
-fancybox: true
-pjax: false
-highlight: true
-
+# Lazyload
 lazyload:
   enable: true
   onlyPost: false
-  loadingImage: /image/loading.gif
-
-# CDN
-vendors:
-  jquery_js: https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js
-  fancybox_js: https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.js
-  pjax_js: https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js
-  lazyload_js: https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js
-  justifiedGallery_js: https://cdn.bootcdn.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js
-  fancybox_css: https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css
-  highlight_css: https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css
-  iconfont_css: //at.alicdn.com/t/font_1445822_58xq2j9v1id.css
-  justifiedGallery_css: https://cdn.bootcdn.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css
+  loadingImage: /images/theme/loading.gif
 
 # Gitalk
 gitalk:
@@ -94,6 +94,38 @@ leancloud:
   appId:
   appKey:
   serverURLs:
+
+# FancyBox
+fancybox: true
+
+# Pjax
+pjax: false
+
+# HighLight
+highlight: true
+
+# --------------------------------------------------
+# Script settings
+# --------------------------------------------------
+
+# CDN
+vendors:
+  jquery_js: https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js
+  fancybox_js: https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.js
+  pjax_js: https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js
+  lazyload_js: https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js
+  justifiedGallery_js: https://cdn.bootcdn.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js
+  fancybox_css: https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css
+  highlight_css: https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css
+  iconfont_css: //at.alicdn.com/t/font_1445822_58xq2j9v1id.css
+  justifiedGallery_css: https://cdn.bootcdn.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css
+
+# Analytics
+analytics:
+  baidu: #id
+  google: #id
+  tencent: #id
+  cnzz: #id
 
 # Custom
 custom:
