@@ -38,6 +38,22 @@
 
 <%- js(['js/script']) %>
 
+<% if(theme.seo.baidu_auto_push) { %>
+<script>
+  (function () {
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    } else {
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+<% } %>
+
 <% if(theme.analytics.baidu) { %>
 <script>
   var _hmt = _hmt || [];

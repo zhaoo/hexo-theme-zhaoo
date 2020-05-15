@@ -88,13 +88,19 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
           Func.hideMenu();
         } else {
           Func.showMenu();
-          Func.hideFab();
+          if (CONFIG.fab.alwaysShow === false) {
+            Func.hideFab();
+          }
         }
       });
       $(".fab-menu, .fab-up").on("click", function () {
         Func.freezeFab();
       });
-      $(window).scroll(Func.scroolFab);
+      if (CONFIG.fab.alwaysShow === true) {
+        Func.showFab();
+      } else {
+        $(window).scroll(Func.scroolFab);
+      }
     },
     menu: function () {
       $(".menu-close").on("click", function () {

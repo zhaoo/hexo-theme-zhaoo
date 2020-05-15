@@ -47,6 +47,11 @@ social:
   github: https://github.com/izhaoo || icongithub-fill || '#24292E'
   email: mailto:izhaoo@163.com || iconmail
 
+# Fab (FloatActionButton)
+fab:
+  enable: true
+  alwaysShow: false
+
 # --------------------------------------------------
 # Post settings
 # --------------------------------------------------
@@ -119,6 +124,10 @@ vendors:
   highlight_css: https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css
   iconfont_css: //at.alicdn.com/t/font_1445822_58xq2j9v1id.css
   justifiedGallery_css: https://cdn.bootcdn.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css
+
+# SEO
+seo:
+  baidu_auto_push: true
 
 # Analytics
 analytics:
