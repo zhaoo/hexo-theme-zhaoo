@@ -1,0 +1,27 @@
+<% if (theme.valine.appId && theme.valine.appKey) { %>
+<div id="valine"></div>
+<script defer src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  window.onload = function () {
+    var loadValine = function () {
+      new Valine({
+        el: '#valine',
+        app_id: "<%= theme.valine.appId %>",
+        app_key: "<%= theme.valine.appKey %>",
+        placeholder: "<%= theme.valine.placeholder %>",
+        avatar: "<%= theme.valine.avatar %>",
+        pageSize: "<%= theme.valine.pageSize %>",
+        lang: "<%= theme.valine.lang %>",
+      });
+    }
+    if ( <%= theme.comments.button %> ) {
+      $("#comments-btn").on("click", function () {
+        $(this).hide();
+        loadValine();
+      });
+    } else {
+      loadValine();
+    }
+  };
+</script>
+<% } %>

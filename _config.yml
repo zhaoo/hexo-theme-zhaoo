@@ -75,6 +75,32 @@ galleries:
   subtitle: Photography
 
 # --------------------------------------------------
+# Comment settings
+# --------------------------------------------------
+
+comments:
+  enable: true
+  type: valine
+  button: true
+
+# Gitalk
+gitalk:
+  owner:
+  repo:
+  admin:
+  clientID:
+  clientSecret:
+
+# Valine
+valine:
+  appId:
+  appKey:
+  placeholder: 雁过留痕
+  avatar: mp
+  pageSize: 10
+  lang: zh-CN
+
+# --------------------------------------------------
 # Plugin settings
 # --------------------------------------------------
 
@@ -83,15 +109,6 @@ lazyload:
   enable: true
   onlyPost: false
   loadingImage: /images/theme/loading.gif
-
-# Gitalk
-gitalk:
-  enable: false
-  owner:
-  repo:
-  admin:
-  clientID:
-  clientSecret:
 
 # LeanCloud
 leancloud:

@@ -11,8 +11,13 @@
       <%- partial('_partial/post/tag') %>
       <%- partial('_partial/post/nav') %>
     </section>
-    <% if (theme.gitalk.enable) { %>
-    <%- partial('_partial/common/comment') %>
+    <% if (theme.comments.enable) { %>
+      <section class="comments">
+        <% if (theme.comments.button) { %>
+          <div class="btn" id="comments-btn">查看评论</div>
+        <% } %>
+        <%- partial('_partial/common/comments/' + theme.comments.type) %>
+      </section>
     <% } %>
   </section>
 </article>
