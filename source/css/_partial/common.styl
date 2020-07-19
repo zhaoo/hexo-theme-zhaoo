@@ -17,6 +17,13 @@
     transform translate3d(-90px, 0, 0)
   100%
     transform translate3d(85px, 0, 0)
+@keyframes blink
+  0%
+    opacity 1
+  50%
+    opacity 0
+  100%
+    opacity 1
 .preview
   .preview-image
     z-index 40
@@ -30,15 +37,20 @@
     display flex
     justify-content center
     align-items center
-    .preview-tagline
+    .preview-motto, .preview-cursor
       font-size 3em
       font-family 'Quicksand', 'Vollkorn', serif
-      font-weight bold
       font-weight 300
-      margin 0 10%
-      color black
+      color convert(hexo-config('preview.motto.color')) || #000000
+      margin 0
       @media (max-width 768px)
         font-size 2em
+    .preview-cursor
+      opacity 1
+      animation-duration 1s
+      opacity 1
+      animation-iteration-count infinite
+      animation-name blink
     .preview-overlay
       width 100%
       position absolute
