@@ -49,6 +49,15 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         scrollTop: '0px'
       }, 800);
     },
+    message: function (text, type) {  //未来可能是 zhaoo-UI
+      var message = '<div class="zui-message"><p>' + text + '</p></div>';
+      $("body").append(message);
+      var messageDom = $(".zui-message");
+      messageDom.addClass("in");
+      setTimeout(function () {
+        messageDom.remove();
+      }, 3000);
+    }
   }
 
   var Action = {
@@ -174,6 +183,13 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         rowHeight: 250,
         lastRow: 'center'
       });
+    },
+    thief: function () {
+      $(".j-thief-btn").on("click", function () {
+        $(".j-thief-data").select();
+        document.execCommand("Copy");
+        Func.message('已复制到剪切板');
+      });
     }
   }
 
@@ -201,6 +217,9 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     }
     if (CONFIG.lazyload && CONFIG.fancybox) {
       Action.fixLazyloadFancybox();
+    }
+    if (CONFIG.thief.enable) {
+      Action.thief();
     }
   });
 

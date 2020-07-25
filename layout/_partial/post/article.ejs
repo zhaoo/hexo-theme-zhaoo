@@ -5,6 +5,9 @@
       <%- page.content %>
     </section>
     <section class="extra">
+      <% if (theme.post_copyright.enable) { %>
+        <%- partial('_partial/post/copyright') %>
+      <% } %>
       <% if (theme.donate.alipay || theme.donate.wechat) { %>
         <%- partial('_partial/post/donate') %>
       <% } %>

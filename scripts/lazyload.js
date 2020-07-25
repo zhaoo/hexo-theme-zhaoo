@@ -1,19 +1,22 @@
 'use strict';
+
 module.exports.lazyload = function (hexo) {
-  var config = hexo.theme.config;
-  if (!config.lazyload || !config.lazyload.enable) {
-    return;
-  }
-  if (config.lazyload.onlyPost) {
-    hexo.extend.filter.register('after_post_render', function (data) {
-      data.content = lazyProcess.call(this, data.content);
-      return data;
-    });
-  } else {
-    hexo.extend.filter.register('after_render:html', function (str, data) {
-      return lazyProcess.call(this, str);
-    });
-  }
+  hexo.on('generateBefore', function () {
+    var config = hexo.theme.config;
+    if (!config.lazyload || !config.lazyload.enable) {
+      return;
+    }
+    if (config.lazyload.onlyPost) {
+      hexo.extend.filter.register('after_post_render', function (data) {
+        data.content = lazyProcess.call(this, data.content);
+        return data;
+      });
+    } else {
+      hexo.extend.filter.register('after_render:html', function (str, data) {
+        return lazyProcess.call(this, str);
+      });
+    }
+  });
 }
 
 function lazyProcess(data) {
