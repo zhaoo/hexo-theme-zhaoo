@@ -33,12 +33,14 @@
 - [CodeGorgeous](https://codegorgeous.github.io/)
 - [你好我是王日天@](http://www.rt95.ink/)
 - [卞卞不是便便](https://www.bianxr.com/)
+- [Yin Blog](http://xuzhimo.top/)
 
 （If you are using the zhaoo theme, welcome to show your blog, just add your blog to the `README.md` and PR.）
 
 ## Characteristic
 
 - [x] Simple & Responsive & Animation
+- [x] `ZUI (zhaoo-UI)` (building)
 - [x] `highlight` code highlighting
 - [x] `Gitalk` comment
 - [x] `FancyBox` lightbox
