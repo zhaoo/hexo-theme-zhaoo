@@ -3,7 +3,52 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
 (function ($) {
   "use strict";
 
-  var Func = {
+  var zui = {
+    Message: function ({ text, type, timer }) {
+      var message = '<div class="zui-message ' + (type || "info") + '"><p>' + text + '</p></div>';
+      $("body").append(message);
+      var e = $(".zui-message");
+      e.ready(function () {
+        e.addClass("in");
+        setTimeout(function () {
+          e.removeClass("in");
+          e.on("transitionend webkitTransitionEnd", function () {
+            $(this).remove();
+          });
+        }, timer || 3000);
+      });
+    }
+  }
+
+  var utils = {
+    debounce: function (fn, delay) {
+      var timeout = null;
+      return function () {
+        if (timeout !== null)
+          clearTimeout(timeout);
+        timeout = setTimeout(fn, delay);
+      }
+    },
+    throttle: function (fn, delay) {
+      var timer = null;
+      var startTime = Date.now();
+      return function () {
+        var curTime = Date.now();
+        var remaining = delay - (curTime - startTime);
+        var context = this;
+        var args = arguments;
+        clearTimeout(timer);
+        if (remaining <= 0) {
+          fn.apply(context, args);
+          startTime = Date.now();
+        } else {
+          timer = setTimeout(fn, remaining);
+        }
+      }
+    }
+  }
+
+  var fn = {
     showMenu: function () {
       $(".menu").addClass("menu-active").fadeIn(300);
       $("body").addClass("lock-screen");
@@ -38,29 +83,20 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       var height = $(window).height();
       var scrollTop = $(window).scrollTop();
       if (scrollTop > height) {
-        Func.showFab();
+        fn.showFab();
       } else {
-        Func.freezeFab();
-        Func.hideFab();
+        fn.freezeFab();
+        fn.hideFab();
       }
     },
     scroolToTop: function () {
       $('body,html').animate({
         scrollTop: '0px'
       }, 800);
-    },
-    message: function (text, type) {  //未来可能是 zhaoo-UI
-      var message = '<div class="zui-message"><p>' + text + '</p></div>';
-      $("body").append(message);
-      var messageDom = $(".zui-message");
-      messageDom.addClass("in");
-      setTimeout(function () {
-        messageDom.remove();
-      }, 3000);
     }
   }
 
-  var Action = {
+  var action = {
     smoothScroll: function () {
       $(".smooth-scroll").click(function () { // a[href *=#], area[href *=#]
         if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
@@ -83,38 +119,38 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     fab: function () {
       $(".fab-plus").on("click", function () {
         if ($(this).hasClass("fab-plus-active")) {
-          Func.freezeFab();
+          fn.freezeFab();
         } else {
-          Func.activeFab();
+          fn.activeFab();
         }
       });
       $(".fab-menu").on("click", function () {
         if ($(".menu").hasClass("menu-active")) {
-          Func.hideMenu();
+          fn.hideMenu();
         } else {
-          Func.showMenu();
+          fn.showMenu();
           if (CONFIG.fab.alwaysShow === false) {
-            Func.hideFab();
+            fn.hideFab();
           }
         }
       });
       $(".fab-menu, .fab-up").on("click", function () {
-        Func.freezeFab();
+        fn.freezeFab();
       });
       if (CONFIG.fab.alwaysShow === true) {
-        Func.showFab();
+        fn.showFab();
       } else {
-        $(window).scroll(Func.scroolFab);
+        $(window).scroll(fn.scroolFab);
       }
     },
     menu: function () {
       $(".menu-close").on("click", function () {
-        Func.hideMenu();
+        fn.hideMenu();
       });
     },
     scroolToTop: function () {
       $(".fab-up").on("click", function () {
-        Func.scroolToTop();
+        fn.scroolToTop();
       })
     },
     fancybox: function () {
@@ -135,7 +171,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       });
       $(document).on('pjax:complete', function () {
         if (CONFIG.fancybox) {
-          Action.fancybox();
+          action.fancybox();
         }
       });
     },
@@ -179,47 +215,47 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         randomize: true
       });
       $("#galleries").justifiedGallery({
-        margins: 10,
+        margins: 10,        
         rowHeight: 250,
         lastRow: 'center'
       });
     },
     thief: function () {
-      $(".j-thief-btn").on("click", function () {
+      $(".j-thief-btn").on("click", utils.throttle(function () {
         $(".j-thief-data").select();
         document.execCommand("Copy");
-        Func.message('已复制到剪切板');
-      });
+        zui.Message({ text: '已复制到剪切板', type: 'success' });
+      }, 3000));
     }
   }
 
   $(function () {
-    Action.smoothScroll();
-    Action.loading();
-    Action.fab();
-    Action.menu();
-    Action.scroolToTop();
-    Action.motto();
+    action.smoothScroll();
+    action.loading();
+    action.fab();
+    action.menu();
+    action.scroolToTop();
+    action.motto();
     if (CONFIG.fancybox) {
-      Action.fancybox();
+      action.fancybox();
     }
     if (CONFIG.pjax) {
-      Action.pjax();
+      action.pjax();
     }
     if (CONFIG.lazyload.enable) {
-      Action.lazyload();
+      action.lazyload();
     }
     if (CONFIG.donate_alipay || CONFIG.donate_wechat) {
-      Action.donate();
+      action.donate();
     }
     if (CONFIG.galleries.enable) {
-      Action.galleries();
+      action.galleries();
     }
     if (CONFIG.lazyload && CONFIG.fancybox) {
-      Action.fixLazyloadFancybox();
+      action.fixLazyloadFancybox();
     }
     if (CONFIG.thief.enable) {
-      Action.thief();
+      action.thief();
     }
   });
 

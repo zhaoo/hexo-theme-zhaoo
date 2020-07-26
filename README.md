@@ -40,7 +40,7 @@
 ## 特性
 
 - [x] 简约 & 响应式 & 动效
-- [x] `ZUI (zhaoo-UI)` 支持（建设中）
+- [x] `ZUI (zhaoo UI)` 支持（建设中）
 - [x] `highlight` 代码高亮
 - [x] `Gitalk` 评论
 - [x] `FancyBox` 图片灯箱

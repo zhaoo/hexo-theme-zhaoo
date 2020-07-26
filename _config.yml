@@ -65,6 +65,15 @@ donate:
   alipay: https://pic.izhaoo.com/alipay.jpg
   wechat: https://pic.izhaoo.com/wechat.jpg
 
+# Copyright
+post_copyright:
+  enable: true
+
+# Thief（copy article with one click）
+thief:
+  enable: true
+  type: html  #markdown
+
 # --------------------------------------------------
 # Page settings
 # --------------------------------------------------

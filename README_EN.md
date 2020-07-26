@@ -40,7 +40,7 @@
 ## Characteristic
 
 - [x] Simple & Responsive & Animation
-- [x] `ZUI (zhaoo-UI)` (building)
+- [x] `ZUI (zhaoo UI)` (building)
 - [x] `highlight` code highlighting
 - [x] `Gitalk` comment
 - [x] `FancyBox` lightbox
