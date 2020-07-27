@@ -69,10 +69,10 @@ donate:
 post_copyright:
   enable: true
 
-# Thief（copy article with one click）
-thief:
+# Carrier（copy article with one click）
+carrier:
   enable: true
-  type: html  #markdown
+  type: html #markdown text
 
 # --------------------------------------------------
 # Page settings

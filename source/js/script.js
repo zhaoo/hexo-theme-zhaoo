@@ -220,9 +220,9 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         lastRow: 'center'
       });
     },
-    thief: function () {
-      $(".j-thief-btn").on("click", utils.throttle(function () {
-        $(".j-thief-data").select();
+    carrier: function () {
+      $(".j-carrier-btn").on("click", utils.throttle(function () {
+        $(".j-carrier-data").select();
         document.execCommand("Copy");
         zui.Message({ text: '已复制到剪切板', type: 'success' });
       }, 3000));
@@ -254,8 +254,8 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     if (CONFIG.lazyload && CONFIG.fancybox) {
       action.fixLazyloadFancybox();
     }
-    if (CONFIG.thief.enable) {
-      action.thief();
+    if (CONFIG.carrier.enable) {
+      action.carrier();
     }
   });
 
