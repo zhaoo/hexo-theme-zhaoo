@@ -110,7 +110,7 @@ $ hexo clean && hexo s
 
 Modify the file `_config.yml` in the theme directory to configure related functions:
 
-It is recommended to refer to [_config.yml](https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/_config.yml) for configuration
+It is recommended to refer to [_config.yml](https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/_config.yml) and [_example](https://github.com/izhaoo/hexo-theme-zhaoo/tree/master/_example) for configuration
 
 ## Update
 
