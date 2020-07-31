@@ -110,7 +110,7 @@ $ hexo clean && hexo s
 
 修改主题目录下的 `_config.yml` 文件，配置相关功能：
 
-建议参考 [_config.yml](https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/_config.yml) 进行配置
+建议参考 [_config.yml](https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/_config.yml) 和 [_example](https://github.com/izhaoo/hexo-theme-zhaoo/tree/master/_example) 进行配置
 
 ## 更新
 
