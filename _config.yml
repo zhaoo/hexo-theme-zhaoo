@@ -15,9 +15,6 @@ favicon:
   safari_pinned_tab: /images/icons/stun-logo.svg
   msapplication: /images/icons/favicon-144x144.png
 
-# Keywords
-keywords: zhaoo, hexo-theme-zhaoo
-
 # Preview
 preview:
   enable: true

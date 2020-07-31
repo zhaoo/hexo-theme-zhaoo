@@ -2,19 +2,18 @@
 var keywords = '';
 var description = '';
 (function() {
-  if (theme.keywords) {
+  if (config.keywords) {
     keywords += theme.keywords;
-    keywords += ',';
   }
   if (page.keywords) {
+    keywords += ', ';
     keywords += page.keywords;
   }
   if (config.description) {
     description += config.description;
-    description += ',';
   }
   if (is_post()) {
-    description += truncate(strip_html(page.content), 100);
+    description = truncate(strip_html(page.content), 100);
   }
 })();
 %>
