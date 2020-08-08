@@ -116,6 +116,11 @@ changyan:
 # Plugin settings
 # --------------------------------------------------
 
+# Daovoice
+daovoice:
+  enable: true
+  appId: a7794e2b
+
 # Lazyload
 lazyload:
   enable: true
@@ -151,7 +156,7 @@ vendors:
   justifiedGallery_js: https://cdn.bootcdn.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js
   fancybox_css: https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css
   highlight_css: https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css
-  iconfont_css: //at.alicdn.com/t/font_1445822_58xq2j9v1id.css
+  iconfont_css: //at.alicdn.com/t/font_1445822_0sri83bhiv7.css
   justifiedGallery_css: https://cdn.bootcdn.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css
 
 # SEO

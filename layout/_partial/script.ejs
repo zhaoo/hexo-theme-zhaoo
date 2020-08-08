@@ -36,7 +36,11 @@
 <%- partial('_partial/common/visitors') %>
 <% } %>
 
-<%- js(['js/script']) %>
+<% if(theme.daovoice.enable){ %>
+  <%- partial('_partial/common/daovoice') %>
+<% } %>
+
+<%- js(['js/utils', 'js/zui', 'js/script']) %>
 
 <% if(theme.seo.baidu_auto_push) { %>
 <script>
@@ -67,8 +71,7 @@
 <% } %>
 
 <% if(theme.analytics.cnzz) { %>
-<script type="text/javascript"
-  src="https://s9.cnzz.com/z_stat.php?id=<%- theme.analytics.cnzz %>&web_id=127888982<%- theme.analytics.cnzz %>">
+<script src="https://s9.cnzz.com/z_stat.php?id=<%- theme.analytics.cnzz %>&web_id=127888982<%- theme.analytics.cnzz %>">
   $("a[title='站长统计']").remove();
 </script>
 <% } %>

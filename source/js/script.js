@@ -3,51 +3,6 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
 (function ($) {
   "use strict";
 
-  var zui = {
-    Message: function ({ text, type, timer }) {
-      var message = '<div class="zui-message ' + (type || "info") + '"><p>' + text + '</p></div>';
-      $("body").append(message);
-      var e = $(".zui-message");
-      e.ready(function () {
-        e.addClass("in");
-        setTimeout(function () {
-          e.removeClass("in");
-          e.on("transitionend webkitTransitionEnd", function () {
-            $(this).remove();
-          });
-        }, timer || 3000);
-      });
-    }
-  }
-
-  var utils = {
-    debounce: function (fn, delay) {
-      var timeout = null;
-      return function () {
-        if (timeout !== null)
-          clearTimeout(timeout);
-        timeout = setTimeout(fn, delay);
-      }
-    },
-    throttle: function (fn, delay) {
-      var timer = null;
-      var startTime = Date.now();
-      return function () {
-        var curTime = Date.now();
-        var remaining = delay - (curTime - startTime);
-        var context = this;
-        var args = arguments;
-        clearTimeout(timer);
-        if (remaining <= 0) {
-          fn.apply(context, args);
-          startTime = Date.now();
-        } else {
-          timer = setTimeout(fn, remaining);
-        }
-      }
-    }
-  }
-
   var fn = {
     showMenu: function () {
       $(".menu").addClass("menu-active").fadeIn(300);
@@ -67,11 +22,13 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       $(".fab-menu").addClass("fab-menu-active");
       $(".fab-up").addClass("fab-up-active");
       $(".fab-plus").addClass("fab-plus-active");
+      $(".fab-daovoice").addClass("fab-daovoice-active");
     },
     freezeFab: function () {
       $(".fab-menu").removeClass("fab-menu-active");
       $(".fab-up").removeClass("fab-up-active");
       $(".fab-plus").removeClass("fab-plus-active");
+      $(".fab-daovoice").removeClass("fab-daovoice-active");
     },
     showFab: function () {
       $(".fab").removeClass("fab-hide").addClass("fab-show");
@@ -134,7 +91,11 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
           }
         }
       });
-      $(".fab-menu, .fab-up").on("click", function () {
+      $(".fab-daovoice").on("click", function () {
+        daovoice('openMessages');
+        fn.freezeFab();
+      });
+      $(".fab-menu, .fab-up .fab-daovoice").on("click", function () {
         fn.freezeFab();
       });
       if (CONFIG.fab.alwaysShow === true) {
@@ -215,16 +176,16 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         randomize: true
       });
       $("#galleries").justifiedGallery({
-        margins: 10,        
+        margins: 10,
         rowHeight: 250,
         lastRow: 'center'
       });
     },
     carrier: function () {
-      $(".j-carrier-btn").on("click", utils.throttle(function () {
+      $(".j-carrier-btn").on("click", ZHAOO.utils.throttle(function () {
         $(".j-carrier-data").select();
         document.execCommand("Copy");
-        zui.Message({ text: '已复制到剪切板', type: 'success' });
+        ZHAOO.zui.message({ text: '已复制到剪切板', type: 'success' });
       }, 3000));
     }
   }

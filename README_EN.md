@@ -42,7 +42,8 @@
 - [x] Simple & Responsive & Animation
 - [x] `ZUI (zhaoo UI)` (building)
 - [x] `highlight` code highlighting
-- [x] `Gitalk` comment
+- [x] `Gitalk`、`Valine`、`ChangYan` comment
+- [x] `DaoVoice` IM
 - [x] `FancyBox` lightbox
 - [x] `Pjax`
 - [x] `lazyload`
@@ -50,6 +51,7 @@
 - [x] `Alipay, Wechat` donate
 - [x] Galleries, pictures support waterfall (`justifiedGallery`)
 - [x] Motto, can use plugin `hexo-plug-motto`to achieve dynamic motto
+- [x] `Baidu`、`CNZZ`、`google` analytics and SEO
 - [x] Customized `Theme Style`、`CDN`、`Embedded Script`、`Social Link`、`Copyright` and more
 
 ## Screenshots

@@ -22,7 +22,7 @@ var description = '';
 <html lang="zh-CN">
 
 <head>
-  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><%= page_title() %></title>
@@ -82,7 +82,8 @@ var description = '';
   <% }} %>
 
   <script>
-    var CONFIG = window.CONFIG || {}
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
     CONFIG = {
       fancybox: <%= theme.fancybox %>,
       pjax: <%= theme.pjax %>,
@@ -105,6 +106,9 @@ var description = '';
       },
       carrier: {
         enable: '<%= theme.carrier.enable %>'
+      },
+      daovoice: {
+        enable: '<%= theme.daovoice.enable %>'
       }
     }
   </script>

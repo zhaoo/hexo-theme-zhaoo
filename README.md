@@ -42,7 +42,8 @@
 - [x] 简约 & 响应式 & 动效
 - [x] `ZUI (zhaoo UI)` 支持（建设中）
 - [x] `highlight` 代码高亮
-- [x] `Gitalk` 评论
+- [x] `Gitalk`、`Valine`、`畅言` 评论
+- [x] `DaoVoice` 即时通讯 
 - [x] `FancyBox` 图片灯箱
 - [x] `Pjax` 无刷新加载
 - [x] `lazyload` 图片懒加载
@@ -50,6 +51,7 @@
 - [x] `支付宝、微信` 打赏
 - [x] 相册页面，图片支持瀑布流加载（`justifiedGallery`）
 - [x] 格言，可配合插件 `hexo-plug-motto` 实现动态格言
+- [x] `百度`、`CNZZ`、`谷歌` 站长统计 及 SEO优化
 - [x] 定制 `主题风格`、`CDN`、`埋点脚本`、`社交链接`、`版权说明` 等
 
 ## 截图
