@@ -50,7 +50,15 @@
         }
       }
       return throttled;
+    },
+    loadScript: function (src, callback) {
+      var script = document.createElement('script');
+      document.head.appendChild(script);
+      script.src = src;
+      script.onload = function () {
+        callback();
+      }
     }
   }
-  
+
 })(jQuery);

@@ -4,20 +4,6 @@
 <%- js('lib/jquery/jquery.js')%>
 <% } %>
 
-<% if(theme.fancybox){ %>
-<% if(theme.vendors.fancybox_js){ %>
-<%- js(theme.vendors.fancybox_js) %>
-<% }else{ %>
-<%- js('lib/fancybox/fancybox.js')%>
-<% }} %>
-
-<% if(theme.pjax){ %>
-<% if(theme.vendors.pjax_js){ %>
-<%- js(theme.vendors.pjax_js) %>
-<% }else{ %>
-<%- js('lib/pjax/pjax.js')%>
-<% }} %>
-
 <% if(theme.lazyload){ %>
 <% if(theme.vendors.lazyload_js){ %>
 <%- js(theme.vendors.lazyload_js) %>
@@ -32,18 +18,32 @@
 <%- js('lib/justifiedGallery/justifiedGallery.js')%>
 <% }} %>
 
+<% if(theme.fancybox){ %>
+<% if(theme.vendors.fancybox_js){ %>
+<%- js(theme.vendors.fancybox_js) %>
+<% }else{ %>
+<%- js('lib/fancybox/fancybox.js')%>
+<% }} %>
+
+<% if(theme.pjax){ %>
+<% if(theme.vendors.pjax_js){ %>
+<%- js(theme.vendors.pjax_js) %>
+<% }else{ %>
+<%- js('lib/pjax/pjax.js')%>
+<% }} %>
+
+<%- js(['js/utils', 'js/zui', 'js/script']) %>
+
 <% if(theme.leancloud.enable){ %>
 <%- partial('_partial/common/visitors') %>
 <% } %>
 
 <% if(theme.daovoice.enable){ %>
-  <%- partial('_partial/common/daovoice') %>
+<%- partial('_partial/common/daovoice') %>
 <% } %>
 
-<%- js(['js/utils', 'js/zui', 'js/script']) %>
-
 <% if(theme.seo.baidu_auto_push) { %>
-<script>
+<script defer>
   (function () {
     var bp = document.createElement('script');
     var curProtocol = window.location.protocol.split(':')[0];
@@ -58,26 +58,12 @@
 </script>
 <% } %>
 
-<% if(theme.analytics.baidu) { %>
-<script>
-  var _hmt = _hmt || [];
-  (function () {
-    var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?<%- theme.analytics.baidu %>";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s)
-  })();
-</script>
-<% } %>
+<%- (theme.analytics.baidu && js({ src: 'https://hm.baidu.com/hm.js?' + theme.analytics.baidu, defer: true })) %>
 
-<% if(theme.analytics.cnzz) { %>
-<script src="https://s9.cnzz.com/z_stat.php?id=<%- theme.analytics.cnzz %>&web_id=127888982<%- theme.analytics.cnzz %>">
-  $("a[title='站长统计']").remove();
-</script>
-<% } %>
+<%- (theme.analytics.cnzz &&  js({src: 'https://s9.cnzz.com/z_stat.php?id=' + theme.analytics.cnzz + '&web_id=127888982' + theme.analytics.cnzz, defer: true})) %>
 
 <% if(theme.analytics.tencent) { %>
-<script>
+<script defer>
   var _mtac = {};
   (function () {
     var mta = document.createElement("script");
@@ -94,4 +80,4 @@
 <%- theme.custom.foot  %>
 <% } %>
 
-<%- (theme.custom.js && js(theme.custom.js)) %>
+<%- (theme.custom.js && js({ src: theme.custom.js, defer: true })) %>
