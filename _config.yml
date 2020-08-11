@@ -119,7 +119,7 @@ changyan:
 # Daovoice
 daovoice:
   enable: true
-  appId: a7794e2b
+  appId: abcdefg  # app_id
 
 # Lazyload
 lazyload:
