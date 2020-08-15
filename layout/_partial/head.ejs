@@ -91,24 +91,27 @@ var description = '';
         enable: <%= theme.lazyload.enable %>,
         loadingImage: '<%= theme.lazyload.loadingImage %>',
       },
-      donate_alipay: '<%= theme.donate.alipay %>',
-      donate_wechat: '<%= theme.donate.wechat %>',
+      donate: {
+        enable: <%= theme.donate.enable %>,
+        alipay: '<%= theme.donate.alipay %>',
+        wechat: '<%= theme.donate.wechat %>'
+      },
       motto: {
         api: '<%= theme.preview.motto.api %>',
         default: '<%= theme.preview.motto.default %>'
       },
       galleries: {
-        enable: '<%= theme.galleries.enable %>'
+        enable: <%= theme.galleries.enable %>
       },
       fab: {
-        enable: '<%= theme.fab.enable %>',
-        alwaysShow: '<%= theme.fab.alwaysShow %>'
+        enable: <%= theme.fab.enable %>,
+        alwaysShow: <%= theme.fab.alwaysShow %>
       },
       carrier: {
-        enable: '<%= theme.carrier.enable %>'
+        enable: <%= theme.carrier.enable %>
       },
       daovoice: {
-        enable: '<%= theme.daovoice.enable %>'
+        enable: <%= theme.daovoice.enable %>
       }
     }
   </script>

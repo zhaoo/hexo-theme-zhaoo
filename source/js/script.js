@@ -98,7 +98,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       $(".fab-menu, .fab-up .fab-daovoice").on("click", function () {
         fn.freezeFab();
       });
-      if (CONFIG.fab.alwaysShow === true) {
+      if (CONFIG.fab.alwaysShow) {
         fn.showFab();
       } else {
         $(window).scroll(fn.scroolFab);
@@ -141,7 +141,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         $(".donate .qrcode").show();
       });
       $(".donate .icon").children("a").on("mouseover", function () {
-        $(".donate .qrcode img").attr('src', eval('CONFIG.donate_' + $(this).attr('id')))
+        $(".donate .qrcode img").attr('src', eval('CONFIG.donate.' + $(this).attr('id')))
       });
       $(".donate .icon").on("mouseout", function () {
         $(".donate .qrcode").hide();
@@ -206,7 +206,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     if (CONFIG.lazyload.enable) {
       action.lazyload();
     }
-    if (CONFIG.donate_alipay || CONFIG.donate_wechat) {
+    if (CONFIG.donate.enable) {
       action.donate();
     }
     if (CONFIG.galleries.enable) {
