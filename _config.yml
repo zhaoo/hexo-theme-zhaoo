@@ -7,6 +7,9 @@ color:
   default: "#33333D"
   link: "#FFBE5B"
 
+# Background Image
+background_image:
+
 # Favicon
 favicon:
   small: /images/icons/favicon-16x16.png
