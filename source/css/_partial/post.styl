@@ -85,105 +85,109 @@
         border-left 4px solid $color-link
         p
           margin 0
-  .extra
-    margin-top 50px
-    .copyright
-      border-left 4px solid $color-link
-      background-color $color-background-deep
-      list-style none
-      padding 15px 20px
-      margin-bottom 50px
-      .carrier-data
-        opacity 0
-        position fixed
-        left -1000px
-      li
-        margin 5px 0
-        a
-          text-decoration underline !important
-          word-wrap break-word
-    .donate
-      display block
-      text-align center
-      margin-bottom 20px
-      position relative
-      .qrcode
-        padding 10px
-        width 200px
-        height 200px
-        box-shadow $color-shadow
-        position absolute
-        left calc(50% - 100px)
-        bottom 70px
-        z-index 10
-        display none
-        img
-          position absolute
-          top 0
-          left 0
-          display block
-      .icon
-        position relative
-        display inline-block
-        border 1px solid #E0E0E0
-        background-color #FFFFFF
-        border-radius 2em
-        padding 8px 16px
-        z-index 20
-        a, i
-          font-size 1.25em
-        #alipay:hover
-          color #108EE9
-        #wechat:hover
-          color #09BB07
-        #alipay
-          padding-right 8px
-          border-right 1px solid #E0E0E0
-        #wechat
-          padding-left 8px
-    .tag-list
-      padding 0 0 1em 0
-      border-bottom #DDDDDD dashed 1px
-      .tag-list-item
-        display inline-block
-        list-style-type none
-        margin-right 1em
-        padding 5px 10px
+    .extra
+      margin-top 50px
+      .copyright
+        border-left 4px solid $color-link
         background-color $color-background-deep
-      .tag-list-item:hover
-        cursor pointer
+        list-style none
+        padding 15px 20px
+        margin-bottom 50px
+        .carrier-data
+          opacity 0
+          position fixed
+          left -1000px
+        li
+          margin 5px 0
+          a
+            text-decoration underline !important
+            word-wrap break-word
+      .donate
+        display block
+        text-align center
+        margin-bottom 20px
+        position relative
+        .qrcode
+          padding 10px
+          width 200px
+          height 200px
+          box-shadow $color-shadow
+          position absolute
+          left calc(50% - 100px)
+          bottom 70px
+          z-index 10
+          display none
+          img
+            position absolute
+            top 0
+            left 0
+            display block
+        .icon
+          position relative
+          display inline-block
+          border 1px solid #E0E0E0
+          background-color #FFFFFF
+          border-radius 2em
+          padding 8px 16px
+          z-index 20
+          a, i
+            font-size 1.25em
+          #alipay:hover
+            color #108EE9
+          #wechat:hover
+            color #09BB07
+          #alipay
+            padding-right 8px
+            border-right 1px solid #E0E0E0
+          #wechat
+            padding-left 8px
+      .tag-list
+        padding 0 0 1em 0
+        border-bottom #DDDDDD dashed 1px
+        .tag-list-item
+          display inline-block
+          list-style-type none
+          margin-right 1em
+          padding 5px 10px
+          background-color $color-background-deep
+          a
+            display inline-block
+            line-height 20px
+            height 20px
+        .tag-list-item:hover
+          cursor pointer
+          background-color $color-link
+          a
+            color $color-white
+      .nav
+        margin-top 1em
+        display flex
+        justify-content space-between
+        i
+          font-size 1em
+    .comments
+      margin-top 50px
+      .btn
+        display block
+        padding 10px
+        background-color $color-background-deep
+        text-align center
+      .btn:hover
         background-color $color-link
-        a
-          color $color-white
-    .nav
-      margin-top 1em
-      display flex
-      justify-content space-between
-      i
-        font-size 1em
-  .comments
-    margin-top 50px
-    .btn
-      display block
-      padding 10px
-      background-color $color-background-deep
-      text-align center
-    .btn:hover
-      background-color $color-link
-      color $color-white
-      transition $transition
-      cursor pointer
-    #gitalk, .gt-header-textarea, .gt-btn
-      border-radius 0 !important
-    .vwrap, .vbtn
-      border-radius 0 !important
-    .gt-avatar
-      img
-        border-radius 50% !important
+        color $color-white
         transition $transition
-      img:hover
-        -webkit-transform rotate(180deg)
-        -moz-transform rotate(180deg)
-        -ms-transform rotate(180deg)
-        -o-transform rotate(180deg)
-        transition $transition
+        cursor pointer
+      #gitalk, .gt-header-textarea, .gt-btn
+        border-radius 0 !important
+      .vwrap, .vbtn
+        border-radius 0 !important
+      .gt-avatar
+        img
+          border-radius 50% !important
+          transition $transition
+        img:hover
+          -webkit-transform rotate(180deg)
+          -moz-transform rotate(180deg)
+          -ms-transform rotate(180deg)
+          -o-transform rotate(180deg)
+          transition $transition

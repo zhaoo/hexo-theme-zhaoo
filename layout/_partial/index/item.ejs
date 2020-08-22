@@ -19,7 +19,7 @@
         <p class="substr-3"><%- excerpt %></p>
       </div>
       <div class="post-info">
-        <span class="post-info-item"><i class="iconfont iconcalendar"></i><%- date(post.date, "YYYY-MM-DD") %></span
+        <span class="post-info-item"><i class="iconfont iconcalendar"></i><%- date(post.date, "MMM DD, YYYY") %></span
           class="post-info-item">
         <% if(theme.leancloud.enable) { %>
         <span class="post-info-item"><i class="iconfont iconeye"></i><span id="<%= url_for(post.path) %>"
