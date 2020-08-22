@@ -1,37 +1,36 @@
-<script defer>
-  ZHAOO.utils.loadScript('//cdn.jsdelivr.net/npm/leancloud-storage@4.1.0/dist/av-min.js', function () {
+<script>
+  $.getScript("//cdn.jsdelivr.net/npm/leancloud-storage@4.1.0/dist/av-min.js", () => {
+
     AV.init({
       appId: '<%- theme.leancloud.appId %>',
       appKey: '<%- theme.leancloud.appKey %>',
       serverURLs: '<%- theme.leancloud.serverURLs %>',
     });
 
-    function showCount(Counter) {
-      $(".leancloud").each(function (e) {
-        (function (e) {
-          var url = $(".leancloud").eq(e).attr('id').trim();
-          var query = new AV.Query("Counter");
-          query.equalTo("words", url);
-          query.count().then(function (number) {
-            $(".leancloud").eq(e).text(number ? number : '--');
-          }, function (error) {});
-        })(e)
-      })
+    const showCount = (Counter) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud").each(async (e) => {
+        const url = $(".leancloud").eq(e).attr('id').trim();
+        const query = new AV.Query("Counter");
+        query.equalTo("words", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud").eq(e).text(count ? count : '--');
+      });
     }
 
-    function addCount(Counter) {
-      var url = $(".leancloud").length === 1 ? $(".leancloud").attr('id').trim() : '<%- config.url %>';
-      var Counter = AV.Object.extend("Counter");
+    const addCount = (Counter) => {
+      const url = $(".leancloud").length === 1 ? $(".leancloud").attr('id').trim() : '<%- config.url %>';
       var query = new Counter;
       query.save({
         words: url
-      }).then(function (object) {})
+      });
     }
 
     $(function () {
-      var Counter = AV.Object.extend("Counter");
+      const Counter = AV.Object.extend("Counter");
       addCount(Counter);
       showCount(Counter);
     });
+    
   });
 </script>

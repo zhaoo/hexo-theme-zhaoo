@@ -32,7 +32,7 @@
 <%- js('lib/pjax/pjax.js')%>
 <% }} %>
 
-<%- js(['js/utils', 'js/zui', 'js/script']) %>
+<%- js(['js/utils', 'js/modules', 'js/zui', 'js/script']) %>
 
 <% if(theme.leancloud.enable){ %>
 <%- partial('_partial/common/visitors') %>
@@ -43,7 +43,7 @@
 <% } %>
 
 <% if(theme.seo.baidu_auto_push) { %>
-<script defer>
+<script>
   (function () {
     var bp = document.createElement('script');
     var curProtocol = window.location.protocol.split(':')[0];
@@ -58,12 +58,24 @@
 </script>
 <% } %>
 
-<%- (theme.analytics.baidu && js({ src: 'https://hm.baidu.com/hm.js?' + theme.analytics.baidu, defer: true })) %>
+<script>
+  var _hmt = _hmt || [];
+  (function () {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?4c204d8bc027a0455b5fc642ac334ca8";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
 
-<%- (theme.analytics.cnzz &&  js({src: 'https://s9.cnzz.com/z_stat.php?id=' + theme.analytics.cnzz + '&web_id=127888982' + theme.analytics.cnzz, defer: true})) %>
+<% if(theme.analytics.baidu) { %>
+<script defer src='https://hm.baidu.com/hm.js?<%- theme.analytics.baidu %>'></script>
+<% } %>
+
+<%- (theme.analytics.cnzz && js({ src: 'https://s9.cnzz.com/z_stat.php?id=' + theme.analytics.cnzz + '&web_id=' + theme.analytics.cnzz, defer: true })) %>
 
 <% if(theme.analytics.tencent) { %>
-<script defer>
+<script>
   var _mtac = {};
   (function () {
     var mta = document.createElement("script");
@@ -77,7 +89,7 @@
 <% } %>
 
 <% if(theme.custom.foot) { %>
-<%- theme.custom.foot  %>
+<%- theme.custom.foot %>
 <% } %>
 
 <%- (theme.custom.js && js({ src: theme.custom.js, defer: true })) %>
