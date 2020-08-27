@@ -19,13 +19,11 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       $(".footer").removeClass("blur");
     },
     activeFab: function () {
-      $(".fab-menu").addClass("fab-menu-active");
       $(".fab-up").addClass("fab-up-active");
       $(".fab-plus").addClass("fab-plus-active");
       $(".fab-daovoice").addClass("fab-daovoice-active");
     },
     freezeFab: function () {
-      $(".fab-menu").removeClass("fab-menu-active");
       $(".fab-up").removeClass("fab-up-active");
       $(".fab-plus").removeClass("fab-plus-active");
       $(".fab-daovoice").removeClass("fab-daovoice-active");
@@ -50,6 +48,46 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       $('body,html').animate({
         scrollTop: '0px'
       }, 800);
+    },
+    navbar: {
+      mobile: function () {
+        $(".navbar").addClass("hide");
+        $(window).on("scroll", ZHAOO.utils.throttle(function () {
+          var before = $(this).scrollTop();
+          $(window).on("scroll", function () {
+            var after = $(this).scrollTop();
+            if (before > after && after > 300) {
+              $(".navbar").removeClass("hide");
+            } else if (before < after || after < 300) {
+              $(".navbar").addClass("hide");
+            }
+            before = after;
+          })
+        }, 500));
+      },
+      desktop: function () {
+        function center() {
+          if ($(window).scrollTop() > 60) {
+            $(".navbar .center").addClass("hide");
+          } else {
+            $(".navbar .center").removeClass("hide");
+          }
+        }
+        center();
+        $(window).on("scroll", ZHAOO.utils.throttle(function () {
+          center();
+          var before = $(this).scrollTop();
+          $(window).on("scroll", function () {
+            var after = $(this).scrollTop();
+            if (before > after) {
+              $(".navbar").removeClass("hide");
+            } else if (before < after) {
+              $(".navbar").addClass("hide");
+            }
+            before = after;
+          })
+        }, 500));
+      },
     }
   }
 
@@ -81,21 +119,11 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
           fn.activeFab();
         }
       });
-      $(".fab-menu").on("click", function () {
-        if ($(".menu").hasClass("menu-active")) {
-          fn.hideMenu();
-        } else {
-          fn.showMenu();
-          if (CONFIG.fab.alwaysShow === false) {
-            fn.hideFab();
-          }
-        }
-      });
       $(".fab-daovoice").on("click", function () {
         daovoice('openMessages');
         fn.freezeFab();
       });
-      $(".fab-menu, .fab-up .fab-daovoice").on("click", function () {
+      $(".fab-up .fab-daovoice").on("click", function () {
         fn.freezeFab();
       });
       if (CONFIG.fab.alwaysShow) {
@@ -107,6 +135,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     menu: function () {
       $(".menu-close").on("click", function () {
         fn.hideMenu();
+        $(".navbar").removeClass("hide");
       });
     },
     scroolToTop: function () {
@@ -187,6 +216,18 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         document.execCommand("Copy");
         ZHAOO.zui.message({ text: '已复制到剪切板', type: 'success' });
       }, 3000));
+    },
+    navbar: function () {
+      if (ZHAOO.utils.isDesktop()) {
+        fn.navbar.desktop();
+      }
+      if (ZHAOO.utils.isMobile()) {
+        fn.navbar.mobile();
+      }
+      $(".j-navbar-menu").on("click", function () {
+        fn.showMenu();
+        $(".navbar").addClass("hide");
+      });
     }
   }
 
@@ -194,6 +235,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     action.smoothScroll();
     action.loading();
     action.fab();
+    action.navbar();
     action.menu();
     action.scroolToTop();
     action.motto();

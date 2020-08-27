@@ -1,0 +1,38 @@
+.navbar
+  position fixed
+  display flex
+  align-items: center
+  justify-content: space-between
+  height 55px
+  width 100%
+  top 0
+  z-index 200
+  background-color rgba(255, 255, 255, 0.9)
+  transition transform 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9)
+  &.hide
+    transform translateY(-55px)
+  > div
+    flex 1
+    display inline-flex
+    text-align center
+  .left
+    justify-content: flex-start
+    padding-left: 15px
+  .center
+    justify-content: center
+    opacity 0
+    transition opacity 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9)
+    &.hide
+      opacity 1
+  .right
+    justify-content: flex-end
+    padding-right: 15px
+  .iconfont
+    font-size 22px
+    color: $color-default
+    &:hover
+      cursor pointer
+@media (max-width 768px)
+  .navbar
+    .center
+      display none

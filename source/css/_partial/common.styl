@@ -38,9 +38,9 @@
     justify-content center
     align-items center
     .preview-motto, .preview-cursor
-      font-size 3em
+      font-size 3.5em
       font-family 'Quicksand', 'Vollkorn', serif
-      font-weight 300
+      font-weight 500
       color convert(hexo-config('preview.motto.color')) || #000000
       margin 0
       @media (max-width 768px)
@@ -137,19 +137,13 @@
   z-index 90
   visibility hidden
 .fab-up-active
-  bottom 125px
-  visibility visible
-.fab-menu
-  z-index 80
-  visibility hidden
-.fab-menu-active
   bottom 70px
   visibility visible
 .fab-daovoice
   z-index 10
   visibility hidden
 .fab-daovoice-active
-  bottom 180px
+  bottom 125px
   visibility visible
 // Paginator
 .paginator
@@ -170,6 +164,7 @@
 //Underline
 .underline
   position relative
+  color $color-default !important
 .underline:before
   content: ""
   position: absolute

@@ -50,7 +50,26 @@
         }
       }
       return throttled;
-    }
+    },
+    hasMobileUA: function () {
+      var nav = window.navigator;
+      var ua = nav.userAgent;
+      var pa = /iPad|iPhone|Android|Opera Mini|BlackBerry|webOS|UCWEB|Blazer|PSP|IEMobile|Symbian/g;
+      return pa.test(ua);
+    },
+    isTablet: function () {
+      return (
+        window.screen.width > 767 &&
+        window.screen.width < 992 &&
+        this.hasMobileUA()
+      );
+    },
+    isMobile: function () {
+      return window.screen.width < 767 && this.hasMobileUA();
+    },
+    isDesktop: function () {
+      return !this.isTablet() && !this.isMobile();
+    },
   }
 
 })(jQuery);

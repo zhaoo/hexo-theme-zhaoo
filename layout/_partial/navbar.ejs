@@ -1,0 +1,22 @@
+<% 
+  var title = null;
+  if (is_post() || is_page()) {
+    title = page.title;
+  } else if (is_archive()) {
+    title = '归档';
+  } else if (is_category()) {
+    title = '分类';
+  } else if (is_tag()) {
+    title = '标签';
+  } 
+%>
+
+<% if (title) { %>
+<nav class="navbar">
+  <div class="left"></div>
+  <div class="center"><%- title %></div>
+  <div class="right">
+    <i class="iconfont iconmenu j-navbar-menu"></i>
+  </div>
+</nav>
+<% } %>
