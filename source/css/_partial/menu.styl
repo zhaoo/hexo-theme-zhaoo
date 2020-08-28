@@ -1,41 +1,42 @@
 // Menu
 .menu
   position fixed
-  width 100%
-  height 100%
+  display none
+  width 100vw
+  height 100vh
   top 0
   background-color rgba(255, 255, 255, 0.7)
   z-index 50
-  display none
-  .menu-close
-    position absolute
-    right 15px
-    top 15px
-    cursor pointer
-    i
-      color $color-default
-      font-size 24px
-  .menu-content
+  .menu-wrap
     width 100%
     height 100%
-    text-align center
-    padding 0
-    @media (max-width: 576px)
-      position relative
-      top 50%
-      transform translateY(-25%)
-    .menu-item
-      font-size 2em
-      display inline-block
-      margin 20px
-      margin-top 200px
-      @media (max-width: 576px)
-        display block
-        margin 10px
-  .menu-copyright
-    position absolute
-    bottom 20px
-    width 100%
-    text-align center
-    @media (max-width: 576px)
-      font-size 0.75em
+    display flex
+    justify-content center
+    align-items center
+    .menu-content
+      padding 0
+      display flex
+      @media (min-width 576px)
+        position absolute
+        top 30%
+      @media (max-width 576px)
+        flex-direction column
+      .menu-item
+        font-size 2em
+        list-style none
+        margin 5px 10px
+    .menu-close
+      position absolute
+      right 15px
+      top 15px
+      cursor pointer
+      i
+        color $color-default
+        font-size 24px
+    .menu-copyright
+      position absolute
+      bottom 20px
+      width 100%
+      text-align center
+      @media (max-width 576px)
+        font-size 0.75em

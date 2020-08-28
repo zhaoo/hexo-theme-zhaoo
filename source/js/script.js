@@ -5,14 +5,15 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
 
   var fn = {
     showMenu: function () {
-      $(".menu").addClass("menu-active").fadeIn(300);
+      $(".menu").fadeIn(300);
       $("body").addClass("lock-screen");
       $("main").addClass("blur");
       $(".preview").addClass("blur");
       $(".footer").addClass("blur");
+      fn.hideFab();
     },
     hideMenu: function () {
-      $(".menu").removeClass("menu-active").fadeOut(300);
+      $(".menu").fadeOut(300);
       $("body").removeClass("lock-screen");
       $("main").removeClass("blur");
       $(".preview").removeClass("blur");
@@ -215,15 +216,17 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         $(".j-carrier-data").select();
         document.execCommand("Copy");
         ZHAOO.zui.message({ text: '已复制到剪切板', type: 'success' });
-      }, 3000));
+      }, 1000));
     },
     navbar: function () {
-      if (ZHAOO.utils.isDesktop()) {
-        fn.navbar.desktop();
-      }
-      if (ZHAOO.utils.isMobile()) {
-        fn.navbar.mobile();
-      }
+      $(window).resize(ZHAOO.utils.throttle(function () {
+        if (ZHAOO.utils.isDesktop()) {
+          fn.navbar.desktop();
+        }
+        if (ZHAOO.utils.isMobile()) {
+          fn.navbar.mobile();
+        }
+      }, 1000)).resize();
       $(".j-navbar-menu").on("click", function () {
         fn.showMenu();
         $(".navbar").addClass("hide");
