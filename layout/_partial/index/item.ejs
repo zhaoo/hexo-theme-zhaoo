@@ -13,7 +13,7 @@
       <% if(post.excerpt.length > 0) { %>
       <% var excerpt = truncate(strip_html(post.excerpt), {length: 100}) %>
       <% } else { %>
-      <% var excerpt = truncate(strip_html(post.excerpt), {length: 100}) %>
+      <% var excerpt = truncate(strip_html(post.more), {length: 100}) %>
       <% } %>
       <div class="post-excerpt">
         <p class="substr-3"><%- excerpt %></p>

@@ -6,9 +6,19 @@ module.exports.carrier = function (hexo) {
     if (!config.carrier || !config.carrier.enable || !config.carrier.type) {
       return;
     }
-    var data = '没有抓到内容哦~';
-    if (config.carrier.type === 'html') {
-      data = this.page.content;
+    var data;
+    switch (config.carrier.type) {
+      case 'html':
+        data = this.page.content;
+        break;
+      case 'markdown':
+        data = this.page.raw;
+        break;
+      case 'text':
+        data = this.strip_html(this.page.content);
+        break;
+      default:
+        data = '没有抓到内容哦~';
     }
     return data;
   });
