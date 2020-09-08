@@ -1,9 +1,12 @@
 <div class="preview">
+  <nav class="navbar">
+    <i class="iconfont iconmenu j-navbar-menu"></i>
+  </nav>
   <div class="preview-image">
     <h2 class="preview-motto" id="motto"></h2>
     <!-- <span class="preview-cursor">|</span> -->
     <% if (theme.preview.model === 'cloud') { %>
-      <%- image_tag("/images/theme/cloud.png", {class: "preview-overlay", draggable:"false"}) %>
+    <%- image_tag("/images/theme/cloud.png", {class: "preview-overlay", draggable:"false"}) %>
     <% } else if (theme.preview.model === 'wave') { %>
     <div class="preview-overlay">
       <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"

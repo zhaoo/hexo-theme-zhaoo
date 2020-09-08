@@ -25,6 +25,25 @@
   100%
     opacity 1
 .preview
+  .navbar
+    position absolute
+    display block
+    top 15px
+    right 15px
+    z-index 200
+    width 40px
+    height 40px
+    text-align center
+    line-height 40px
+    border-radius 50%
+    background-color rgba(0, 0, 0, 0.5)
+    opacity 0.5
+    transition transform 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9)
+    &.hide
+      transform translateY(-55px)
+    .iconfont
+      font-size 18px
+      color $color-white
   .preview-image
     z-index 40
     height 90vh
@@ -160,18 +179,18 @@
   .space
     color $color-default
     background-color rgba(0, 0, 0, 0)
-//Underline
+// Underline
 .underline
   position relative
   color $color-default !important
 .underline:before
-  content: ""
-  position: absolute
-  bottom: -3px
-  width: 100%
-  background: $color-default
-  height: 2px;
-  transition: transform 0.2s
-  transform: scaleX(0)
+  content ''
+  position absolute
+  bottom -3px
+  width 100%
+  background $color-default
+  height 2px
+  transition transform 0.2s
+  transform scaleX(0)
 .underline:hover:before
-  transform: scaleX(1)
+  transform scaleX(1)

@@ -10,10 +10,10 @@
           if(post.date.year() !== year) {
             year = post.date.year();
         %>
-        <h3 class="archive-year"><%= year %></h3>
+        <h3 class="archive-year"><%= year %> 年</h3>
         <% } %>
         <div class="archive-item">
-          <a class="archive-date" href="<%- url_for(post.path) %>"><%= date(post.date, "MM/DD") %></a>
+          <a class="archive-date" href="<%- url_for(post.path) %>"><%= date(post.date, "MMMM DD") %></a>
           <a class="archive-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
         </div>
         <% } %>
