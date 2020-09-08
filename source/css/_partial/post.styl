@@ -1,194 +1,195 @@
 .article
-  max-width 700px
-  margin 0 auto
-  margin-top 60px
-  box-shadow $color-shadow
-  @media (max-width: 576px)
-    margin 0
-  .head
-    position relative
-    .head-mask
-      position absolute
-      bottom 0
-      width 100%
-      background linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75))
+  .wrap
+    max-width 700px
+    margin 0 auto
+    margin-top 70px
+    box-shadow $color-shadow
+    @media (max-width 576px)
+      margin 0
+    .head
+      position relative
+      .head-mask
+        position absolute
+        bottom 0
+        width 100%
+        background linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75))
+        padding 30px
+        .head-title
+          color $color-white
+          font-size 2em
+        .head-info
+          color $color-white
+          margin-top 10px
+          .post-info-item
+            margin-right 10px
+            i
+              font-size 1em
+              margin-right 5px
+    .main
       padding 30px
-      .head-title
-        color $color-white
-        font-size 2em
-      .head-info
-        color $color-white
-        margin-top 10px
-        .post-info-item
-          margin-right 10px
+      background-color $color-background
+      .content
+        line-height 2
+        color $color-middle
+        for $i in 1 .. 6
+          h{$i}
+            font-size 1.6 - $i * 0.1 em
+            margin-bottom 1em
+            margin-top 2em
+            color $color-default
+            font-weight bold
+        p, li
+          code
+            font-size 1em
+            background-color $color-background-deep
+            padding 2px 5px
+            border-radius 2px
+            color $color-link
+        a
+          text-decoration underline !important
+        kbd
+          padding 0.2em 0.4em
+          font-size 87.5%
+          color $color-background
+          background-color $color-default
+          border-radius 0.2em
+        table
+          margin 10px auto
+          min-width 100%
+          text-align center
+        table, table td, table th
+          border 1px solid $color-default
+          border-collapse collapse
+          padding 5px
+        figure
+          color $color-default
+          margin 0
+          overflow auto
+          margin-bottom 20px
+          .code
+            padding 0
+            border none
+            code
+              background-color $color-background-deep
+              padding 1em
+          > *
+            border-spacing 0px
+          .gutter
+            display none
+          table, pre
+            margin 0
+            text-align left
+            border 0
+        blockquote
+          margin 0 0 1em
+          padding 15px 20px
+          background-color $color-background-deep
+          border-left 4px solid $color-link
+          p
+            margin 0
+      .extra
+        margin-top 50px
+        .copyright
+          border-left 4px solid $color-link
+          background-color $color-background-deep
+          list-style none
+          padding 15px 20px
+          margin-bottom 50px
+          .carrier-data
+            opacity 0
+            position fixed
+            left -1000px
+          li
+            margin 5px 0
+            a
+              text-decoration underline !important
+              word-wrap break-word
+        .donate
+          display block
+          text-align center
+          margin-bottom 20px
+          position relative
+          .qrcode
+            padding 10px
+            width 200px
+            height 200px
+            box-shadow $color-shadow
+            position absolute
+            left calc(50% - 100px)
+            bottom 70px
+            z-index 10
+            display none
+            img
+              position absolute
+              top 0
+              left 0
+              display block
+          .icon
+            position relative
+            display inline-block
+            border 1px solid #E0E0E0
+            background-color #FFFFFF
+            border-radius 2em
+            padding 8px 16px
+            z-index 20
+            a, i
+              font-size 1.25em
+            #alipay:hover
+              color #108EE9
+            #wechat:hover
+              color #09BB07
+            #alipay
+              padding-right 8px
+              border-right 1px solid #E0E0E0
+            #wechat
+              padding-left 8px
+        .tag-list
+          padding 0 0 1em 0
+          border-bottom #DDDDDD dashed 1px
+          .tag-list-item
+            display inline-block
+            list-style-type none
+            margin-right 1em
+            padding 5px 10px
+            background-color $color-background-deep
+            a
+              display inline-block
+              line-height 20px
+              height 20px
+          .tag-list-item:hover
+            cursor pointer
+            background-color $color-link
+            a
+              color $color-white
+        .nav
+          margin-top 1em
+          display flex
+          justify-content space-between
           i
             font-size 1em
-            margin-right 5px
-  .main
-    padding 30px
-    background-color $color-background
-    .content
-      line-height 2
-      color $color-middle
-      for $i in 1 .. 6
-        h{$i}
-          font-size 1.6 - $i * 0.1 em
-          margin-bottom 1em
-          margin-top 2em
-          color $color-default
-          font-weight bold
-      p, li
-        code
-          font-size 1em
-          background-color $color-background-deep
-          padding 2px 5px
-          border-radius 2px
-          color $color-link
-      a
-        text-decoration underline !important
-      kbd
-        padding 0.2em 0.4em
-        font-size 87.5%
-        color $color-background
-        background-color $color-default
-        border-radius 0.2em
-      table
-        margin 10px auto
-        min-width 100%
-        text-align center
-      table, table td, table th
-        border 1px solid $color-default
-        border-collapse collapse
-        padding 5px
-      figure
-        color $color-default
-        margin 0
-        overflow auto
-        margin-bottom 20px
-        .code
-          padding 0
-          border none
-          code
-            background-color $color-background-deep
-            padding 1em
-        > *
-          border-spacing 0px
-        .gutter
-          display none
-        table, pre
-          margin 0
-          text-align left
-          border 0
-      blockquote
-        margin 0 0 1em
-        padding 15px 20px
-        background-color $color-background-deep
-        border-left 4px solid $color-link
-        p
-          margin 0
-    .extra
-      margin-top 50px
-      .copyright
-        border-left 4px solid $color-link
-        background-color $color-background-deep
-        list-style none
-        padding 15px 20px
-        margin-bottom 50px
-        .carrier-data
-          opacity 0
-          position fixed
-          left -1000px
-        li
-          margin 5px 0
-          a
-            text-decoration underline !important
-            word-wrap break-word
-      .donate
-        display block
-        text-align center
-        margin-bottom 20px
-        position relative
-        .qrcode
+      .comments
+        margin-top 50px
+        .btn
+          display block
           padding 10px
-          width 200px
-          height 200px
-          box-shadow $color-shadow
-          position absolute
-          left calc(50% - 100px)
-          bottom 70px
-          z-index 10
-          display none
-          img
-            position absolute
-            top 0
-            left 0
-            display block
-        .icon
-          position relative
-          display inline-block
-          border 1px solid #E0E0E0
-          background-color #FFFFFF
-          border-radius 2em
-          padding 8px 16px
-          z-index 20
-          a, i
-            font-size 1.25em
-          #alipay:hover
-            color #108EE9
-          #wechat:hover
-            color #09BB07
-          #alipay
-            padding-right 8px
-            border-right 1px solid #E0E0E0
-          #wechat
-            padding-left 8px
-      .tag-list
-        padding 0 0 1em 0
-        border-bottom #DDDDDD dashed 1px
-        .tag-list-item
-          display inline-block
-          list-style-type none
-          margin-right 1em
-          padding 5px 10px
           background-color $color-background-deep
-          a
-            display inline-block
-            line-height 20px
-            height 20px
-        .tag-list-item:hover
-          cursor pointer
+          text-align center
+        .btn:hover
           background-color $color-link
-          a
-            color $color-white
-      .nav
-        margin-top 1em
-        display flex
-        justify-content space-between
-        i
-          font-size 1em
-    .comments
-      margin-top 50px
-      .btn
-        display block
-        padding 10px
-        background-color $color-background-deep
-        text-align center
-      .btn:hover
-        background-color $color-link
-        color $color-white
-        transition $transition
-        cursor pointer
-      #gitalk, .gt-header-textarea, .gt-btn
-        border-radius 0 !important
-      .vwrap, .vbtn
-        border-radius 0 !important
-      .gt-avatar
-        img
-          border-radius 50% !important
+          color $color-white
           transition $transition
-        img:hover
-          -webkit-transform rotate(180deg)
-          -moz-transform rotate(180deg)
-          -ms-transform rotate(180deg)
-          -o-transform rotate(180deg)
-          transition $transition
+          cursor pointer
+        #gitalk, .gt-header-textarea, .gt-btn
+          border-radius 0 !important
+        .vwrap, .vbtn
+          border-radius 0 !important
+        .gt-avatar
+          img
+            border-radius 50% !important
+            transition $transition
+          img:hover
+            -webkit-transform rotate(180deg)
+            -moz-transform rotate(180deg)
+            -ms-transform rotate(180deg)
+            -o-transform rotate(180deg)
+            transition $transition

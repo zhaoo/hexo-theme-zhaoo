@@ -94,15 +94,17 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
 
   var action = {
     smoothScroll: function () {
-      $(".smooth-scroll").click(function () { // a[href *=#], area[href *=#]
+      // a[href *=#], area[href *=#]
+      $(".smooth-scroll").click(function () {
         if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
-          var $target = $(this.hash);
+          var $target = $(decodeURIComponent(this.hash));
           $target = $target.length && $target || $("[name=" + this.hash.slice(1) + "]");
           if ($target.length) {
             var targetOffset = $target.offset().top;
             $("html,body").animate({
               scrollTop: targetOffset
-            }, 800);
+            }, 500);
+            location.hash = this.hash;
             return false;
           }
         }

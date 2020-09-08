@@ -1,26 +1,23 @@
 <article class="article">
-  <%- partial('_partial/post/head') %>
-  <section class="main">
-    <section class="content">
-      <%- page.more %>
-    </section>
-    <section class="extra">
-      <% if (theme.post_copyright.enable) { %>
-        <%- partial('_partial/post/copyright') %>
-      <% } %>
-      <% if (theme.donate.enable) { %>
-        <%- partial('_partial/post/donate') %>
-      <% } %>
-      <%- partial('_partial/post/tag') %>
-      <%- partial('_partial/post/nav') %>
-    </section>
-    <% if (theme.comments.enable) { %>
-      <section class="comments">
-        <% if (theme.comments.button) { %>
-          <div class="btn" id="comments-btn">查看评论</div>
-        <% } %>
-        <%- partial('_partial/common/comments/' + theme.comments.type) %>
+  <div class="wrap">
+    <%- partial('_partial/post/head') %>
+    <section class="main">
+      <section class="content">
+        <%- page.more %>
       </section>
-    <% } %>
-  </section>
+      <section class="extra">
+        <% if (theme.post_copyright.enable) { %>
+        <%- partial('_partial/post/copyright') %>
+        <% } %>
+        <% if (theme.donate.enable) { %>
+        <%- partial('_partial/post/donate') %>
+        <% } %>
+        <%- partial('_partial/post/tag') %>
+        <%- partial('_partial/post/nav') %>
+      </section>
+      <% if (theme.comments.enable) { %>
+      <%- partial('_partial/post/comments') %>
+      <% } %>
+    </section>
+  </div>
 </article>

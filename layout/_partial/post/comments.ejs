@@ -1,0 +1,6 @@
+<section class="comments">
+  <% if (theme.comments.button) { %>
+  <div class="btn" id="comments-btn">查看评论</div>
+  <% } %>
+  <%- partial('_partial/post/comments/' + theme.comments.type) %>
+</section>
