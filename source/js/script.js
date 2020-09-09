@@ -257,7 +257,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       action.donate();
     }
     if (CONFIG.galleries.enable) {
-      action.galleries();
+      // action.galleries();
     }
     if (CONFIG.lazyload && CONFIG.fancybox) {
       action.fixLazyloadFancybox();

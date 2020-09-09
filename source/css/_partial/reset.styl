@@ -52,15 +52,14 @@ body
 // Container
 .container
   width 100%
-  margin-right auto
-  margin-left auto
-  @media (min-width: 576px)
+  margin 0 auto
+  @media (min-width 576px)
     max-width 540px
-  @media (min-width: 768px)
+  @media (min-width 768px)
     max-width 720px
-  @media (min-width: 992px)
+  @media (min-width 992px)
     max-width 960px
-  @media (min-width: 1200px)
+  @media (min-width 1200px)
     max-width 1140px
 // Grid
 .row
@@ -74,7 +73,7 @@ for $i in 1 .. 12
     width 100%
     padding-right 15px
     padding-left 15px
-    @media (max-width: 576px)
+    @media (max-width 576px)
       padding-right 0
       padding-left 0
 col-attr()
@@ -84,15 +83,15 @@ col-attr()
 for $i in 1 .. 12
   .col-{$i}
     col-attr round(($i * 100 / 12) %, 6)
-@media (min-width: 576px)
+@media (min-width 576px)
   for $i in 1 .. 12
     .col-sm-{$i}
       col-attr round(($i * 100 / 12) %, 6)
-@media (min-width: 768px)
+@media (min-width 768px)
   for $i in 1 .. 12
     .col-md-{$i}
       col-attr round(($i * 100 / 12) %, 6)
-@media (min-width: 992px)
+@media (min-width 992px)
   for $i in 1 .. 12
     .col-lg-{$i}
       col-attr round(($i * 100 / 12) %, 6)
