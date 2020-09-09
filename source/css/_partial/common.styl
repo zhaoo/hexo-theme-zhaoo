@@ -30,7 +30,6 @@
     display block
     top 15px
     right 15px
-    z-index 200
     width 40px
     height 40px
     text-align center
@@ -38,9 +37,6 @@
     border-radius 50%
     background-color rgba(0, 0, 0, 0.5)
     opacity 0.5
-    transition transform 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9)
-    &.hide
-      transform translateY(-55px)
     .iconfont
       font-size 18px
       color $color-white
@@ -63,7 +59,9 @@
       color convert(hexo-config('preview.motto.color')) || #000000
       margin 0
       @media (max-width 768px)
-        font-size 2em
+        font-size 1.5em
+        padding 15px
+        text-align center
     .preview-cursor
       opacity 1
       animation-duration 1s

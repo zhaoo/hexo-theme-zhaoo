@@ -225,7 +225,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         if (ZHAOO.utils.isDesktop()) {
           fn.navbar.desktop();
         }
-        if (ZHAOO.utils.isMobile()) {
+        if (ZHAOO.utils.isMobile() && !CONFIG.isHome) {
           fn.navbar.mobile();
         }
       }, 1000)).resize();

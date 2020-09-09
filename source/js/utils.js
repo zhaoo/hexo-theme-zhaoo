@@ -69,7 +69,7 @@
     },
     isDesktop: function () {
       return !this.isTablet() && !this.isMobile();
-    },
+    }
   }
 
 })(jQuery);
