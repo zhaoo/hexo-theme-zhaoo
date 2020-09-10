@@ -1,6 +1,9 @@
 // Body
 *, *::before, *::after
   box-sizing border-box
+html
+  if hexo-config("gray.enable")
+    filter grayscale(100%)
 body
   margin 0
   font-size 14px

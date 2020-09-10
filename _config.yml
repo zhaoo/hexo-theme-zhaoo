@@ -53,6 +53,10 @@ fab:
   enable: true
   alwaysShow: false
 
+# Gray (Mourning Mode)
+gray:
+  enable: false
+
 # --------------------------------------------------
 # Post settings
 # --------------------------------------------------
