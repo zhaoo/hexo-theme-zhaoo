@@ -201,18 +201,6 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         $(this).parent().attr("href", $(this).attr("data-original"));
       });
     },
-    galleries: function () {
-      $("#gallery").justifiedGallery({
-        margins: 5,
-        rowHeight: 200,
-        randomize: true
-      });
-      $("#galleries").justifiedGallery({
-        margins: 10,
-        rowHeight: 250,
-        lastRow: 'center'
-      });
-    },
     carrier: function () {
       $(".j-carrier-btn").on("click", ZHAOO.utils.throttle(function () {
         $(".j-carrier-data").select();
@@ -255,9 +243,6 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     }
     if (CONFIG.donate.enable) {
       action.donate();
-    }
-    if (CONFIG.galleries.enable) {
-      // action.galleries();
     }
     if (CONFIG.lazyload && CONFIG.fancybox) {
       action.fixLazyloadFancybox();
