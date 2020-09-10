@@ -16,14 +16,14 @@ var photos = currentGallery.photos;
 var image = ''
 for (var i = 0, len = photos.length; i < len; i++) {
   var photo = photos[i];
-  image += `<a data-fancybox="images" href="${photo}"><img src="${photo}" alt="${photo}"></a>`
+  image += `<a data-fancybox="images" href="${photo}" class="item"><img src="${photo}" alt="${photo}"></a>`
 }
 %>
 
 <main id="main">
   <section class="gallery container">
     <%- partial('_partial/header', {title: page.title, subtitle: currentGallery.description}) %>
-    <div id="gallery">
+    <div class="wrap">
       <%- image %>
     </div>
   </section>
