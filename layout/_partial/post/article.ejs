@@ -6,7 +6,7 @@
         <%- page.more %>
       </section>
       <section class="extra">
-        <% if (theme.post_copyright.enable) { %>
+        <% if (theme.post_copyright.enable && page.copyright !== false) { %>
         <%- partial('_partial/post/copyright') %>
         <% } %>
         <% if (theme.donate.enable) { %>
