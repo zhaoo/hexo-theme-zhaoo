@@ -128,6 +128,11 @@ Get update from GitHub：
 $ git pull
 ```
 
+## Related
+
+* Weapp：[https://github.com/izhaoo/hexo-weapp-zhaoo](hexo-weapp-zhaoo) (Weapp for Hexo)
+* Plugin：[hexo-generator-restful](https://github.com/izhaoo/hexo-generator-restful) (RESTful API for Hexo)
+
 ## License
 
 [MIT](https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/LICENSE) License

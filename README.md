@@ -128,6 +128,11 @@ $ cd themes/zhaoo
 $ git pull
 ```
 
+## 相关
+
+* 小程序：[https://github.com/izhaoo/hexo-weapp-zhaoo](hexo-weapp-zhaoo) (为 Hexo 定制的博客小程序)
+* 插件：[hexo-generator-restful](https://github.com/izhaoo/hexo-generator-restful) (Hexo RESTful 接口)
+
 ## 协议
 
 [MIT](https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/LICENSE) License
