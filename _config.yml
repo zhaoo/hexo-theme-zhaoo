@@ -48,6 +48,9 @@ social:
   github: https://github.com/izhaoo || icongithub-fill || '#24292E'
   email: mailto:izhaoo@163.com || iconmail
 
+# Loading
+loading: /images/theme/loading.gif
+
 # Fab (FloatActionButton)
 fab:
   enable: true
@@ -133,7 +136,7 @@ daovoice:
 lazyload:
   enable: true
   onlyPost: false
-  loadingImage: /images/theme/loading.gif
+  loading: /images/theme/loading.gif
 
 # LeanCloud
 leancloud:
