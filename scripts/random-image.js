@@ -14,7 +14,7 @@ module.exports.randomImage = function (hexo) {
         });
       }
       var count = images.length;
-      res = images[Math.floor(Math.random() * (count + 1))];
+      res = images[Math.floor(Math.random() * count)];
     }
     return res;
   });
