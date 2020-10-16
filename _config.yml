@@ -65,7 +65,9 @@ gray:
 # --------------------------------------------------
 
 # Post image
-post_image: /images/theme/post-image.jpg
+post_image:
+  random: true # need to turn on galleries
+  default: /images/theme/post-image.jpg
 
 # Donate
 donate:

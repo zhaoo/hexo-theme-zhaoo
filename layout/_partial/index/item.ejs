@@ -6,7 +6,7 @@
     </div>
     <% } %>
     <a href="<%- url_for(post.path) %>" class="post-image">
-      <%- image_tag(post.image || theme.post_image, { draggable: "false" }) %>
+      <%- image_tag(post.image || random_image(), { draggable: "false" }) %>
     </a>
     <div class="post-content">
       <h3 class="post-title"><a href="<%- url_for(post.path) %>"><%= post.title %></a></h3>
