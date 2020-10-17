@@ -5,9 +5,15 @@
       <div>置顶</div>
     </div>
     <% } %>
+    <% if (post.image_id) { %>
+    <a href="<%- url_for(post.path) %>" class="post-image">
+      <%- image_tag(getImageById(post.image_id) || post.image || random_image(), { draggable: "false" }) %>
+    </a>
+    <% } else { %>
     <a href="<%- url_for(post.path) %>" class="post-image">
       <%- image_tag(post.image || random_image(), { draggable: "false" }) %>
     </a>
+    <% } %>
     <div class="post-content">
       <h3 class="post-title"><a href="<%- url_for(post.path) %>"><%= post.title %></a></h3>
       <% if(post.excerpt.length > 0) { %>

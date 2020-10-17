@@ -1,5 +1,9 @@
 <section class="head">
-  <%- image_tag(page.image || random_image(), { draggable: "false" }) %>
+  <% if (page.image_id) { %>
+    <%- image_tag(getImageById(page.image_id) || page.image || random_image(), { draggable: "false" }) %>
+  <% } else { %>
+    <%- image_tag(page.image || random_image(), { draggable: "false" }) %>
+  <% } %>
   <div class="head-mask">
     <h1 class="head-title"><%- page.title %></h1>
     <div class="head-info">
