@@ -2,14 +2,16 @@
   max-width 576px
   min-height calc(100vh - 350px)
   margin 0 auto
-  @media (max-width: 576px)
+  @media (max-width 576px)
     margin 40px 20px 0 20px
   .tags-container
     text-align center
   a
     padding 5px 10px
-    background-color $color-background-deep
+    background-color var(--color-background-secondary)
     margin-right 10px
   a:hover
     background-color $color-link
-    color $color-white !important
+    color #ffffff !important
+.dark .tags a
+  color var(--color-text) !important

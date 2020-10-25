@@ -1,17 +1,3 @@
-// Lazyload
-.lazyload
-  background url(hexo-config('lazyload.loading')) no-repeat center
-// Loading
-.loading
-  position fixed
-  width 100%
-  height 100%
-  top 0
-  background url(hexo-config('loading')) no-repeat center
-  background-color $color-background
-  z-index 2019
-  overflow hidden
-// Preview
 @keyframes move-forever
   0%
     transform translate3d(-90px, 0, 0)
@@ -40,7 +26,7 @@
     cursor pointer
     .iconfont
       font-size 18px
-      color $color-white
+      color #ffffff
   .preview-image
     z-index 40
     height 90vh
@@ -107,89 +93,3 @@
     align-items center
     i
       font-size 32px
-// Fuction
-.substr-1, .substr-3
-  display -webkit-box
-  -webkit-box-orient vertical
-  overflow hidden
-.substr-1
-  -webkit-line-clamp 1
-.substr-3
-  -webkit-line-clamp 3
-.lock-screen
-  overflow hidden
-  padding-right 6px
-  height 100%
-  width 100%
-.blur
-  filter blur(10px)
-// Fab
-.fab
-  position fixed
-  bottom -50px
-  right 15px
-  width 45px
-  height 45px
-  line-height 45px
-  text-align center
-  border-radius 50%
-  background-color $color-default
-  color $color-white
-  transition $transition
-  box-shadow 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 1px 3px 1px rgba(60, 64, 67, 0.149)
-  i
-    font-size 1.5em
-.fab:hover
-  background-color $color-link
-  cursor pointer
-.fab-hide
-  bottom -50px
-.fab-show
-  bottom 15px
-.fab-plus
-  z-index 200
-.fab-plus-active
-  transform rotate(45deg)
-.fab-up
-  z-index 90
-  visibility hidden
-.fab-up-active
-  bottom 70px
-  visibility visible
-.fab-daovoice
-  z-index 10
-  visibility hidden
-.fab-daovoice-active
-  bottom 125px
-  visibility visible
-// Paginator
-.paginator
-  text-align center
-  margin-bottom 30px
-  span, a
-    display inline-block
-    margin 0 3px
-    width 30px
-    height 30px
-    line-height 30px
-  span, a:hover
-    background-color $color-default
-    color $color-white
-  .space
-    color $color-default
-    background-color rgba(0, 0, 0, 0)
-// Underline
-.underline
-  position relative
-  color $color-default !important
-.underline:before
-  content ''
-  position absolute
-  bottom -3px
-  width 100%
-  background $color-default
-  height 2px
-  transition transform 0.2s
-  transform scaleX(0)
-.underline:hover:before
-  transform scaleX(1)

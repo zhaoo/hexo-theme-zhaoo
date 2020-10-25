@@ -8,6 +8,9 @@
   <% if (theme.fab.enable) { %>
     <%- partial('_partial/common/fab') %>
   <% } %>
+  <% if (theme.color_mode.enable) { %>
+    <%- js('js/color-mode') %>
+  <% } %>
 </body>
 <%- partial('_partial/script') %>
 </html>

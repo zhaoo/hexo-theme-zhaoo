@@ -1,0 +1,44 @@
+/* Lazyload */
+.lazyload
+  background url(hexo-config('lazyload.loading')) no-repeat center
+/* Loading */
+.loading
+  position fixed
+  width 100%
+  height 100%
+  top 0
+  background url(hexo-config('loading')) no-repeat center
+  background-color var(--color-background)
+  z-index 2019
+  overflow hidden
+/* Fuction */
+.substr-1, .substr-3
+  display -webkit-box
+  -webkit-box-orient vertical
+  overflow hidden
+.substr-1
+  -webkit-line-clamp 1
+.substr-3
+  -webkit-line-clamp 3
+.lock-screen
+  overflow hidden
+  padding-right 6px
+  height 100%
+  width 100%
+.blur
+  filter blur(10px)
+/* Underline */
+.underline
+  position relative
+  color var(--color-text) !important
+.underline:before
+  content ''
+  position absolute
+  bottom -3px
+  width 100%
+  background var(--color-text)
+  height 2px
+  transition transform 0.2s
+  transform scaleX(0)
+.underline:hover:before
+  transform scaleX(1)

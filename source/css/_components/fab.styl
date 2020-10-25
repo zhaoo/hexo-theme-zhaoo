@@ -1,0 +1,38 @@
+.fab
+  position fixed
+  bottom -50px
+  right 15px
+  width 45px
+  height 45px
+  line-height 45px
+  text-align center
+  border-radius 50%
+  background-color var(--color-text)
+  color var(--color-background)
+  transition $transition
+  box-shadow 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 1px 3px 1px rgba(60, 64, 67, 0.149)
+  i
+    font-size 1.5em
+.fab:hover
+  background-color $color-link
+  cursor pointer
+.fab-hide
+  bottom -50px
+.fab-show
+  bottom 15px
+.fab-plus
+  z-index 200
+.fab-plus-active
+  transform rotate(45deg)
+.fab-up
+  z-index 90
+  visibility hidden
+.fab-up-active
+  bottom 70px
+  visibility visible
+.fab-daovoice
+  z-index 10
+  visibility hidden
+.fab-daovoice-active
+  bottom 125px
+  visibility visible

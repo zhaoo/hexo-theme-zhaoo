@@ -19,7 +19,7 @@ var description = '';
 %>
 
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="<%= config.language %>" <%= theme.color_mode.enable ? `color-mode=light` : '' %>>
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -83,7 +83,8 @@ var description = '';
       pjax: <%= theme.pjax %>,
       lazyload: {
         enable: <%= theme.lazyload.enable %>,
-        loadingImage: '<%= theme.lazyload.loadingImage %>',
+        onlyPost: '<%= theme.lazyload.onlyPost %>',
+        loading: '<%= theme.lazyload.loading %>'
       },
       donate: {
         enable: <%= theme.donate.enable %>,

@@ -27,12 +27,19 @@
   .right
     justify-content flex-end
     padding-right 15px
+    .iconfont:not(:last-child)
+      margin-right 10px
   .iconfont
     font-size 22px
-    color $color-default
+    color var(--color-text)
     &:hover
       cursor pointer
 @media (max-width 768px)
   .navbar
     .center
       display none
+@css {
+  .navbar {
+    background-color: rgba(var(--color-background-rgb), 0.9);
+  }
+}

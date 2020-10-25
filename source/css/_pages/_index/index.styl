@@ -7,7 +7,7 @@
       box-shadow $color-shadow-active
     .post-wrap
       box-shadow $color-shadow
-      background-color $color-background
+      background-color var(--color-background)
       .post-top
         z-index 10
         width 80px
@@ -28,7 +28,7 @@
           left -28px
           width 100px
           background-color #FF3B00
-          color $color-white
+          color #ffffff
           box-shadow -3px 5px 6px -5px rgba(0, 0, 0, 0.5)
       .post-image
         display block
@@ -62,9 +62,9 @@
         .post-excerpt
           height 80px
           p
-            color $color-middle
+            color var(--color-text-secondary)
         .post-info
-          color $color-light
+          color var(--color-text-third)
           .post-info-item
             margin-right 10px
             i

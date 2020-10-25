@@ -13,7 +13,7 @@ function getCurrentGallery(galleries, pageTitle) {
 }
 var currentGallery = getCurrentGallery(galleries, pageTitle);
 var photos = currentGallery.photos;
-var image = ''
+var image = '';
 for (var i = 0, len = photos.length; i < len; i++) {
   var photo = photos[i];
   image += `<a data-fancybox="images" href="${photo}" class="item"><img src="${photo}" alt="${photo}"></a>`

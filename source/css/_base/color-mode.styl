@@ -1,0 +1,21 @@
+:root
+  --color-background $color-background
+  --color-background-secondary $color-background-secondary
+  --color-background-rgb $color-background-rgb
+  --color-text $color-text
+  --color-text-secondary $color-text-secondary
+  --color-text-third $color-text-third
+dark()
+  --color-background $color-background-dark
+  --color-background-secondary $color-background-secondary-dark
+  --color-background-rgb $color-background-rgb-dark
+  --color-text $color-text-dark
+  --color-text-secondary $color-text-secondary-dark
+  --color-text-third $color-text-third-dark
+@media (prefers-color-scheme dark)
+  :root
+    --color-mode 'dark'
+  :root:not([color-mode])
+    dark()
+[color-mode='dark']
+  dark()

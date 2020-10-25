@@ -16,6 +16,9 @@
   <div class="left"></div>
   <div class="center"><%- title %></div>
   <div class="right">
+    <% if (theme.color_mode.enable) { %>
+      <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+    <% } %>
     <i class="iconfont iconmenu j-navbar-menu"></i>
   </div>
 </nav>

@@ -31,7 +31,7 @@
       top 20px
       cursor pointer
       i
-        color $color-default
+        color var(--color-text)
         font-size 24px
     .menu-copyright
       position absolute
@@ -40,3 +40,8 @@
       text-align center
       @media (max-width 576px)
         font-size 0.75em
+@css {
+  .menu {
+    background-color: rgba(var(--color-background-rgb), 0.7);
+  }
+}

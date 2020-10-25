@@ -1,17 +1,17 @@
-// Body
+/* Body */
 *, *::before, *::after
   box-sizing border-box
 html
-  if hexo-config("gray.enable")
+  if (hexo-config('gray.enable'))
     filter grayscale(100%)
 body
   margin 0
   font-size 14px
-  color $color-default
+  color var(--color-text)
   font-family 'Hiragino Sans GB', 'Hiragino Sans GB W3', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif
-  background $color-background url(hexo-config('background_image')) fixed no-repeat
+  background var(--color-background) url(hexo-config('background_image')) fixed no-repeat
   a
-    color $color-default
+    color var(--color-text)
     text-decoration none
   a:hover
     color $color-link
@@ -32,27 +32,27 @@ body
     margin-bottom 1rem
   ul
     margin 0
-// Browser
+/* Browser */
 ::-webkit-scrollbar, ::-webkit-scrollbar-track
   width 6px
   height 6px
-  background-color $color-background
+  background-color var(--color-background)
 ::-webkit-scrollbar-thumb
-  background-color $color-default
+  background-color var(--color-text)
 ::-webkit-scrollbar-thumb:hover
-  background-color $color-default
+  background-color var(--color-text)
 ::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb:hover
   transition $transition
 *::selection
   background $color-link
-  color $color-white
+  color #ffffff
 *::-moz-selection
   background $color-link
-  color $color-white
+  color #ffffff
 *::-webkit-selection
   background $color-link
-  color $color-white
-// Container
+  color #ffffff
+/* Container */
 .container
   width 100%
   margin 0 auto
@@ -64,7 +64,7 @@ body
     max-width 960px
   @media (min-width 1200px)
     max-width 1140px
-// Grid
+/* Grid */
 .row
   display -ms-flexbox
   display flex

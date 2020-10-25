@@ -26,10 +26,10 @@
         background linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75))
         padding 30px
         .head-title
-          color $color-white
+          color #ffffff
           font-size 2em
         .head-info
-          color $color-white
+          color #ffffff
           margin-top 10px
           .post-info-item
             margin-right 10px
@@ -38,21 +38,21 @@
               margin-right 5px
     .main
       padding 30px
-      background-color $color-background
+      background-color var(--color-background)
       .content
         line-height 2
-        color $color-middle
+        color var(--color-text-secondary)
         for $i in 1 .. 6
           h{$i}
             font-size 1.6 - $i * 0.1 em
             margin-bottom 1em
             margin-top 2em
-            color $color-default
+            color var(--color-text)
             font-weight bold
         p, li
           code
             font-size 1em
-            background-color $color-background-deep
+            background-color var(--color-background-secondary)
             padding 2px 5px
             border-radius 2px
             color $color-link
@@ -63,19 +63,19 @@
         kbd
           padding 0.2em 0.4em
           font-size 87.5%
-          color $color-background
-          background-color $color-default
+          color var(--color-background)
+          background-color var(--color-text)
           border-radius 0.2em
         table
           margin 10px auto
           min-width 100%
           text-align center
         table, table td, table th
-          border 1px solid $color-default
+          border 1px solid var(--color-text)
           border-collapse collapse
           padding 5px
         figure
-          color $color-default
+          color var(--color-text)
           margin 0
           overflow auto
           margin-bottom 20px
@@ -83,7 +83,7 @@
             padding 0
             border none
             code
-              background-color $color-background-deep
+              background-color var(--color-background-secondary)
               padding 1em
           > *
             border-spacing 0px
@@ -96,7 +96,7 @@
         blockquote
           margin 0 0 1em
           padding 15px 20px
-          background-color $color-background-deep
+          background-color var(--color-background-secondary)
           border-left 4px solid $color-link
           p
             margin 0
@@ -104,7 +104,7 @@
         margin-top 50px
         .copyright
           border-left 4px solid $color-link
-          background-color $color-background-deep
+          background-color var(--color-background-secondary)
           list-style none
           padding 15px 20px
           margin-bottom 50px
@@ -141,7 +141,7 @@
             position relative
             display inline-block
             border 1px solid #E0E0E0
-            background-color #FFFFFF
+            background-color var(--color-background)
             border-radius 2em
             padding 8px 16px
             z-index 20
@@ -164,7 +164,7 @@
             list-style-type none
             margin-right 1em
             padding 5px 10px
-            background-color $color-background-deep
+            background-color var(--color-background-secondary)
             a
               display inline-block
               line-height 20px
@@ -173,7 +173,7 @@
             cursor pointer
             background-color $color-link
             a
-              color $color-white
+              color #ffffff
         .nav
           margin-top 1em
           display flex
@@ -185,11 +185,11 @@
         .btn
           display block
           padding 10px
-          background-color $color-background-deep
+          background-color var(--color-background-secondary)
           text-align center
         .btn:hover
           background-color $color-link
-          color $color-white
+          color #ffffff
           transition $transition
           cursor pointer
         #gitalk, .gt-header-textarea, .gt-btn
@@ -206,3 +206,5 @@
             -ms-transform rotate(180deg)
             -o-transform rotate(180deg)
             transition $transition
+.dark .hljs
+  color var(--color-text)
