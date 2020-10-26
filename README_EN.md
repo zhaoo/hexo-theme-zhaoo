@@ -34,6 +34,7 @@
 - [你好我是王日天@](http://www.rt95.ink/)
 - [卞卞不是便便](https://www.bianxr.com/)
 - [Yin Blog](http://xuzhimo.top/)
+- [Ray's Blog](http://my-blog-webside.herokuapp.com/)
 
 （If you are using the zhaoo theme, welcome to show your blog, just add your blog to the `README.md` and PR.）
 
