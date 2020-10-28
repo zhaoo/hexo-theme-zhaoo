@@ -167,10 +167,10 @@ highlight: true
 # CDN
 vendors:
   jquery_js: https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js
-  fancybox_js: https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.js
+  fancybox_js: https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js
   pjax_js: https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js
   lazyload_js: https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js
-  fancybox_css: https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css
+  fancybox_css: https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css
   highlight_css: https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css
   iconfont_css: //at.alicdn.com/t/font_1445822_onl0g0h21np.css
 
