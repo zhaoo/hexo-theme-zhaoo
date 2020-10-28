@@ -1,3 +1,4 @@
+/* Color Mode */
 :root
   --color-background $color-background
   --color-background-secondary $color-background-secondary
@@ -19,3 +20,17 @@ dark()
     dark()
 [color-mode='dark']
   dark()
+/* Fix */
+[color-mode='dark']
+  .hljs
+    color var(--color-text)
+  .tags a
+    color var(--color-text) !important
+@css {
+  .menu {
+    background-color: rgba(var(--color-background-rgb), 0.7) !important;
+  }
+  .navbar {
+    background-color: rgba(var(--color-background-rgb), 0.9) !important;
+  }
+}
