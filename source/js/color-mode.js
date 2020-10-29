@@ -28,6 +28,7 @@
   }
 
   var setIcon = function (mode) {
+    if (!toggleElement) return;
     var addIconName = mode === 'light' ? 'iconmoono' : 'iconsuno';
     var removeIconName = mode === 'light' ? 'iconsuno' : 'iconmoono';
     toggleElement.classList.remove(removeIconName);
@@ -42,6 +43,7 @@
   }
 
   var switchColorMode = function () {
+    if (!toggleElement) return;
     toggleElement.addEventListener('click', function () {
       var mode = this.getAttribute(toggleAttribute) === 'light' ? 'dark' : 'light';
       setColorMode(mode);
