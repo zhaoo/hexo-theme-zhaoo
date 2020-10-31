@@ -30,27 +30,34 @@
 ## Rreview
 
 - [zhaoo's Blog](https://www.izhaoo.com)
-- [CodeGorgeous](https://codegorgeous.github.io/)
-- [你好我是王日天@](http://www.rt95.ink/)
-- [卞卞不是便便](https://www.bianxr.com/)
+- [Handwer's Blog](https://blog.handwer-std.top/)
+- [Mtaun](https://mtaun.top/)
+- [杨云召](https://flywith24.gitee.io/)
+- [汐语](https://xywangb.cn/)
+- [Meizi's Blog](http://www.meizia.net/)
+- [kilic の 部落格](https://kilicmu.github.io/)
+- [Hexo](https://www.actor360.xyz/)
+- [Live And Learn](https://kangshitao.github.io/)
 - [Yin Blog](http://xuzhimo.top/)
-- [Ray's Blog](http://my-blog-webside.herokuapp.com/)
+- [CodeGorgeous](https://codegorgeous.github.io/)
+- [卞卞不是便便](https://www.bianxr.com/)
+- [你好我是王日天@](http://www.rt95.ink/)
 
 （If you are using the zhaoo theme, welcome to show your blog, just add your blog to the `README.md` and PR.）
 
 ## Characteristic
 
 - [x] Simple & Responsive & Animation
-- [x] `ZUI (zhaoo UI)` (building)
 - [x] `highlight` code highlighting
 - [x] `Gitalk`、`Valine`、`ChangYan` comment
 - [x] `DaoVoice` IM
 - [x] `FancyBox` lightbox
+- [x] Dark scheme
 - [x] `Pjax`
 - [x] `lazyload`
 - [x] `LeanCloud` statistical pv & uv
 - [x] `Alipay, Wechat` donate
-- [x] Galleries, pictures support waterfall (`justifiedGallery`)
+- [x] Galleries, pictures support waterfall
 - [x] Motto, can use plugin `hexo-plug-motto`to achieve dynamic motto
 - [x] `Baidu`、`CNZZ`、`google` analytics and SEO
 - [x] Customized `Theme Style`、`CDN`、`Embedded Script`、`Social Link`、`Copyright` and more
@@ -133,6 +140,10 @@ $ git pull
 
 * Weapp：[hexo-weapp-zhaoo](https://github.com/izhaoo/hexo-weapp-zhaoo) (Weapp for Hexo)
 * Plugin：[hexo-generator-restful](https://github.com/izhaoo/hexo-generator-restful) (RESTful API for Hexo)
+
+## Stargazers
+
+[![Stargazers over time](https://starchart.cc/izhaoo/hexo-theme-zhaoo.svg)](https://starchart.cc/izhaoo/hexo-theme-zhaoo)
 
 ## License
 
