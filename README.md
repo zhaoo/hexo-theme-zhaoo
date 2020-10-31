@@ -140,6 +140,7 @@ $ git pull
 
 * 小程序：[hexo-weapp-zhaoo](https://github.com/izhaoo/hexo-weapp-zhaoo) (为 Hexo 定制的博客小程序)
 * 插件：[hexo-generator-restful](https://github.com/izhaoo/hexo-generator-restful) (Hexo RESTful 接口)
+* 交流群：550262893
 
 ## 趋势
 
