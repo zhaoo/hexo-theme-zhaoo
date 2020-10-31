@@ -67,9 +67,12 @@ var description = '';
   <%- css('lib/fancybox/fancybox.css')%>
   <% }} %>
 
-  <% if(theme.highlight){ %>
+  <% if(theme.highlight.enable){ %>
   <% if(theme.vendors.highlight_css){ %>
-  <%- css(theme.vendors.highlight_css) %>
+  <% for (i in theme.highlight.style) { %>
+  <% style = theme.highlight.style[i].toLowerCase().replace(/(?<!([0-9]))\s(?!([0-9]))/g, '-').replace(/\s/g, '') %>
+  <%- css({href: theme.vendors.highlight_css + style + '.min.css', name: 'highlight-style', mode: i}) %>
+  <% } %>
   <% }else{ %>
   <%- css('lib/highlight/a11y-dark.css')%>
   <% }} %>

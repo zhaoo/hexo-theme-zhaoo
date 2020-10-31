@@ -21,12 +21,12 @@ favicon:
 # Preview
 preview:
   enable: true
-  model: wave  #cloud
+  model: wave  # cloud
   welcome_image: /images/theme/welcome-image.jpg
   motto:
     default: 我在开了灯的床头下，想问问自己的心啊。
     color: '#000000'
-    api:  #'http://localhost:3000/api/motto'
+    api:  # http://localhost:3000/api/motto
 
 # Menu
 menu:
@@ -70,7 +70,7 @@ color_mode:
 
 # Post image
 post_image:
-  random: local #galleries
+  random: local # galleries
   default: /images/theme/post-image.jpg
 
 # Donate
@@ -86,7 +86,7 @@ post_copyright:
 # Carrier（copy article with one click）
 carrier:
   enable: true
-  type: html #markdown text
+  type: html # markdown text
 
 # --------------------------------------------------
 # Page settings
@@ -158,7 +158,11 @@ fancybox: true
 pjax: false
 
 # HighLight
-highlight: true
+highlight:
+  enable: true
+  style: # https://highlightjs.org/static/demo/
+    light: Xcode
+    dark: Solarized Dark
 
 # --------------------------------------------------
 # Script settings
@@ -171,7 +175,7 @@ vendors:
   pjax_js: https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js
   lazyload_js: https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js
   fancybox_css: https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css
-  highlight_css: https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css
+  highlight_css: https://cdn.bootcss.com/highlight.js/9.18.1/styles/
   iconfont_css: //at.alicdn.com/t/font_1445822_onl0g0h21np.css
 
 # SEO
@@ -180,10 +184,10 @@ seo:
 
 # Analytics
 analytics:
-  baidu: #id
-  google: #id
-  tencent: #id
-  cnzz: #id
+  baidu: # id
+  google: # id
+  tencent: # id
+  cnzz: # id
 
 # Custom
 custom:

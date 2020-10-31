@@ -1,17 +1,22 @@
 !function (window, document) {
   var rootElement = document.documentElement;
   var toggleElement = document.getElementById('color-toggle');
-  var storageKey = 'color-mode';
+  var highlightElement = document.getElementsByName('highlight-style');
+  var modeStorageKey = 'color-mode';
   var mediaQueryStorageKey = 'color-mode-media-query'
   var htmlAttribute = 'color-mode'
   var toggleAttribute = 'color-toggle'
 
-  var getModeFromMediaQuery = function () {
+  var getMediaQuery = function () {
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   }
 
-  var getModeFromLocalStorage = function () {
-    return localStorage.getItem(storageKey);
+  var getModeStorage = function () {
+    return localStorage.getItem(modeStorageKey);
+  }
+
+  var setModeStorage = function (mode) {
+    localStorage.setItem(modeStorageKey, mode);
   }
 
   var getMediaQueryStorage = function () {
@@ -19,12 +24,12 @@
   }
 
   var setMediaQueryStorage = function (mode) {
-    localStorage.setItem(mediaQueryKey, mode);
+    localStorage.setItem(mediaQueryStorageKey, mode);
   }
 
   var setColorMode = function (mode) {
     rootElement.setAttribute(htmlAttribute, mode);
-    localStorage.setItem(storageKey, mode);
+    setModeStorage(mode);
   }
 
   var setIcon = function (mode) {
@@ -36,10 +41,23 @@
     toggleElement.setAttribute(toggleAttribute, mode);
   }
 
+  var setHighlightStyle = function (mode) {
+    highlightElement.forEach(function (item) {
+      item.disabled = !(item.getAttribute('mode') === mode);
+    });
+  }
+
   var loadColorMode = function (mode) {
-    var mode = mode || getModeFromLocalStorage() || getModeFromMediaQuery();
+    var mode = mode || getModeStorage() || getMediaQuery();
+    if (getMediaQuery() === getMediaQueryStorage()) {
+      mode = getModeStorage();
+    } else {
+      mode = getMediaQuery();
+      setMediaQueryStorage(mode);
+    }
     setColorMode(mode);
     setIcon(mode);
+    setHighlightStyle(mode);
   }
 
   var switchColorMode = function () {
@@ -48,6 +66,7 @@
       var mode = this.getAttribute(toggleAttribute) === 'light' ? 'dark' : 'light';
       setColorMode(mode);
       setIcon(mode);
+      setHighlightStyle(mode);
     });
   }
 
