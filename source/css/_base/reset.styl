@@ -6,9 +6,9 @@ html
     filter grayscale(100%)
 body
   margin 0
-  font-size 14px
+  font-size unquote(hexo-config('font.size') || 14px)
   color var(--color-text)
-  font-family 'Hiragino Sans GB', 'Hiragino Sans GB W3', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif
+  font-family unquote(hexo-config('font.family') || 'Hiragino Sans GB', 'Hiragino Sans GB W3', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif)
   background var(--color-background) url(hexo-config('background_image')) fixed no-repeat
   a
     color var(--color-text)

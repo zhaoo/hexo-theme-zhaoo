@@ -6,7 +6,7 @@ module.exports.lazyload = function (hexo) {
     if (!config.lazyload || !config.lazyload.enable) {
       return;
     }
-    if (config.lazyload.onlyPost) {
+    if (config.lazyload.only_post) {
       hexo.extend.filter.register('after_post_render', function (data) {
         data.content = lazyProcess.call(this, data.content);
         return data;

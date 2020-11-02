@@ -1,14 +1,29 @@
 # --------------------------------------------------
-# Site settings
+# Site Settings
 # --------------------------------------------------
   
+# Menu
+menu:
+  home: / || 首页
+  galleries: /galleries || 摄影
+  archives: /archives || 归档
+  tags: /tags || 标签
+  categories: /categories || 分类
+  about: /about || 关于
+
 # Color
 color:
-  default: "#33333D"
-  link: "#FFBE5B"
-
-# Background Image
-background_image:
+  text: "#33333D"
+  text-secondary: "#4e4e4e"
+  text-third: "#999999"
+  background: "#ffffff"
+  background-secondary: "#f6f8fa"
+  text-dark: "#dddddd"
+  text-secondary-dark: "#9899ab"
+  text-third-dark: "#7d8594"
+  background-dark: "#1e2128"
+  background-secondary-dark: "#1a1d22"
+  link: "#FF3B00"
 
 # Favicon
 favicon:
@@ -17,6 +32,17 @@ favicon:
   apple_touch_icon: /images/icons/apple-touch-icon.png
   safari_pinned_tab: /images/icons/stun-logo.svg
   msapplication: /images/icons/favicon-144x144.png
+
+# Font
+font:
+  size: 14px
+  family:
+
+# Background Image
+background_image:
+
+# Loading
+loading: /images/theme/loading.gif
 
 # Preview
 preview:
@@ -27,15 +53,6 @@ preview:
     default: 我在开了灯的床头下，想问问自己的心啊。
     color: '#000000'
     api:  # http://localhost:3000/api/motto
-
-# Menu
-menu:
-  home: / || 首页
-  galleries: /galleries || 摄影
-  archives: /archives || 归档
-  tags: /tags || 标签
-  categories: /categories || 分类
-  about: /about || 关于
 
 # Copyright
 copyright: <p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p>
@@ -48,30 +65,31 @@ social:
   github: https://github.com/izhaoo || icongithub-fill || '#24292E'
   email: mailto:izhaoo@163.com || iconmail
 
-# Loading
-loading: /images/theme/loading.gif
-
-# Fab (FloatActionButton)
+# Fab (Float Action Button)
 fab:
   enable: true
-  alwaysShow: false
-
-# Gray (Mourning Mode)
-gray:
-  enable: false
+  always_show: false
 
 # Color Mode
 color_mode:
   enable: true
 
+# Gray (Mourning Mode)
+gray:
+  enable: false
+
 # --------------------------------------------------
-# Post settings
+# Post Settings
 # --------------------------------------------------
 
-# Post image
+# Post Image
 post_image:
   random: local # galleries
   default: /images/theme/post-image.jpg
+
+# Page Size
+post_page_size:
+  width: 800px
 
 # Donate
 donate:
@@ -89,7 +107,7 @@ carrier:
   type: html # markdown text
 
 # --------------------------------------------------
-# Page settings
+# Page Settings
 # --------------------------------------------------
 
 # Galleries
@@ -99,7 +117,7 @@ galleries:
   subtitle: Photography
 
 # --------------------------------------------------
-# Comment settings
+# Comment Settings
 # --------------------------------------------------
 
 comments:
@@ -141,7 +159,7 @@ daovoice:
 # Lazyload
 lazyload:
   enable: true
-  onlyPost: false
+  only_post: false
   loading: /images/theme/loading.gif
 
 # LeanCloud
@@ -165,7 +183,7 @@ highlight:
     dark: Solarized Dark
 
 # --------------------------------------------------
-# Script settings
+# Script Settings
 # --------------------------------------------------
 
 # CDN

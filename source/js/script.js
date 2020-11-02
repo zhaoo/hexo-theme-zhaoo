@@ -123,7 +123,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       $(".fab-up .fab-daovoice").on("click", function () {
         fn.freezeFab();
       });
-      if (CONFIG.fab.alwaysShow) {
+      if (CONFIG.fab.always_show) {
         fn.showFab();
       } else {
         $(window).scroll(fn.scroolFab);
