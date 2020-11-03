@@ -9,7 +9,7 @@
       <%- image_tag(post_image(post.image), { draggable: "false" }) %>
     </a>
     <div class="post-content">
-      <h3 class="post-title"><a href="<%- url_for(post.path) %>"><%= post.title %></a></h3>
+      <h3 class="post-title"><a href="<%- url_for(post.path) %>" title="<%= post.title %>" ><%= post.title %></a></h3>
       <% if(post.excerpt.length > 0) { %>
       <% var excerpt = truncate(strip_html(post.excerpt), {length: 100}) %>
       <% } else { %>
