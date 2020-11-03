@@ -145,7 +145,7 @@ valine:
 # ChangYan
 changyan:
   appId:
-  appKey:
+  conf:
 
 # --------------------------------------------------
 # Plugin settings
