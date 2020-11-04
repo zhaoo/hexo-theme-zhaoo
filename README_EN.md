@@ -42,6 +42,7 @@
 - [CodeGorgeous](https://codegorgeous.github.io/)
 - [卞卞不是便便](https://www.bianxr.com/)
 - [你好我是王日天@](http://www.rt95.ink/)
+- [iaosee's Blog](https://www.iaosee.com/)
 
 （If you are using the zhaoo theme, welcome to show your blog, just add your blog to the `README.md` and PR.）
 
