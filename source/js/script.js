@@ -217,6 +217,14 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       $(".j-navbar-menu").on("click", function () {
         fn.showMenu();
         $(".navbar").addClass("hide");
+        $(".qrcode").fadeOut(300);
+      });
+      $(".j-navbar-qrcode").on("click", function () {
+        if ($(".qrcode").is(":hidden")) {
+          $(".qrcode").fadeIn(300);
+        } else {
+          $(".qrcode").fadeOut(300);
+        }
       });
     },
     preview: function () {
