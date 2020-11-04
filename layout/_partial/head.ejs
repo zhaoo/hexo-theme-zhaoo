@@ -94,10 +94,6 @@ var description = '';
         alipay: '<%= theme.donate.alipay %>',
         wechat: '<%= theme.donate.wechat %>'
       },
-      motto: {
-        api: '<%= theme.preview.motto.api %>',
-        default: '<%= theme.preview.motto.default %>'
-      },
       galleries: {
         enable: <%= theme.galleries.enable %>
       },
@@ -110,6 +106,16 @@ var description = '';
       },
       daovoice: {
         enable: <%= theme.daovoice.enable %>
+      },
+      preview: {
+        background: {
+          default: '<%= theme.preview.background.default %>',
+          api: '<%= theme.preview.background.api %>'
+        },
+        motto: {
+          default: '<%= theme.preview.motto.default %>',
+          api: '<%= theme.preview.motto.api %>'
+        },
       }
     }
   </script>

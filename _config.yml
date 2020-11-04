@@ -48,11 +48,13 @@ loading: /images/theme/loading.gif
 preview:
   enable: true
   model: wave  # cloud
-  welcome_image: /images/theme/welcome-image.jpg
+  background: 
+    default: /images/theme/welcome-image.jpg
+    api: # https://source.unsplash.com/random/1920x1080
   motto:
+    color: '#ffffff'
     default: 我在开了灯的床头下，想问问自己的心啊。
-    color: '#000000'
-    api:  # http://localhost:3000/api/motto
+    api:  # https://v1.hitokoto.cn/?encode=text&c=d
 
 # Copyright
 copyright: <p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p>
