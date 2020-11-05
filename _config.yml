@@ -56,7 +56,8 @@ preview:
   motto:
     color: '#ffffff'
     default: 我在开了灯的床头下，想问问自己的心啊。
-    api: https://v1.hitokoto.cn/?encode=text&c=d
+    jinrishici: true
+    api: https://v1.hitokoto.cn/?c=i  # Only if `jinrishici` is false
 
 # Copyright
 copyright: <p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p>

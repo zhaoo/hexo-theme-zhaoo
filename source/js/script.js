@@ -85,13 +85,24 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       },
     },
     motto: function () {
-      if (CONFIG.preview.motto.api) {
-        $.get(CONFIG.preview.motto.api, function (data) {
-          if (data) {
-            $("#motto").text(data);
+      if ( CONFIG.preview.motto.jinrishici ) {
+        jinrishici && jinrishici.load(function(result) {
+          var data = result.data;
+          if ( !data || !data.content )  {
+            return;
           }
+          $("#motto").text(data.content);
+        });
+      } else if (CONFIG.preview.motto.api) {
+        $.get(CONFIG.preview.motto.api, function (data) {
+          console.log(data);
+          if (!data || !data.hitokoto) {
+            return;
+          }
+          $("#motto").text(data.hitokoto);
         });
       }
+
     },
     background: function () {
       if (CONFIG.preview.background.api) {

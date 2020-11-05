@@ -32,6 +32,10 @@
 <%- js('lib/qrcode/qrcode.js')%>
 <% }} %>
 
+<% if(theme.preview.motto.jinrishici){ %>
+<%- js('https://sdk.jinrishici.com/v2/browser/jinrishici.js') %>
+<% } %>
+
 <%- js(['js/utils', 'js/script']) %>
 
 <% if(theme.leancloud.enable){ %>
