@@ -51,8 +51,8 @@ preview:
   background:
     default: /images/theme/welcome-image.jpg
     api: # https://source.unsplash.com/random/1920x1080
-    size: cover # css value
-    position: center # css value
+    size: cover # css: background-size
+    position: center # css: background-position
   motto:
     color: '#ffffff'
     default: 我在开了灯的床头下，想问问自己的心啊。
