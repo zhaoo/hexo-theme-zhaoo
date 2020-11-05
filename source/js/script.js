@@ -95,7 +95,6 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         });
       } else if (CONFIG.preview.motto.api) {
         $.get(CONFIG.preview.motto.api, function (data) {
-          console.log(data);
           if (!data || !data.hitokoto) {
             return;
           }
