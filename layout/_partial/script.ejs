@@ -25,6 +25,13 @@
 <%- js('lib/pjax/pjax.js')%>
 <% }} %>
 
+<% if(theme.qrcode.enable){ %>
+<% if(theme.vendors.qrcode_js){ %>
+<%- js(theme.vendors.qrcode_js) %>
+<% }else{ %>
+<%- js('lib/qrcode/qrcode.js')%>
+<% }} %>
+
 <%- js(['js/utils', 'js/script']) %>
 
 <% if(theme.leancloud.enable){ %>

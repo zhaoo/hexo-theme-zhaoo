@@ -47,7 +47,7 @@ loading: /images/theme/loading.gif
 # Preview
 preview:
   enable: true
-  model: wave  # cloud
+  model: wave  # wave cloud
   background:
     default: /images/theme/welcome-image.jpg
     api: # https://source.unsplash.com/random/1920x1080
@@ -56,7 +56,7 @@ preview:
   motto:
     color: '#ffffff'
     default: 我在开了灯的床头下，想问问自己的心啊。
-    api:  # https://v1.hitokoto.cn/?encode=text&c=d
+    api: https://v1.hitokoto.cn/?encode=text&c=d
 
 # Copyright
 copyright: <p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p>
@@ -76,7 +76,8 @@ fab:
 
 # QR Code
 qrcode:
-  enable: false
+  enable: true
+  type: url # url image
   image: https://pic.izhaoo.com/weapp-code.jpg
 
 # Color Mode
@@ -93,7 +94,7 @@ gray:
 
 # Post Image
 post_image:
-  random: local # galleries
+  random: local # local galleries
   default: /images/theme/post-image.jpg
 
 # Page Size
@@ -113,7 +114,7 @@ post_copyright:
 # Carrier（copy article with one click）
 carrier:
   enable: true
-  type: html # markdown text
+  type: html # html markdown text
 
 # --------------------------------------------------
 # Page Settings
@@ -163,7 +164,7 @@ changyan:
 # Daovoice
 daovoice:
   enable: true
-  appId: abcdefg  # app_id
+  appId: # app_id
 
 # Lazyload
 lazyload:
@@ -201,6 +202,7 @@ vendors:
   fancybox_js: https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js
   pjax_js: https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js
   lazyload_js: https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js
+  qrcode_js: https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js
   fancybox_css: https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css
   highlight_css: https://cdn.bootcss.com/highlight.js/9.18.1/styles/
   iconfont_css: //at.alicdn.com/t/font_1445822_s6x2xcokxrl.css

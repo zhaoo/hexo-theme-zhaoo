@@ -230,6 +230,17 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     preview: function () {
       fn.background();
       fn.motto();
+    },
+    qrcode: function () {
+      if (CONFIG.qrcode.type === 'url') {
+        $(".qrcode").qrcode({
+          text: window.location.href,
+          width: 150,
+          height: 150
+        });
+      } else if (CONFIG.qrcode.type === 'image') {
+        $(".qrcode").append('<img src="' + CONFIG.qrcode.image + '" alt="qrcode" />');
+      }
     }
   }
 
@@ -258,6 +269,9 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     }
     if (CONFIG.carrier.enable) {
       action.carrier();
+    }
+    if (CONFIG.qrcode.enable) {
+      action.qrcode();
     }
   });
 
