@@ -1,7 +1,7 @@
 # --------------------------------------------------
 # Site Settings
 # --------------------------------------------------
-  
+
 # Menu
 menu:
   home: / || 首页
@@ -48,9 +48,11 @@ loading: /images/theme/loading.gif
 preview:
   enable: true
   model: wave  # cloud
-  background: 
+  background:
     default: /images/theme/welcome-image.jpg
     api: # https://source.unsplash.com/random/1920x1080
+    size: cover # css value
+    position: center # css value
   motto:
     color: '#ffffff'
     default: 我在开了灯的床头下，想问问自己的心啊。
