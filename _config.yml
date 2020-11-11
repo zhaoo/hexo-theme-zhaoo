@@ -131,7 +131,7 @@ galleries:
 # --------------------------------------------------
 
 comments:
-  enable: true
+  enable: false
   type: valine
   button: true
 
@@ -163,7 +163,7 @@ changyan:
 
 # Daovoice
 daovoice:
-  enable: true
+  enable: false
   appId: # app_id
 
 # Lazyload
@@ -203,6 +203,7 @@ vendors:
   pjax_js: https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js
   lazyload_js: https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js
   qrcode_js: https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js
+  daovoice_js: https://widget.daovoice.io/widget/0f81ff2f.js
   fancybox_css: https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css
   highlight_css: https://cdn.bootcss.com/highlight.js/9.18.1/styles/
   iconfont_css: //at.alicdn.com/t/font_1445822_s6x2xcokxrl.css
