@@ -166,7 +166,7 @@ daovoice:
   enable: false
   appId: # app_id
 
-# TencentChao https://txc.qq.com/
+# Tencent Chao https://txc.qq.com/
 tencentChao:
   enable: false
   appId: # app_id

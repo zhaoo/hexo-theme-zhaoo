@@ -5,7 +5,7 @@ tags: [Hexo, 主题]
 keywords: hexo-theme-zhaoo, zhaoo, hexo, 主题, theme, 简约, 响应式
 categories:
 - 项目
-image: https://pic.izhaoo.com/20191211070006.jpg
+image: /images/theme/post-image.jpg
 top: 100
 ---
 
@@ -48,7 +48,7 @@ top: 100
 
 ### 图片
 
-![图片测试](https://pic.izhaoo.com/20191211070006.jpg "图片测试")
+![图片测试](/images/theme/post-image.jpg "图片测试")
 
 ### 代码
 
@@ -85,7 +85,7 @@ module.exports = function(locals){
 
 ### 链接
 
-[普通链接](https://pic.izhaoo.com/20180103151733.jpg)
+[普通链接](/images/theme/post-image.jpg)
 
 <https://www.izhaoo.com>
 
