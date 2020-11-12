@@ -17,11 +17,13 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       $(".fab-up").addClass("fab-up-active");
       $(".fab-plus").addClass("fab-plus-active");
       $(".fab-daovoice").addClass("fab-daovoice-active");
+      $(".fab-tencent-chao").addClass("fab-tencent-chao-active");
     },
     freezeFab: function () {
       $(".fab-up").removeClass("fab-up-active");
       $(".fab-plus").removeClass("fab-plus-active");
       $(".fab-daovoice").removeClass("fab-daovoice-active");
+      $(".fab-tencent-chao").removeClass("fab-tencent-chao-active");
     },
     showFab: function () {
       $(".fab").removeClass("fab-hide").addClass("fab-show");
@@ -131,17 +133,10 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         }
       });
       $(".fab-daovoice").on("click", function () {
-        if(CONFIG.daovoice.enable){
-          daovoice('openMessages');
-          fn.freezeFab();
-        }else if(CONFIG.tencentChao.enable){
-          window.location = 'https://support.qq.com/product/' + $(this).attr("attr-id")
-        }
+        daovoice('openMessages');
       });
-      $(".fab-up .fab-daovoice").on("click", function () {
-        if(CONFIG.daovoice.enable){
-          fn.freezeFab();
-        }
+      $(".fab-up, .fab-daovoice, fab-tencent-chao").on("click", function () {
+        fn.freezeFab();
       });
       if (CONFIG.fab.always_show) {
         fn.showFab();
