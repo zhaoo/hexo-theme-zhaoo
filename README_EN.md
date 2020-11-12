@@ -52,6 +52,7 @@
 - [x] `highlight` code highlighting
 - [x] `Gitalk`、`Valine`、`ChangYan` comment
 - [x] `DaoVoice` IM
+- [x] `TencentChao` [Feedback interactive community](https://txc.qq.com/)
 - [x] `FancyBox` lightbox
 - [x] Dark scheme
 - [x] `Pjax`

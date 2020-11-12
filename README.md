@@ -52,6 +52,7 @@
 - [x] `highlight` 代码高亮
 - [x] `Gitalk`、`Valine`、`畅言` 评论
 - [x] `DaoVoice` 即时通讯 
+- [x] `TencentChao` [腾讯兔小巢](https://txc.qq.com/)
 - [x] `FancyBox` 图片灯箱
 - [x] 黑暗模式
 - [x] `Pjax` 无刷新加载
