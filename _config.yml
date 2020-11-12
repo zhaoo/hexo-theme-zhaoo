@@ -166,6 +166,11 @@ daovoice:
   enable: false
   appId: # app_id
 
+# TencentChao https://txc.qq.com/
+tencentChao:
+  enable: false
+  appId: # app_id
+
 # Lazyload
 lazyload:
   enable: true

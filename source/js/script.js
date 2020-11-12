@@ -131,11 +131,17 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         }
       });
       $(".fab-daovoice").on("click", function () {
-        daovoice('openMessages');
-        fn.freezeFab();
+        if(CONFIG.daovoice.enable){
+          daovoice('openMessages');
+          fn.freezeFab();
+        }else if(CONFIG.tencentChao.enable){
+          window.location = 'https://support.qq.com/product/' + $(this).attr("attr-id")
+        }
       });
       $(".fab-up .fab-daovoice").on("click", function () {
-        fn.freezeFab();
+        if(CONFIG.daovoice.enable){
+          fn.freezeFab();
+        }
       });
       if (CONFIG.fab.always_show) {
         fn.showFab();
