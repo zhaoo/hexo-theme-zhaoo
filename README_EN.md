@@ -49,21 +49,20 @@
 
 ## Characteristic
 
-- [x] Simple & Responsive & Animation
-- [x] `highlight` code highlighting
-- [x] `Gitalk`、`Valine`、`ChangYan` comment
-- [x] `DaoVoice` IM
-- [x] `TencentChao` [Feedback interactive community](https://txc.qq.com/)
-- [x] `FancyBox` lightbox
+- [x] Design concept: Simple & Responsive & Animation
+- [x] Comment: `Gitalk`、`Valine`、`ChangYan`
+- [x] Feedback: [DaoVoice](http://www.daovoice.io/)、[Tencent Chao](https://txc.qq.com/)
+- [x] Analytics: `LeanCloud`、`Baidu`、`CNZZ`、`google` and SEO
 - [x] Dark scheme
+- [x] Motto, support [Hitokoto](https://hitokoto.cn/)、[Poems Today](https://www.jinrishici.com/) and another dynamic mottos
+- [x] Preview，support [Unsplash](https://unsplash.com/)、[Bing Pictures](https://cn.bing.com/) and another dynamic pictures
+- [x] Galleries, pictures support waterfall
+- [x] `highlight` code highlighting
+- [x] `FancyBox` lightbox
 - [x] `Pjax`
 - [x] `lazyload`
-- [x] `LeanCloud` statistical pv & uv
 - [x] `Alipay, Wechat` donate
-- [x] Galleries, pictures support waterfall
-- [x] Motto, can use plugin `hexo-plug-motto`to achieve dynamic motto
-- [x] `Baidu`、`CNZZ`、`google` analytics and SEO
-- [x] Customized `Theme Style`、`CDN`、`Embedded Script`、`Social Link`、`Copyright` and more
+- [x] Customized `Theme Style`、`CDN`、`Embedded Script`、`Social Link`、`Copyright`、`QRCode` and more
 
 ## Screenshots
 
@@ -74,6 +73,8 @@
 ![article](./screenshots/article.png)
 
 ![galleries](./screenshots/galleries.png)
+
+![menu](./screenshots/menu.png)
 
 ## Install
 

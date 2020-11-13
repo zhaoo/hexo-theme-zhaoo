@@ -3,9 +3,9 @@
   var toggleElement = document.getElementById('color-toggle');
   var highlightElement = document.getElementsByName('highlight-style');
   var modeStorageKey = 'color-mode';
-  var mediaQueryStorageKey = 'color-mode-media-query'
-  var htmlAttribute = 'color-mode'
-  var toggleAttribute = 'color-toggle'
+  var mediaQueryStorageKey = 'color-mode-media-query';
+  var htmlAttribute = 'color-mode';
+  var toggleAttribute = 'color-toggle';
 
   var getMediaQuery = function () {
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
