@@ -13,17 +13,19 @@ menu:
 
 # Color
 color:
-  text: "#33333D"
-  text-secondary: "#4e4e4e"
-  text-third: "#999999"
-  background: "#ffffff"
-  background-secondary: "#f6f8fa"
-  text-dark: "#dddddd"
-  text-secondary-dark: "#9899ab"
-  text-third-dark: "#7d8594"
-  background-dark: "#1e2128"
-  background-secondary-dark: "#1a1d22"
-  link: "#FF3B00"
+  text: '#33333D'
+  text-secondary: '#4e4e4e'
+  text-third: '#999999'
+  background: '#ffffff'
+  background-secondary: '#f6f8fa'
+  border: '#eeeeee'
+  text-dark: '#dddddd'
+  text-secondary-dark: '#9899ab'
+  text-third-dark: '#7d8594'
+  background-dark: '#1e2128'
+  background-secondary-dark: '#1a1d22'
+  border-dark: '#2b3038'
+  link: '#FF3B00'
 
 # Favicon
 favicon:
