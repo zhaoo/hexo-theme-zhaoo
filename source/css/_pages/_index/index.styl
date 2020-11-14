@@ -50,20 +50,25 @@
             filter grayscale(100%)
             // opacity 0.7
       .post-content
+        position relative 
         padding 20px
-        height 170px
+        height 180px
+        &-wrap
+          height 110px
+          overflow hidden
         .post-title
           font-size 1.5em
           a
             display -webkit-box
             -webkit-box-orient vertical
-            -webkit-line-clamp 1
+            -webkit-line-clamp 2
             overflow hidden
         .post-excerpt
-          height 80px
           p
             color var(--color-text-secondary)
         .post-info
+          position absolute
+          bottom 20px
           color var(--color-text-third)
           .post-info-item
             margin-right 10px
