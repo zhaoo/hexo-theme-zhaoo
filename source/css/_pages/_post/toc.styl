@@ -1,5 +1,5 @@
 .toc-wrap
-  position sticky
+  position fixed
   top 70px
   background-color var(--color-background)
   z-index 10
@@ -10,6 +10,12 @@
     display none
   ol, li
     list-style none
+  & > :only-child
+    display none
+  .toc-title
+    font-size 1rem
+    font-weight bold
+    margin-left calc(1rem + 3px)
   .toc
     position relative
     margin 0
