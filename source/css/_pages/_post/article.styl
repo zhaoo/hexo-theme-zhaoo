@@ -1,8 +1,12 @@
+.article-wrap
+  @media (min-width 768px)
+    margin-top 70px
+  .container
+    @media (min-width 1200px)
+      max-width 'calc(%s * 12 / 6)' % unquote(hexo-config('post_page_size.width') || 800px)
 .article
   .wrap
-    max-width unquote(hexo-config('post_page_size.width') || 800px)
     margin 0 auto
-    margin-top 70px
     box-shadow $color-shadow
     @media (max-width 576px)
       margin 0

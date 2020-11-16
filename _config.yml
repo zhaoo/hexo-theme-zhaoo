@@ -103,6 +103,12 @@ post_image:
 post_page_size:
   width: 800px
 
+# TOC
+toc:
+  enable: true
+  min_depth: 1
+  max_depth: 3
+
 # Donate
 donate:
   enable: true

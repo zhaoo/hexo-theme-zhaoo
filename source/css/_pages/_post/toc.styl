@@ -1,0 +1,25 @@
+.toc-wrap
+  position sticky
+  top 70px
+  background-color var(--color-background)
+  z-index 10
+  padding 20px
+  height calc(100vh - 140px)
+  overflow scroll
+  @media (max-width 1200px)
+    display none
+  ol, li
+    list-style none
+  .toc
+    position relative
+    margin 0
+    padding 0
+    .toc-link
+      display block
+      padding 4px 1rem
+      border-left 3px solid transparent
+      &.active
+        color $color-link
+        font-weight bold
+    .toc-child
+      padding-left 1.5rem

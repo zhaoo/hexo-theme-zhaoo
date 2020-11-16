@@ -1,12 +1,11 @@
 /* Colors */
 /* global */
-$color-link = unquote(hexo-config('color.link') || #ffbe5b)
+$color-link = convert(hexo-config('color.link') || #ffbe5b)
 $color-shadow = 0 5px 40px -1px rgba(2, 10, 18, 0.11)
 $color-shadow-active = 0 16px 32px 0 rgba(0, 0, 0, 0.1)
 /* light */
 $color-background = unquote(hexo-config('color.background') || #ffffff)
 $color-background-secondary = unquote(hexo-config('color.background-secondary') || #f6f8fa)
-$color-background-rgb = 255, 255, 255
 $color-text = unquote(hexo-config('color.text') || #33333d)
 $color-text-secondary = unquote(hexo-config('color.text-secondary') || #4e4e4e)
 $color-text-third = unquote(hexo-config('color.text-third') || #999999)
@@ -14,7 +13,6 @@ $color-border = unquote(hexo-config('color.border') || #eeeeee)
 /* dark */
 $color-background-dark = unquote(hexo-config('color.background-dark') || #1e2128)
 $color-background-secondary-dark = unquote(hexo-config('color.background-secondary-dark') || #1a1d22)
-$color-background-rgb-dark = 30, 33, 40
 $color-text-dark = unquote(hexo-config('color.text-dark') || #dddddd)
 $color-text-secondary-dark = unquote(hexo-config('color.text-secondary-dark') || #9899ab)
 $color-text-third-dark = unquote(hexo-config('color.text-third-dark') || #7d8594)

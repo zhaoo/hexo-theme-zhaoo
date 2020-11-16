@@ -105,7 +105,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
   var action = {
     smoothScroll: function () {
       // a[href *=#], area[href *=#]
-      $(".smooth-scroll").click(function () {
+      $(".smooth-scroll, .toc-link").click(function () {
         if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
           var $target = $(decodeURIComponent(this.hash));
           $target = $target.length && $target || $("[name=" + this.hash.slice(1) + "]");
@@ -242,6 +242,28 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       } else if (CONFIG.qrcode.type === 'image') {
         $("#qrcode-navbar").append('<img src="' + CONFIG.qrcode.image + '" alt="qrcode" />');
       }
+    },
+    toc: function () {
+      var current = [];
+      var titleList = new Map();
+      $("article .content h1,h2,h3,h4,h5,h6").each(function () {
+        var title = $(this).attr("id");
+        var height = $(this).offset().top;
+        titleList.set(height, title);
+      });
+      $(window).on("scroll", f);
+      function f() {
+        var height = $(this).scrollTop() || $(window).scrollTop();
+        for (var item of titleList) {
+          if (item[0] >= height) {
+            current = item;
+            break;
+          }
+        }
+        $(".toc-link").removeClass("active");
+        $(".toc-link[href='#" + current[1] + "']").addClass("active");
+      };
+      f();
     }
   }
 
@@ -273,6 +295,9 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     }
     if (CONFIG.qrcode.enable) {
       action.qrcode();
+    }
+    if (CONFIG.toc.enable) {
+      action.toc();
     }
   });
 
