@@ -103,6 +103,10 @@ post_image:
 post_page_size:
   width: 800px
 
+# Caption
+caption:
+  enable: true
+
 # TOC
 toc:
   enable: true
