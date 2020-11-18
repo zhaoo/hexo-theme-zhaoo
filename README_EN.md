@@ -146,6 +146,12 @@ $ git pull
 * Plugin: [hexo-generator-restful](https://github.com/izhaoo/hexo-generator-restful) (RESTful API for Hexo)
 * Exchange group: 550262893
 
+## Contributors
+
+[![contributors](https://opencollective.com/hexo-theme-zhaoo/contributors.svg?width=890&button=false)](https://github.com/izhaoo/hexo-theme-zhaoo/graphs/contributors)
+
+Thanks to all contributors! Welcome to PR.
+
 ## Stargazers
 
 [![Stargazers over time](https://starchart.cc/izhaoo/hexo-theme-zhaoo.svg)](https://starchart.cc/izhaoo/hexo-theme-zhaoo)

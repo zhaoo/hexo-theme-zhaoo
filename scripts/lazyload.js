@@ -26,6 +26,6 @@ function lazyProcess(data) {
     }
     var className = `lazyload`;
     var placeholder = `data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==`;
-    return `<img ${attrBegin} class="${className}" data-original="${src}" src="${placeholder}" ${attrEnd} />`;
+    return `<img ${attrBegin} class="${className}" data-original="${src}" src="${placeholder}" ${attrEnd}>`;
   });
 }

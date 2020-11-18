@@ -146,6 +146,12 @@ $ git pull
 * 插件：[hexo-generator-restful](https://github.com/izhaoo/hexo-generator-restful) (Hexo RESTful 接口)
 * 交流群：550262893
 
+## 贡献
+
+[![contributors](https://opencollective.com/hexo-theme-zhaoo/contributors.svg?width=890&button=false)](https://github.com/izhaoo/hexo-theme-zhaoo/graphs/contributors)
+
+感谢所有贡献者！欢迎提交代码~
+
 ## 趋势
 
 [![趋势](https://starchart.cc/izhaoo/hexo-theme-zhaoo.svg)](https://starchart.cc/izhaoo/hexo-theme-zhaoo)

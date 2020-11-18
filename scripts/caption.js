@@ -10,7 +10,7 @@ module.exports.caption = function (hexo) {
       if (!alt) {
         return match;
       }
-      return `<img ${attrBegin} ${attrEnd} /><span class="image-caption">${alt}</span>`;
+      return `<img ${attrBegin} ${attrEnd}><span class="image-caption">${alt}</span>`;
     });
   }, 0);
 }
