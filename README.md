@@ -148,7 +148,7 @@ $ git pull
 
 ## 贡献
 
-[![contributors](https://opencollective.com/hexo-theme-zhaoo/contributors.svg?width=890&button=false)](https://github.com/izhaoo/hexo-theme-zhaoo/graphs/contributors)
+[![contributors](https://opencollective.com/hexo-theme-zhaoo/contributors.svg?button=false)](https://github.com/izhaoo/hexo-theme-zhaoo/graphs/contributors)
 
 感谢所有贡献者！欢迎提交代码~
 

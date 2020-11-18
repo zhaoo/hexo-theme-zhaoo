@@ -43,43 +43,27 @@
 <% } %>
 
 <% if(theme.seo.baidu_auto_push) { %>
-<script>
-  (function () {
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    } else {
-      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-  })();
-</script>
+<%- partial('_partial/seo/baidu-push') %>
 <% } %>
 
 <% if(theme.analytics.baidu) { %>
-<script defer src='https://hm.baidu.com/hm.js?<%- theme.analytics.baidu %>'></script>
+<%- partial('_partial/analytics/baidu') %>
 <% } %>
 
-<%- (theme.analytics.cnzz && js({ src: 'https://s9.cnzz.com/z_stat.php?id=' + theme.analytics.cnzz + '&web_id=' + theme.analytics.cnzz, defer: true })) %>
+<% if(theme.analytics.google) { %>
+<%- partial('_partial/analytics/google') %>
+<% } %>
+
+<% if(theme.analytics.cnzz) { %>
+<%- partial('_partial/analytics/cnzz') %>
+<% } %>
 
 <% if(theme.analytics.tencent) { %>
-<script>
-  var _mtac = {};
-  (function () {
-    var mta = document.createElement("script");
-    mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";
-    mta.setAttribute("name", "MTAH5");
-    mta.setAttribute("sid", "<%- theme.analytics.tencent %>");
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(mta, s);
-  })();
-</script>
+<%- partial('_partial/analytics/tencent') %>
 <% } %>
 
 <% if(theme.custom.foot) { %>
 <%- theme.custom.foot %>
 <% } %>
 
-<%- (theme.custom.js && js({ src: theme.custom.js, defer: true })) %>
+<%- (theme.custom.js && js(theme.custom.js)) %>

@@ -148,7 +148,7 @@ $ git pull
 
 ## Contributors
 
-[![contributors](https://opencollective.com/hexo-theme-zhaoo/contributors.svg?width=890&button=false)](https://github.com/izhaoo/hexo-theme-zhaoo/graphs/contributors)
+[![contributors](https://opencollective.com/hexo-theme-zhaoo/contributors.svg?button=false)](https://github.com/izhaoo/hexo-theme-zhaoo/graphs/contributors)
 
 Thanks to all contributors! Welcome to PR.
 
