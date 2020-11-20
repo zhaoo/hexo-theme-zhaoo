@@ -5,11 +5,11 @@
 # Menu
 menu:
   home: / || 首页
-  galleries: /galleries || 摄影
-  archives: /archives || 归档
-  tags: /tags || 标签
-  categories: /categories || 分类
-  about: /about || 关于
+  galleries: /galleries/ || 摄影
+  archives: /archives/ || 归档
+  tags: /tags/ || 标签
+  categories: /categories/ || 分类
+  about: /about/ || 关于
 
 # Color
 color:
@@ -68,7 +68,7 @@ social:
   qq: tencent://message/?Menu=yes&uin=894519210 || iconQQ || '#12B7F5'
   wechat: javascript:; || iconwechat-fill || '#09BB07'
   instagram: https://www.instagram.com/izhaoo/ || iconinstagram || '#DA2E76'
-  github: https://github.com/izhaoo || icongithub-fill || '#24292E'
+  github: https://github.com/izhaoo || icongithub-fill || '#9f7be1'
   email: mailto:izhaoo@163.com || iconmail
 
 # Fab (Float Action Button)
@@ -98,9 +98,6 @@ gray:
 post_image:
   random: local # local galleries
   default: /images/theme/post-image.jpg
-
-# Keywords
-keywords:
 
 # Page Size
 post_page_size:

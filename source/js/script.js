@@ -89,9 +89,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     motto: function () {
       if (CONFIG.preview.motto.api) {
         $.get(CONFIG.preview.motto.api, function (data) {
-          if (data) {
-            $("#motto").text(data);
-          }
+          data && $("#motto").text(data);
         });
       }
     },
@@ -172,9 +170,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         });
       });
       $(document).on('pjax:complete', function () {
-        if (CONFIG.fancybox) {
-          action.fancybox();
-        }
+        CONFIG.fancybox && action.fancybox();
       });
     },
     donate: function () {
@@ -208,12 +204,8 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     },
     navbar: function () {
       $(window).resize(ZHAOO.utils.throttle(function () {
-        if (ZHAOO.utils.isDesktop()) {
-          fn.navbar.desktop();
-        }
-        if (ZHAOO.utils.isMobile() && !CONFIG.isHome) {
-          fn.navbar.mobile();
-        }
+        ZHAOO.utils.isDesktop() && fn.navbar.desktop();
+        (ZHAOO.utils.isMobile() && !CONFIG.isHome) && fn.navbar.mobile();
       }, 1000)).resize();
       $(".j-navbar-menu").on("click", function () {
         fn.showMenu();
@@ -275,30 +267,14 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     action.menu();
     action.scroolToTop();
     action.preview();
-    if (CONFIG.fancybox) {
-      action.fancybox();
-    }
-    if (CONFIG.pjax) {
-      action.pjax();
-    }
-    if (CONFIG.lazyload.enable) {
-      action.lazyload();
-    }
-    if (CONFIG.donate.enable) {
-      action.donate();
-    }
-    if (CONFIG.lazyload && CONFIG.fancybox) {
-      action.fixLazyloadFancybox();
-    }
-    if (CONFIG.carrier.enable) {
-      action.carrier();
-    }
-    if (CONFIG.qrcode.enable) {
-      action.qrcode();
-    }
-    if (CONFIG.toc.enable) {
-      action.toc();
-    }
+    CONFIG.fancybox && action.fancybox();
+    CONFIG.pjax && action.pjax();
+    CONFIG.lazyload.enable && action.lazyload();
+    CONFIG.donate.enable && action.donate();
+    (CONFIG.lazyload && CONFIG.fancybox) && action.fixLazyloadFancybox();
+    CONFIG.carrier.enable && action.carrier();
+    CONFIG.qrcode.enable && action.qrcode();
+    CONFIG.toc.enable && action.toc();
   });
 
 })(jQuery);

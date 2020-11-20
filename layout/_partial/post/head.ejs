@@ -3,11 +3,11 @@
   <div class="head-mask">
     <h1 class="head-title"><%- page.title %></h1>
     <div class="head-info">
-      <span class="post-info-item"><i class="iconfont iconcalendar"></i><%- date(page.date, "MMMM DD, YYYY") %></span
-        class="post-info-item">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i><%- date(page.date, "MMMM DD, YYYY") %></span>
       <% if(theme.leancloud.enable) { %>
-      <span class="post-info-item"><i class="iconfont iconeye"></i><span id="<%= url_for(page.path) %>"
-          class="leancloud" data-flag-title="<%- page.title %>"></span></span>
+        <span class="post-info-item">
+          <i class="iconfont iconeye"></i><span id="<%- url_for(page.path) %>" class="leancloud" data-flag-title="<%- page.title %>"></span>
+        </span>
       <% } %>
       <span class="post-info-item"><i class="iconfont iconfont-size"></i><%- strip_html(page.content).length %></span>
     </div>

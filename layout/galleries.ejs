@@ -1,6 +1,6 @@
 <main id="main">
   <section class="container galleries">
-    <%- partial('_partial/header', {title: theme.galleries.title, subtitle: theme.galleries.subtitle}) %>
+    <%- partial('_partial/components/header', {title: theme.galleries.title, subtitle: theme.galleries.subtitle}) %>
     <% if (site.data && site.data.galleries) { %>
     <% var galleries = site.data.galleries; %>
     <div class="wrap">

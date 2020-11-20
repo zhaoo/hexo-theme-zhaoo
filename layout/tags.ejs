@@ -1,6 +1,6 @@
 <main id="main">
   <section class="tags">
-    <%- partial('_partial/header', {title: '标签', subtitle: `共: ${site.tags.length} 个`}) %>
+    <%- partial('_partial/components/header', {title: '标签', subtitle: `共: ${site.tags.length} 个`}) %>
     <div class="tags-container">
       <%- tagcloud({min_font: 14, max_font: 36, amount: 200, color: true, start_color: '#666666', end_color: '#212121'}) %>
     </div>

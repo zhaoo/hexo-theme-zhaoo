@@ -1,69 +1,11 @@
-<% if(theme.vendors.jquery_js){ %>
-<%- js(theme.vendors.jquery_js) %>
-<% }else{ %>
-<%- js('lib/jquery/jquery.js')%>
-<% } %>
-
-<% if(theme.lazyload){ %>
-<% if(theme.vendors.lazyload_js){ %>
-<%- js(theme.vendors.lazyload_js) %>
-<% }else{ %>
-<%- js('lib/lazyload/lazyload.js')%>
-<% }} %>
-
-<% if(theme.fancybox){ %>
-<% if(theme.vendors.fancybox_js){ %>
-<%- js(theme.vendors.fancybox_js) %>
-<% }else{ %>
-<%- js('lib/fancybox/fancybox.js')%>
-<% }} %>
-
-<% if(theme.pjax){ %>
-<% if(theme.vendors.pjax_js){ %>
-<%- js(theme.vendors.pjax_js) %>
-<% }else{ %>
-<%- js('lib/pjax/pjax.js')%>
-<% }} %>
-
-<% if(theme.qrcode.enable){ %>
-<% if(theme.vendors.qrcode_js){ %>
-<%- js(theme.vendors.qrcode_js) %>
-<% }else{ %>
-<%- js('lib/qrcode/qrcode.js')%>
-<% }} %>
-
+<%- theme.vendors.jquery_js ? js(theme.vendors.jquery_js) : js('lib/jquery/jquery.js') %>
+<%- theme.lazyload && (theme.vendors.lazyload_js ? js(theme.vendors.lazyload_js) : js('lib/lazyload/lazyload.js')) %>
+<%- theme.fancybox && (theme.vendors.fancybox_js ? js(theme.vendors.fancybox_js) : js('lib/fancybox/fancybox.js'))%>
+<%- theme.pjax && (theme.vendors.pjax_js ? js(theme.vendors.pjax_js) : js('lib/pjax/pjax.js')) %>
+<%- theme.qrcode.enable && (theme.vendors.qrcode_js ? js(theme.vendors.qrcode_js) : js('lib/qrcode/qrcode.js')) %>
 <%- js(['js/utils', 'js/script']) %>
-
-<% if(theme.leancloud.enable){ %>
-<%- partial('_partial/common/visitors') %>
-<% } %>
-
-<% if(theme.daovoice.enable){ %>
-<%- partial('_partial/common/daovoice') %>
-<% } %>
-
-<% if(theme.seo.baidu_auto_push) { %>
-<%- partial('_partial/seo/baidu-push') %>
-<% } %>
-
-<% if(theme.analytics.baidu) { %>
-<%- partial('_partial/analytics/baidu') %>
-<% } %>
-
-<% if(theme.analytics.google) { %>
-<%- partial('_partial/analytics/google') %>
-<% } %>
-
-<% if(theme.analytics.cnzz) { %>
-<%- partial('_partial/analytics/cnzz') %>
-<% } %>
-
-<% if(theme.analytics.tencent) { %>
-<%- partial('_partial/analytics/tencent') %>
-<% } %>
-
-<% if(theme.custom.foot) { %>
-<%- theme.custom.foot %>
-<% } %>
-
-<%- (theme.custom.js && js(theme.custom.js)) %>
+<%- theme.leancloud.enable && partial('_partial/plugins/visitors') %>
+<%- partial('_partial/plugins/seo') %>
+<%- partial('_partial/plugins/analytics') %>
+<%- theme.custom.foot && theme.custom.foot %>
+<%- theme.custom.js && js(theme.custom.js) %>
