@@ -3,7 +3,7 @@
     <i class="iconfont iconmenu"></i>
   </nav>
   <div class="preview-image">
-    <h2 class="preview-motto" id="motto"><%- theme.preview.motto.default %></h2>
+    <h2 class="preview-motto" id="motto"><%= theme.preview.motto.default %></h2>
     <!-- <span class="preview-cursor">|</span> -->
     <% if (theme.preview.model === 'cloud') { %>
       <%- image_tag("/images/theme/cloud.png", {class: "preview-overlay", draggable:"false"}) %>

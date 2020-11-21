@@ -17,6 +17,8 @@
       <i class="iconfont iconbaseline-close-px"></i>
     </div>
     <ul class="menu-content"><%- menuList %></ul>
-    <%- theme.copyright && `<div class="menu-copyright">${theme.copyright}</div>` %>
+    <% if (theme.copyright) { %>
+      <div class="menu-copyright"><%- theme.copyright %></div>
+    <% } %>
   </div>
 </nav>

@@ -1,11 +1,35 @@
 <%- theme.vendors.jquery_js ? js(theme.vendors.jquery_js) : js('lib/jquery/jquery.js') %>
-<%- theme.lazyload && (theme.vendors.lazyload_js ? js(theme.vendors.lazyload_js) : js('lib/lazyload/lazyload.js')) %>
-<%- theme.fancybox && (theme.vendors.fancybox_js ? js(theme.vendors.fancybox_js) : js('lib/fancybox/fancybox.js'))%>
-<%- theme.pjax && (theme.vendors.pjax_js ? js(theme.vendors.pjax_js) : js('lib/pjax/pjax.js')) %>
-<%- theme.qrcode.enable && (theme.vendors.qrcode_js ? js(theme.vendors.qrcode_js) : js('lib/qrcode/qrcode.js')) %>
+
+<% if (theme.lazyload) { %>
+  <%- theme.vendors.lazyload_js ? js(theme.vendors.lazyload_js) : js('lib/lazyload/lazyload.js') %>
+<% } %>
+
+<% if (theme.fancybox) { %>
+  <%- theme.vendors.fancybox_js ? js(theme.vendors.fancybox_js) : js('lib/fancybox/fancybox.js') %>
+<% } %>
+
+<% if (theme.pjax) { %>
+  <%- theme.vendors.pjax_js ? js(theme.vendors.pjax_js) : js('lib/pjax/pjax.js') %>
+<% } %>
+
+<% if (theme.qrcode.enable) { %>
+  <%- theme.vendors.qrcode_js ? js(theme.vendors.qrcode_js) : js('lib/qrcode/qrcode.js') %>
+<% } %>
+
 <%- js(['js/utils', 'js/script']) %>
-<%- theme.leancloud.enable && partial('_partial/plugins/visitors') %>
+
+<% if (theme.leancloud.enable) { %>
+  <%- partial('_partial/plugins/visitors') %>
+<% } %>
+
 <%- partial('_partial/plugins/seo') %>
+
 <%- partial('_partial/plugins/analytics') %>
-<%- theme.custom.foot && theme.custom.foot %>
-<%- theme.custom.js && js(theme.custom.js) %>
+
+<% if (theme.custom.foot) { %>
+  <%- theme.custom.foot %>
+<% } %>
+
+<% if (theme.custom.js) { %>
+  <%- js(theme.custom.js) %>
+<% } %>

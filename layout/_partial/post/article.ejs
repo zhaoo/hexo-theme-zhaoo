@@ -6,12 +6,18 @@
         <%- page.more %>
       </section>
       <section class="extra">
-        <%- (theme.post_copyright.enable && page.copyright !== false) && partial('_partial/post/copyright') %>
-        <%- theme.donate.enable && partial('_partial/post/donate') %>
+        <% if (theme.post_copyright.enable && page.copyright !== false) { %>
+          <%- partial('_partial/post/copyright') %>
+        <% } %>
+        <% if (theme.donate.enable) { %>
+          <%- partial('_partial/post/donate') %>
+        <% } %>
         <%- partial('_partial/post/tag') %>
         <%- partial('_partial/post/nav') %>
       </section>
-      <%- theme.comments.enable && partial('_partial/post/comments') %>
+      <% if (theme.comments.enable) { %>
+        <%- partial('_partial/post/comments') %>
+      <% } %>
     </section>
   </div>
 </article>

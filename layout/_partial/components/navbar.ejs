@@ -14,13 +14,19 @@
 <% if (title) { %>
   <nav class="navbar">
     <div class="left">
-      <%- theme.qrcode.enable && `<i class="iconfont iconqrcode j-navbar-qrcode"></i>` %>
-      <%- theme.color_mode.enable && `<i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>` %>
+      <% if (theme.qrcode.enable) { %>
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      <% } %>
+      <% if (theme.color_mode.enable) { %>
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      <% } %>
     </div>
-    <div class="center"><%- title %></div>
+    <div class="center"><%= title %></div>
     <div class="right">
       <i class="iconfont iconmenu j-navbar-menu"></i>
     </div>
-    <%- theme.qrcode.enable && `<div id="qrcode-navbar"></div>` %>
+    <% if (theme.qrcode.enable) { %>
+      <div id="qrcode-navbar"></div>
+    <% } %>
   </nav>
 <% } %>

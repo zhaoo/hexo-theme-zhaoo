@@ -1,6 +1,10 @@
-<%- theme.analytics.baidu && `<script defer src='https://hm.baidu.com/hm.js?${theme.analytics.baidu}'></script>` %>
+<% if (theme.analytics.baidu) { %>
+  <script defer src='https://hm.baidu.com/hm.js?<%- theme.analytics.baidu %>'></script>
+<% } %>
 
-<%- theme.analytics.cnzz && `<script defer src='https://s9.cnzz.com/z_stat.php?id=${theme.analytics.cnzz}&web_id=${theme.analytics.cnzz}'></script>` %>
+<% if (theme.analytics.cnzz) { %>
+  <script defer src='https://s9.cnzz.com/z_stat.php?id=<%- theme.analytics.cnzz %>&web_id=<%- theme.analytics.cnzz %>'></script>
+<% } %>
 
 <% if (theme.analytics.google) { %>
   <script>
@@ -14,7 +18,7 @@
   <script async src='https://www.google-analytics.com/analytics.js'></script>
 <% } %>
 
-<% if(theme.analytics.tencent) { %>
+<% if (theme.analytics.tencent) { %>
   <script>
     var _mtac = {};
     (function () {
