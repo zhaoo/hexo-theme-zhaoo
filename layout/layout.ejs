@@ -8,6 +8,9 @@
   <% if (theme.fab.enable) { %>
     <%- partial('_partial/components/fab') %>
   <% } %>
+  <% if (theme.scrollbar.model === 'simple') { %>
+    <%- partial('_partial/components/scrollbar') %>
+  <% } %>
   <% if (theme.color_mode.enable) { %>
     <%- js('js/color-mode') %>
   <% } %>

@@ -61,7 +61,7 @@ preview:
     api: https://v1.hitokoto.cn/?encode=text&c=d
 
 # Copyright
-# copyright: <p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p>
+copyright: <p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p>
 
 # Social
 social:
@@ -70,6 +70,10 @@ social:
   instagram: https://www.instagram.com/izhaoo/ || iconinstagram || '#DA2E76'
   github: https://github.com/izhaoo || icongithub-fill || '#9f7be1'
   email: mailto:izhaoo@163.com || iconmail
+
+# Override Scrollbar
+scrollbar:
+  model: simple # default simple normal
 
 # Fab (Float Action Button)
 fab:

@@ -34,17 +34,22 @@ body
     margin 0
   a, div, span
     -webkit-tap-highlight-color transparent
-/* Browser */
-::-webkit-scrollbar, ::-webkit-scrollbar-track
-  width 6px
-  height 6px
-  background-color var(--color-background)
-::-webkit-scrollbar-thumb
-  background-color var(--color-text)
-::-webkit-scrollbar-thumb:hover
-  background-color var(--color-text)
-::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb:hover
-  transition $transition
+/* ScrollBar */
+if (hexo-config('scrollbar.model') == 'simple')
+  ::-webkit-scrollbar
+    display none
+if (hexo-config('scrollbar.model') == 'normal')
+  ::-webkit-scrollbar, ::-webkit-scrollbar-track
+    width 6px
+    height 6px
+    background-color var(--color-background)
+  ::-webkit-scrollbar-thumb
+    background-color var(--color-text)
+  ::-webkit-scrollbar-thumb:hover
+    background-color var(--color-text)
+  ::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb:hover
+    transition $transition
+/* Selection */
 *::selection
   background $color-link
   color #ffffff

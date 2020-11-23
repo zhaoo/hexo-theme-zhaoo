@@ -256,6 +256,31 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         $(".toc-link[href='#" + current[1] + "']").addClass("active");
       };
       f();
+    },
+    scrollbar: function () {
+      var totalH = $(document).height();
+      var clientH = $(window).height();
+      $(window).on("scroll", f);
+      function f() {
+        var validH = totalH - clientH;
+        var scrollH = $(document).scrollTop();
+        var height = scrollH / validH * 100;
+        $(".j-scrollbar-current").css("height", height + '%');
+      }
+      f();
+      $(".j-scrollbar").mousedown(function (e) {
+        var scrollH = e.offsetY * totalH / 100;
+        $("html,body").animate({ scrollTop: scrollH }, 300);
+        $(document).mousemove(function (e) {
+          var scrollH = (1 - ((clientH - e.clientY) / clientH)) * totalH;
+          $("html,body").scrollTop(scrollH);
+          $("html,body").css("user-select", "none");
+        });
+        $(document).mouseup(function () {
+          $(document).off('mousemove');
+          $("html,body").css("user-select", "auto");
+        });
+      });
     }
   }
 
@@ -275,6 +300,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     CONFIG.carrier.enable && action.carrier();
     CONFIG.qrcode.enable && action.qrcode();
     CONFIG.toc.enable && action.toc();
+    CONFIG.scrollbar.model === 'simple' && action.scrollbar();
   });
 
 })(jQuery);
