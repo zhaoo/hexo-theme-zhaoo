@@ -220,3 +220,31 @@
             -ms-transform rotate(180deg)
             -o-transform rotate(180deg)
             transition $transition
+.article-wrap--pure
+  .container
+    @media (min-width 1200px)
+      max-width unquote(hexo-config('post_page_size.width') || 800px)
+  .article
+    .wrap
+      box-shadow none
+      .head
+        padding-bottom 0
+        height auto
+        margin-top 180px
+        img
+          display none
+        .head-mask
+          background none
+          &::after
+            display block
+            content ''
+            height 1px
+            width 100px
+            background var(--color-border)
+            transform translateY(30px)
+          .head-title
+            color var(--color-text)
+            font-weight bold
+            margin-bottom 20px
+          .head-info
+            color var(--color-text-third)

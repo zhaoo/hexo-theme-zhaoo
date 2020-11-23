@@ -9,7 +9,7 @@
         <% if (theme.post_copyright.enable && page.copyright !== false) { %>
           <%- partial('_partial/post/copyright') %>
         <% } %>
-        <% if (theme.donate.enable) { %>
+        <% if (theme.donate.enable && page.donate !== false) { %>
           <%- partial('_partial/post/donate') %>
         <% } %>
         <%- partial('_partial/post/tag') %>

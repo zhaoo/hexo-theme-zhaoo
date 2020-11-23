@@ -1,1 +1,3 @@
-<%- (page.tags && page.tags.length) && list_tags(page.tags, { show_count: false, class: 'tag' }) %>
+<% if (page.tags && page.tags.length) { %>
+  <%- list_tags(page.tags, { show_count: false, class: 'tag' }) %> %>
+<% } %>
