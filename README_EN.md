@@ -27,7 +27,11 @@
   </a>
 </div>
 
-## Rreview
+<div align="center">
+  Documents: <a href="https://www.izhaoo.com/2020/05/05/hexo-theme-zhaoo-doc/" target="_blank" rel="noopener noreferrer">Documents</a>&nbsp;&nbsp;&nbsp;&nbsp;Preview:<a href="https://www.izhaoo.com/" target="_blank" rel="noopener noreferrer">zhaoo</a>
+</div>
+
+## Preview
 
 - [zhaoo's Blog](https://www.izhaoo.com)
 - [Handwer's Blog](https://blog.handwer-std.top/)
@@ -124,7 +128,7 @@ $ hexo clean && hexo s
 
 Modify the file `_config.yml` in the theme directory to configure related functions:
 
-It is recommended to refer to [_config.yml](https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/_config.yml) and [_example](https://github.com/izhaoo/hexo-theme-zhaoo/tree/master/_example) for configuration
+It is recommended to refer to [documents](https://www.izhaoo.com/2020/05/05/hexo-theme-zhaoo-doc/)、[_config.yml](https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/_config.yml)、[_example](https://github.com/izhaoo/hexo-theme-zhaoo/tree/master/_example) for configuration
 
 ## Update
 

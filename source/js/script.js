@@ -274,11 +274,11 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         $(document).mousemove(function (e) {
           var scrollH = (1 - ((clientH - e.clientY) / clientH)) * totalH;
           $("html,body").scrollTop(scrollH);
-          $("html,body").css("user-select", "none");
+          $("html,body").css({"user-select": "none", "cursor": "move"});
         });
         $(document).mouseup(function () {
           $(document).off('mousemove');
-          $("html,body").css("user-select", "auto");
+          $("html,body").css({"user-select": "auto", "cursor": "default"});
         });
       });
     }
