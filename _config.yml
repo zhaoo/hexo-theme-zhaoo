@@ -112,6 +112,11 @@ post_page_size:
 caption:
   enable: true
 
+# Indent
+indent:
+  content:
+  excerpt:
+
 # TOC
 toc:
   enable: true

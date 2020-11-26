@@ -66,6 +66,8 @@
         .post-excerpt
           p
             color var(--color-text-secondary)
+            if (hexo-config('indent.excerpt'))
+              text-indent unquote(hexo-config('indent.excerpt'))
         .post-info
           position absolute
           bottom 20px

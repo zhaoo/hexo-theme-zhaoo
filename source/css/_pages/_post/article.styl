@@ -55,6 +55,8 @@
             font-weight bold
         p
           text-align justify
+          if (hexo-config('indent.content'))
+            text-indent unquote(hexo-config('indent.content'))
         p, li
           code
             font-size 1em
