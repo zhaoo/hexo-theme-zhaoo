@@ -1,11 +1,10 @@
 <ul class="copyright">
   <% if (theme.carrier.enable && page.carrier) { %>
-  <li><strong>版权声明：</strong>本文作者放弃了版权，大家随意搬运，特此奉上搬运链接：<a href="javascript:;" class="j-carrier-btn">一键打包带走</a></li>
-  <input value="<%= carrier(); %>" class="j-carrier-data carrier-data">
+    <li><strong>版权声明：</strong>本文作者放弃了版权，大家随意搬运，特此奉上搬运链接：<a href="javascript:;" class="j-carrier-btn">一键打包带走</a></li>
+    <input value="<%= carrier(); %>" class="j-carrier-data carrier-data">
   <% } else { %>
-  <li><strong>本文作者：</strong><%= config.author %></li>
-  <li><strong>本文链接：</strong><a href="<%= url %>"><%= url %></a></li>
-  <li><strong>版权声明：</strong>本博客所有文章均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
-      rel="external nofollow" target="_blank"> BY-NC-SA </a>许可协议，转载请注明出处！</li>
+    <li><strong>本文作者：</strong><%= config.author %></li>
+    <li><strong>本文链接：</strong><%- link_to(full_url_for(url), full_url_for(url)) %></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <%- link_to('https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh', 'BY-NC-SA', {external: true}) %> 许可协议，转载请注明出处！</li>
   <% } %>
 </ul>

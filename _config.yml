@@ -5,25 +5,27 @@
 # Menu
 menu:
   home: / || 首页
-  galleries: /galleries || 摄影
-  archives: /archives || 归档
-  tags: /tags || 标签
-  categories: /categories || 分类
-  about: /about || 关于
+  galleries: /galleries/ || 摄影
+  archives: /archives/ || 归档
+  tags: /tags/ || 标签
+  categories: /categories/ || 分类
+  about: /about/ || 关于
 
 # Color
 color:
-  text: "#33333D"
-  text-secondary: "#4e4e4e"
-  text-third: "#999999"
-  background: "#ffffff"
-  background-secondary: "#f6f8fa"
-  text-dark: "#dddddd"
-  text-secondary-dark: "#9899ab"
-  text-third-dark: "#7d8594"
-  background-dark: "#1e2128"
-  background-secondary-dark: "#1a1d22"
-  link: "#FF3B00"
+  text: '#33333D'
+  text-secondary: '#4e4e4e'
+  text-third: '#999999'
+  background: '#ffffff'
+  background-secondary: '#f6f8fa'
+  border: '#eeeeee'
+  text-dark: '#dddddd'
+  text-secondary-dark: '#9899ab'
+  text-third-dark: '#7d8594'
+  background-dark: '#1e2128'
+  background-secondary-dark: '#1a1d22'
+  border-dark: '#2b3038'
+  link: '#FF3B00'
 
 # Favicon
 favicon:
@@ -67,8 +69,12 @@ social:
   qq: tencent://message/?Menu=yes&uin=894519210 || iconQQ || '#12B7F5'
   wechat: javascript:; || iconwechat-fill || '#09BB07'
   instagram: https://www.instagram.com/izhaoo/ || iconinstagram || '#DA2E76'
-  github: https://github.com/izhaoo || icongithub-fill || '#24292E'
+  github: https://github.com/izhaoo || icongithub-fill || '#9f7be1'
   email: mailto:izhaoo@163.com || iconmail
+
+# Override Scrollbar
+scrollbar:
+  model: simple # default simple normal none
 
 # Fab (Float Action Button)
 fab:
@@ -102,6 +108,17 @@ post_image:
 post_page_size:
   width: 800px
 
+# Caption
+caption:
+  enable: true
+
+# TOC
+toc:
+  enable: true
+  always_show: true
+  min_depth: 1
+  max_depth: 3
+
 # Donate
 donate:
   enable: true
@@ -132,7 +149,7 @@ galleries:
 # --------------------------------------------------
 
 comments:
-  enable: true
+  enable: false
   type: valine
   button: true
 
@@ -164,21 +181,26 @@ changyan:
 
 # Daovoice
 daovoice:
-  enable: true
+  enable: false
   appId: # app_id
 
-# Lazyload
-lazyload:
-  enable: true
-  only_post: false
-  loading: /images/theme/loading.gif
+# Tencent Chao
+tencentChao:
+  enable: false
+  appId: # app_id
 
 # LeanCloud
 leancloud:
   enable: false
   appId:
   appKey:
-  serverURLs:
+  serverURLs: https://leancloud.cn/
+
+# Lazyload
+lazyload:
+  enable: true
+  only_post: false
+  loading: /images/theme/loading.gif
 
 # FancyBox
 fancybox: true
@@ -193,6 +215,17 @@ highlight:
     light: Xcode
     dark: Solarized Dark
 
+# SEO
+seo:
+  baidu_auto_push: true
+
+# Analytics
+analytics:
+  baidu: # id
+  google: # id
+  tencent: # id
+  cnzz: # id
+
 # --------------------------------------------------
 # Script Settings
 # --------------------------------------------------
@@ -204,20 +237,10 @@ vendors:
   pjax_js: https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js
   lazyload_js: https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js
   qrcode_js: https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js
+  daovoice_js: https://widget.daovoice.io/widget/0f81ff2f.js
   fancybox_css: https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css
   highlight_css: https://cdn.bootcss.com/highlight.js/9.18.1/styles/
   iconfont_css: //at.alicdn.com/t/font_1445822_s6x2xcokxrl.css
-
-# SEO
-seo:
-  baidu_auto_push: true
-
-# Analytics
-analytics:
-  baidu: # id
-  google: # id
-  tencent: # id
-  cnzz: # id
 
 # Custom
 custom:

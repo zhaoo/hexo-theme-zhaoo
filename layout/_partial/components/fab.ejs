@@ -1,0 +1,18 @@
+  <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  <% if (theme.daovoice.enable) { %>
+    <div class="fab fab-daovoice">
+      <i class="iconfont iconcomment"></i>
+    </div>
+  <% } %>
+  <% if (theme.tencentChao.enable) { %>
+    <a href="https://support.qq.com/product/<%= theme.tencentChao.appId %>" target="_blank">
+      <div class="fab fab-tencent-chao">
+        <i class="iconfont iconcomment"></i>
+      </div>
+    </a>
+  <% } %>
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>

@@ -1,0 +1,25 @@
+<%
+  var socialList = '';
+  for (var i in theme.social) { 
+    var arr = theme.social[i].split('||');
+    var url = arr[0];
+    var iconfont = arr[1];
+    var color = arr[2] || theme.color.link;
+    socialList += 
+      `<a 
+        href="${url}"
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=${color}" 
+        onMouseOut="this.style.color='${theme.color.text}'">
+          <i class="iconfont ${iconfont}"></i>
+      </a>`;
+  } 
+%>
+
+<footer class="footer">
+  <div class="footer-social"><%- socialList %></div>
+  <% if (theme.copyright) { %>
+    <div class="footer-copyright"><%- theme.copyright %></div>
+  <% } %>
+</footer>

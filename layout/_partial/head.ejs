@@ -3,7 +3,7 @@ var keywords = '';
 var description = '';
 (function() {
   if (config.keywords) {
-    keywords += theme.keywords;
+    keywords += config.keywords;
   }
   if (page.keywords) {
     keywords += ', ';
@@ -19,8 +19,7 @@ var description = '';
 %>
 
 <!DOCTYPE html>
-<html lang="<%= config.language %>" <%= theme.color_mode.enable ? `color-mode=light` : '' %>>
-
+<html lang="<%= config.language %>" <%- theme.color_mode.enable ? `color-mode=light` : `` %>>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -29,52 +28,36 @@ var description = '';
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
-
-  <% if (keywords) { %>
-  <meta name="keywords" content="<%= keywords %>"> <% } %>
-  <% if (description) { %>
-  <meta name="description" content="<%= description %>"> <% } %>
-  <% if (config.author){ %>
-  <meta name="author" content="<%= config.author %>"> <% } %>
-
-  <% if (theme.favicon.small) { %>
-    <link rel="icon" href="<%= theme.favicon.small %>" type="image/png" sizes="16x16">
-  <% } %>
-  <% if (theme.favicon.medium) { %>
-    <link rel="icon" href="<%= theme.favicon.medium %>" type="image/png" sizes="32x32">
-  <% } %>
-  <% if (theme.favicon.apple_touch_icon) { %>
-    <link rel="apple-touch-icon" href="<%= theme.favicon.apple_touch_icon %>" sizes="180x180">
-  <% } %>
-  <% if (theme.favicon.safari_pinned_tab) { %>
-    <meta rel="mask-icon" href="<%= theme.favicon.safari_pinned_tab %>" color="#333333">
-  <% } %>
+  <%- keywords ? `<meta name="keywords" content="${keywords}">` : `` %>
+  <%- description ? `<meta name="description" content="${description}">` : `` %>
+  <%- config.author ? `<meta name="author" content="${config.author}">` : `` %>
+  <%- theme.favicon.small ? `<link rel="icon" href="${theme.favicon.small}" type="image/png" sizes="16x16">` : `` %>
+  <%- theme.favicon.medium ? `<link rel="icon" href="${theme.favicon.medium}" type="image/png" sizes="32x32">` : `` %>
+  <%- theme.favicon.apple_touch_icon ? `<link rel="apple-touch-icon" href="${theme.favicon.apple_touch_icon}" sizes="180x180">` : `` %>
+  <%- theme.favicon.safari_pinned_tab ? `<meta rel="mask-icon" href="${theme.favicon.safari_pinned_tab}" color="#333333">` : `` %>
   <% if (theme.favicon.msapplication) { %>
-    <meta rel="msapplication-TileImage" content="<%= theme.favicon.msapplication %>">
+    <meta rel="msapplication-TileImage" content="<%- theme.favicon.msapplication %>">
     <meta rel="msapplication-TileColor" content="#000000">
   <% } %>
 
   <%- css(['css/style']) %>
 
-  <% if(theme.vendors.iconfont_css){ %>
-  <%- css(theme.vendors.iconfont_css) %>
+  <% if (theme.vendors.iconfont_css) { %>
+    <%- css(theme.vendors.iconfont_css) %>
   <% } %>
 
-  <% if(theme.fancybox){ %>
-  <% if(theme.vendors.fancybox_css){ %>
-  <%- css(theme.vendors.fancybox_css) %>
-  <% }else{ %>
-  <%- css('lib/fancybox/fancybox.css')%>
-  <% }} %>
+  <% if (theme.fancybox) { %>
+    <%- theme.vendors.fancybox_css ? css(theme.vendors.fancybox_css) : css('lib/fancybox/fancybox.css') %>
+  <% } %>
 
   <% if(theme.highlight.enable){ %>
-  <% if(theme.vendors.highlight_css){ %>
-  <% for (i in theme.highlight.style) { %>
-  <% style = theme.highlight.style[i].toLowerCase().replace(/(?<!([0-9]))\s(?!([0-9]))/g, '-').replace(/\s/g, '') %>
-  <%- css({href: theme.vendors.highlight_css + style + '.min.css', name: 'highlight-style', mode: i}) %>
-  <% } %>
+    <% if(theme.vendors.highlight_css){ %>
+      <% for (i in theme.highlight.style) { %>
+        <% style = theme.highlight.style[i].toLowerCase().replace(/(?<!([0-9]))\s(?!([0-9]))/g, '-').replace(/\s/g, '') %>
+        <%- css({href: theme.vendors.highlight_css + style + '.min.css', name: 'highlight-style', mode: i}) %>
+      <% } %>
   <% }else{ %>
-  <%- css('lib/highlight/a11y-dark.css')%>
+    <%- css('lib/highlight/a11y-dark.css')%>
   <% }} %>
 
   <script>
@@ -115,20 +98,29 @@ var description = '';
         motto: {
           jinrishici: <%= theme.preview.motto.jinrishici || false %>,
           default: '<%= theme.preview.motto.default %>',
-          api: '<%= theme.preview.motto.api %>'
+          api: '<%- theme.preview.motto.api %>'
         },
       },
       qrcode: {
         enable: <%= theme.qrcode.enable %>,
         type: '<%= theme.qrcode.type %>',
         image: '<%= theme.qrcode.image %>',
+      },
+      toc: {
+        enable: <%= theme.toc.enable %>
+      },
+      scrollbar: {
+        model: '<%= theme.scrollbar.model %>'
       }
     }
   </script>
 
-  <% if(theme.custom.head) { %>
-  <%- theme.custom.head  %>
+  <% if (theme.custom.head) { %>
+    <%- theme.custom.head %>
   <% } %>
 
-  <%- (theme.custom.css && css(theme.custom.css)) %>
+  <% if (theme.custom.css) { %>
+    <%- css(theme.custom.css) %>
+  <% } %>
+
 </head>

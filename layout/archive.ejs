@@ -4,18 +4,18 @@
       <div class="archive-post">
         <h3 class="archive-total">归档: <%= site.posts.length %> 篇</h3>
         <% var posts = site.posts.sort('date', 'desc'); %>
-        <% for(var i = 0, year = -1; i < posts.data.length; ++i) { %>
-        <%
-          var post = posts.data[i];
-          if(post.date.year() !== year) {
-            year = post.date.year();
-        %>
-        <h3 class="archive-year"><%= year %> 年</h3>
-        <% } %>
-        <div class="archive-item">
-          <a class="archive-date" href="<%- url_for(post.path) %>"><%= date(post.date, "MMMM DD") %></a>
-          <a class="archive-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
-        </div>
+        <% for (var i = 0, year = -1; i < posts.data.length; ++i) { %>
+          <%
+            var post = posts.data[i];
+            if (post.date.year() !== year) {
+              year = post.date.year();
+          %>
+            <h3 class="archive-year"><%= year %> 年</h3>
+          <% } %>
+          <div class="archive-item">
+            <a class="archive-date" href="<%- url_for(post.path) %>"><%= date(post.date, "MMMM DD") %></a>
+            <a class="archive-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
+          </div>
         <% } %>
       </div>
     </div>

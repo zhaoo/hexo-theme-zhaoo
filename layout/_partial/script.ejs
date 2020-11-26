@@ -1,89 +1,39 @@
-<% if(theme.vendors.jquery_js){ %>
-<%- js(theme.vendors.jquery_js) %>
-<% }else{ %>
-<%- js('lib/jquery/jquery.js')%>
+<%- theme.vendors.jquery_js ? js(theme.vendors.jquery_js) : js('lib/jquery/jquery.js') %>
+
+<% if (theme.lazyload) { %>
+  <%- theme.vendors.lazyload_js ? js(theme.vendors.lazyload_js) : js('lib/lazyload/lazyload.js') %>
 <% } %>
 
-<% if(theme.lazyload){ %>
-<% if(theme.vendors.lazyload_js){ %>
-<%- js(theme.vendors.lazyload_js) %>
-<% }else{ %>
-<%- js('lib/lazyload/lazyload.js')%>
-<% }} %>
-
-<% if(theme.fancybox){ %>
-<% if(theme.vendors.fancybox_js){ %>
-<%- js(theme.vendors.fancybox_js) %>
-<% }else{ %>
-<%- js('lib/fancybox/fancybox.js')%>
-<% }} %>
-
-<% if(theme.pjax){ %>
-<% if(theme.vendors.pjax_js){ %>
-<%- js(theme.vendors.pjax_js) %>
-<% }else{ %>
-<%- js('lib/pjax/pjax.js')%>
-<% }} %>
-
-<% if(theme.qrcode.enable){ %>
-<% if(theme.vendors.qrcode_js){ %>
-<%- js(theme.vendors.qrcode_js) %>
-<% }else{ %>
-<%- js('lib/qrcode/qrcode.js')%>
-<% }} %>
-
 <% if(theme.preview.motto.jinrishici){ %>
-<%- js('https://sdk.jinrishici.com/v2/browser/jinrishici.js') %>
+  <%- js('https://sdk.jinrishici.com/v2/browser/jinrishici.js') %>
+<% } %>
+
+<% if (theme.fancybox) { %>
+  <%- theme.vendors.fancybox_js ? js(theme.vendors.fancybox_js) : js('lib/fancybox/fancybox.js') %>
+<% } %>
+
+<% if (theme.pjax) { %>
+  <%- theme.vendors.pjax_js ? js(theme.vendors.pjax_js) : js('lib/pjax/pjax.js') %>
+<% } %>
+
+<% if (theme.qrcode.enable) { %>
+  <%- theme.vendors.qrcode_js ? js(theme.vendors.qrcode_js) : js('lib/qrcode/qrcode.js') %>
 <% } %>
 
 <%- js(['js/utils', 'js/script']) %>
 
-<% if(theme.leancloud.enable){ %>
-<%- partial('_partial/common/visitors') %>
+<% if (theme.leancloud.enable) { %>
+  <%- partial('_partial/plugins/visitors') %>
 <% } %>
 
-<% if(theme.daovoice.enable){ %>
-<%- partial('_partial/common/daovoice') %>
+<%- partial('_partial/plugins/seo') %>
+
+<%- partial('_partial/plugins/analytics') %>
+
+<% if (theme.custom.foot) { %>
+  <%- theme.custom.foot %>
 <% } %>
 
-<% if(theme.seo.baidu_auto_push) { %>
-<script>
-  (function () {
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    } else {
-      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-  })();
-</script>
+<% if (theme.custom.js) { %>
+  <%- js(theme.custom.js) %>
 <% } %>
-
-<% if(theme.analytics.baidu) { %>
-<script defer src='https://hm.baidu.com/hm.js?<%- theme.analytics.baidu %>'></script>
-<% } %>
-
-<%- (theme.analytics.cnzz && js({ src: 'https://s9.cnzz.com/z_stat.php?id=' + theme.analytics.cnzz + '&web_id=' + theme.analytics.cnzz, defer: true })) %>
-
-<% if(theme.analytics.tencent) { %>
-<script>
-  var _mtac = {};
-  (function () {
-    var mta = document.createElement("script");
-    mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";
-    mta.setAttribute("name", "MTAH5");
-    mta.setAttribute("sid", "<%- theme.analytics.tencent %>");
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(mta, s);
-  })();
-</script>
-<% } %>
-
-<% if(theme.custom.foot) { %>
-<%- theme.custom.foot %>
-<% } %>
-
-<%- (theme.custom.js && js({ src: theme.custom.js, defer: true })) %>

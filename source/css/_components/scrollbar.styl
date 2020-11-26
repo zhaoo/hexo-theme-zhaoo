@@ -1,0 +1,18 @@
+.scrollbar
+  position fixed
+  top calc(50% - 50px)
+  right 15px
+  height 100px
+  width 6px
+  background-color var(--color-border)
+  border-radius 12px
+  overflow hidden
+  &:hover
+    cursor move
+  @media (max-width 1200px)
+    display none
+  &-current
+    background-color var(--color-text)
+    border-radius 12px
+    width 6px
+    transition height 0.2s ease-out

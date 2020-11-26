@@ -12,7 +12,7 @@
       owner: '<%= theme.gitalk.owner %>',
       admin: '<%= theme.gitalk.admin %>'
     });
-    if ( <%= theme.comments.button %> ) {
+    if ( <%- theme.comments.button %> ) {
       $("#comments-btn").on("click", function () {
         $(this).hide();
         gitalk.render('gitalk');

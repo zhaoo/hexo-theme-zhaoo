@@ -1,8 +1,12 @@
+.article-wrap
+  @media (min-width 768px)
+    margin-top 70px
+  .container
+    @media (min-width 1200px)
+      max-width 'calc(%s * 12 / 6)' % unquote(hexo-config('post_page_size.width') || 800px)
 .article
   .wrap
-    max-width unquote(hexo-config('post_page_size.width') || 800px)
     margin 0 auto
-    margin-top 70px
     box-shadow $color-shadow
     @media (max-width 576px)
       margin 0
@@ -49,6 +53,8 @@
             margin-top 2em
             color var(--color-text)
             font-weight bold
+        p
+          text-align justify
         p, li
           code
             font-size 1em
@@ -60,6 +66,14 @@
           text-decoration underline
         .no-underline
           text-decoration none
+        img
+          display block
+          margin 0 auto
+        .image-caption
+          display block
+          margin 10px auto
+          text-align center
+          font-weight bold
         kbd
           padding 0.2em 0.4em
           font-size 87.5%
@@ -122,7 +136,7 @@
           text-align center
           margin-bottom 20px
           position relative
-          .qrcode
+          #qrcode-donate
             padding 10px
             width 200px
             height 200px
@@ -206,3 +220,31 @@
             -ms-transform rotate(180deg)
             -o-transform rotate(180deg)
             transition $transition
+.article-wrap--pure
+  .container
+    @media (min-width 1200px)
+      max-width unquote(hexo-config('post_page_size.width') || 800px)
+  .article
+    .wrap
+      box-shadow none
+      .head
+        padding-bottom 0
+        height auto
+        margin-top 180px
+        img
+          display none
+        .head-mask
+          background none
+          &::after
+            display block
+            content ''
+            height 1px
+            width 100px
+            background var(--color-border)
+            transform translateY(30px)
+          .head-title
+            color var(--color-text)
+            font-weight bold
+            margin-bottom 20px
+          .head-info
+            color var(--color-text-third)

@@ -20,17 +20,19 @@
       display flex
       @media (min-width 576px)
         position absolute
-        top 30%
+        top 40%
       @media (max-width 576px)
         flex-direction column
       .menu-item
         font-size 2em
         list-style none
         margin 5px 10px
+        a.active
+          text-decoration line-through
     .menu-close
       position absolute
-      right 20px
-      top 20px
+      right 15px
+      top 15px
       cursor pointer
       i
         color var(--color-text)

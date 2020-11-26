@@ -7,16 +7,16 @@
       </section>
       <section class="extra">
         <% if (theme.post_copyright.enable && page.copyright !== false) { %>
-        <%- partial('_partial/post/copyright') %>
+          <%- partial('_partial/post/copyright') %>
         <% } %>
-        <% if (theme.donate.enable) { %>
-        <%- partial('_partial/post/donate') %>
+        <% if (theme.donate.enable && page.donate !== false) { %>
+          <%- partial('_partial/post/donate') %>
         <% } %>
         <%- partial('_partial/post/tag') %>
         <%- partial('_partial/post/nav') %>
       </section>
       <% if (theme.comments.enable) { %>
-      <%- partial('_partial/post/comments') %>
+        <%- partial('_partial/post/comments') %>
       <% } %>
     </section>
   </div>

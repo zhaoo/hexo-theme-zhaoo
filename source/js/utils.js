@@ -7,7 +7,7 @@
       return function () {
         var context = this;
         var args = arguments;
-        if (timeout) clearTimeout(timeout);
+        timeout && clearTimeout(timeout);
         if (immediate) {
           var callNow = !timeout;
           timeout = setTimeout(function () {

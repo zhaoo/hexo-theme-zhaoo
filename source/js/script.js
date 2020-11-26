@@ -17,11 +17,13 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       $(".fab-up").addClass("fab-up-active");
       $(".fab-plus").addClass("fab-plus-active");
       $(".fab-daovoice").addClass("fab-daovoice-active");
+      $(".fab-tencent-chao").addClass("fab-tencent-chao-active");
     },
     freezeFab: function () {
       $(".fab-up").removeClass("fab-up-active");
       $(".fab-plus").removeClass("fab-plus-active");
       $(".fab-daovoice").removeClass("fab-daovoice-active");
+      $(".fab-tencent-chao").removeClass("fab-tencent-chao-active");
     },
     showFab: function () {
       $(".fab").removeClass("fab-hide").addClass("fab-show");
@@ -95,10 +97,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         });
       } else if (CONFIG.preview.motto.api) {
         $.get(CONFIG.preview.motto.api, function (data) {
-          if (!data || !data.hitokoto) {
-            return;
-          }
-          $("#motto").text(data.hitokoto);
+          data && $("#motto").text(data);
         });
       }
 
@@ -113,7 +112,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
   var action = {
     smoothScroll: function () {
       // a[href *=#], area[href *=#]
-      $(".smooth-scroll").click(function () {
+      $(".smooth-scroll, .toc-link").click(function () {
         if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
           var $target = $(decodeURIComponent(this.hash));
           $target = $target.length && $target || $("[name=" + this.hash.slice(1) + "]");
@@ -142,9 +141,8 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       });
       $(".fab-daovoice").on("click", function () {
         daovoice('openMessages');
-        fn.freezeFab();
       });
-      $(".fab-up .fab-daovoice").on("click", function () {
+      $(".fab-up, .fab-daovoice, fab-tencent-chao").on("click", function () {
         fn.freezeFab();
       });
       if (CONFIG.fab.always_show) {
@@ -181,20 +179,18 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         });
       });
       $(document).on('pjax:complete', function () {
-        if (CONFIG.fancybox) {
-          action.fancybox();
-        }
+        CONFIG.fancybox && action.fancybox();
       });
     },
     donate: function () {
       $(".donate .icon").on("mouseover", function () {
-        $(".donate .qrcode").show();
+        $("#qrcode-donate").show();
       });
       $(".donate .icon").children("a").on("mouseover", function () {
-        $(".donate .qrcode img").attr('src', eval('CONFIG.donate.' + $(this).attr('id')))
+        $("#qrcode-donate img").attr('src', eval('CONFIG.donate.' + $(this).attr('id')))
       });
       $(".donate .icon").on("mouseout", function () {
-        $(".donate .qrcode").hide();
+        $("#qrcode-donate").hide();
       });
     },
     lazyload: function () {
@@ -217,12 +213,8 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     },
     navbar: function () {
       $(window).resize(ZHAOO.utils.throttle(function () {
-        if (ZHAOO.utils.isDesktop()) {
-          fn.navbar.desktop();
-        }
-        if (ZHAOO.utils.isMobile() && !CONFIG.isHome) {
-          fn.navbar.mobile();
-        }
+        ZHAOO.utils.isDesktop() && fn.navbar.desktop();
+        (ZHAOO.utils.isMobile() && !CONFIG.isHome) && fn.navbar.mobile();
       }, 1000)).resize();
       $(".j-navbar-menu").on("click", function () {
         fn.showMenu();
@@ -230,10 +222,10 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         $(".qrcode").fadeOut(300);
       });
       $(".j-navbar-qrcode").on("click", function () {
-        if ($(".qrcode").is(":hidden")) {
-          $(".qrcode").fadeIn(300);
+        if ($("#qrcode-navbar").is(":hidden")) {
+          $("#qrcode-navbar").fadeIn(300);
         } else {
-          $(".qrcode").fadeOut(300);
+          $("#qrcode-navbar").fadeOut(300);
         }
       });
     },
@@ -243,14 +235,61 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     },
     qrcode: function () {
       if (CONFIG.qrcode.type === 'url') {
-        $(".qrcode").qrcode({
+        $("#qrcode-navbar").qrcode({
           text: window.location.href,
           width: 150,
           height: 150
         });
       } else if (CONFIG.qrcode.type === 'image') {
-        $(".qrcode").append('<img src="' + CONFIG.qrcode.image + '" alt="qrcode" />');
+        $("#qrcode-navbar").append('<img src="' + CONFIG.qrcode.image + '" alt="qrcode" />');
       }
+    },
+    toc: function () {
+      var current = [];
+      var titleList = new Map();
+      $("article .content h1,h2,h3,h4,h5,h6").each(function () {
+        var title = $(this).attr("id");
+        var height = $(this).offset().top;
+        titleList.set(height, title);
+      });
+      $(window).on("scroll", f);
+      function f() {
+        var height = $(this).scrollTop() || $(window).scrollTop();
+        for (var item of titleList) {
+          if (item[0] >= height) {
+            current = item;
+            break;
+          }
+        }
+        $(".toc-link").removeClass("active");
+        $(".toc-link[href='#" + current[1] + "']").addClass("active");
+      };
+      f();
+    },
+    scrollbar: function () {
+      var totalH = $(document).height();
+      var clientH = $(window).height();
+      $(window).on("scroll", f);
+      function f() {
+        var validH = totalH - clientH;
+        var scrollH = $(document).scrollTop();
+        var height = scrollH / validH * 100;
+        $(".j-scrollbar-current").css("height", height + '%');
+      }
+      f();
+      $(".j-scrollbar").mousedown(function (e) {
+        var scrollH = e.offsetY * totalH / 100;
+        $("html,body").animate({ scrollTop: scrollH }, 300);
+        $(document).mousemove(function (e) {
+          var scrollH = (1 - ((clientH - e.clientY) / clientH)) * totalH;
+          $("html,body").scrollTop(scrollH);
+          $("html,body").css({"user-select": "none", "cursor": "move"});
+        });
+        $(document).mouseup(function () {
+          $(document).off('mousemove');
+          $("html,body").css({"user-select": "auto", "cursor": "default"});
+        });
+      });
     }
   }
 
@@ -262,27 +301,15 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     action.menu();
     action.scroolToTop();
     action.preview();
-    if (CONFIG.fancybox) {
-      action.fancybox();
-    }
-    if (CONFIG.pjax) {
-      action.pjax();
-    }
-    if (CONFIG.lazyload.enable) {
-      action.lazyload();
-    }
-    if (CONFIG.donate.enable) {
-      action.donate();
-    }
-    if (CONFIG.lazyload && CONFIG.fancybox) {
-      action.fixLazyloadFancybox();
-    }
-    if (CONFIG.carrier.enable) {
-      action.carrier();
-    }
-    if (CONFIG.qrcode.enable) {
-      action.qrcode();
-    }
+    CONFIG.fancybox && action.fancybox();
+    CONFIG.pjax && action.pjax();
+    CONFIG.lazyload.enable && action.lazyload();
+    CONFIG.donate.enable && action.donate();
+    (CONFIG.lazyload && CONFIG.fancybox) && action.fixLazyloadFancybox();
+    CONFIG.carrier.enable && action.carrier();
+    CONFIG.qrcode.enable && action.qrcode();
+    CONFIG.toc.enable && action.toc();
+    CONFIG.scrollbar.model === 'simple' && action.scrollbar();
   });
 
 })(jQuery);

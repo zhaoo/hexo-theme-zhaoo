@@ -14,7 +14,7 @@
 
 <div align="center">
   <a href="https://github.com/izhaoo/hexo-theme-zhaoo/releases" target="_blank" rel="noopener noreferrer">
-    <img alt="releases" src="https://img.shields.io/badge/releases-v1.4.0-blue.svg?style=flat-square&longCache=true">
+    <img alt="releases" src="https://img.shields.io/badge/releases-v1.6.0-blue.svg?style=flat-square&longCache=true">
   </a>
   <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">
     <img alt="hexo" src="https://img.shields.io/badge/hexo-%3E=4.0.0-blue.svg?style=flat-square&logo=hexo&longCache=true">
@@ -25,6 +25,10 @@
   <a href="(https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">
     <img alt="license" src="https://img.shields.io/badge/license-MIT-green.svg?style=flat-square&longCache=true">
   </a>
+</div>
+
+<div align="center">
+  文档：<a href="https://www.izhaoo.com/2020/05/05/hexo-theme-zhaoo-doc/" target="_blank" rel="noopener noreferrer">配置文档</a>&nbsp;&nbsp;&nbsp;&nbsp;预览：<a href="https://www.izhaoo.com/" target="_blank" rel="noopener noreferrer">zhaoo</a>
 </div>
 
 ## 预览
@@ -43,25 +47,27 @@
 - [卞卞不是便便](https://www.bianxr.com/)
 - [你好我是王日天@](http://www.rt95.ink/)
 - [iaosee's Blog](https://www.iaosee.com/)
+- [少年民仔](https://www.feminzai.com/)
+- [刘超智](https://www.insidentally.com/)
 
 （如果您正在使用 zhaoo 主题，欢迎展示您的博客哦，只需在 `README.md` 文件中加入您的博客，提交 PR 即可。）
 
 ## 特性
 
-- [x] 简约 & 响应式 & 动效
+- [x] 设计理念：简约 & 响应式 & 动效
+- [x] 评论：`Gitalk`、`Valine`、`畅言`
+- [x] 反馈：[DaoVoice](http://www.daovoice.io/)、[腾讯兔小巢](https://txc.qq.com/)
+- [x] 统计：`LeanCloud`、`百度`、`CNZZ`、`谷歌` 及 SEO优化
+- [x] 深色模式
+- [x] 格言，支持接入 [一言](https://hitokoto.cn/)、[今日诗词](https://www.jinrishici.com/) 等第三方动态格言
+- [x] 预览图，支持接入 [Unsplash](https://unsplash.com/)、[必应每日图片](https://cn.bing.com/) 等第三方动态图片
+- [x] 相册，支持瀑布流加载
 - [x] `highlight` 代码高亮
-- [x] `Gitalk`、`Valine`、`畅言` 评论
-- [x] `DaoVoice` 即时通讯 
 - [x] `FancyBox` 图片灯箱
-- [x] 黑暗模式
 - [x] `Pjax` 无刷新加载
 - [x] `lazyload` 图片懒加载
-- [x] `LeanCloud` 统计访问量
 - [x] `支付宝、微信` 打赏
-- [x] 相册页面，图片支持瀑布流加载
-- [x] 格言，可配合插件 `hexo-plug-motto` 实现动态格言
-- [x] `百度`、`CNZZ`、`谷歌` 站长统计 及 SEO优化
-- [x] 定制 `主题风格`、`CDN`、`埋点脚本`、`社交链接`、`版权说明` 等
+- [x] 定制 `主题风格`、`CDN`、`埋点脚本`、`社交链接`、`版权说明`、`二维码` 等
 
 ## 截图
 
@@ -72,6 +78,8 @@
 ![文章](./screenshots/article.png)
 
 ![相册](./screenshots/galleries.png)
+
+![菜单](./screenshots/menu.png)
 
 ## 安装
 
@@ -121,7 +129,7 @@ $ hexo clean && hexo s
 
 修改主题目录下的 `_config.yml` 文件，配置相关功能：
 
-建议参考 [_config.yml](https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/_config.yml) 和 [_example](https://github.com/izhaoo/hexo-theme-zhaoo/tree/master/_example) 进行配置
+建议参考 [配置文档](https://www.izhaoo.com/2020/05/05/hexo-theme-zhaoo-doc/)、[_config.yml](https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/_config.yml)、[_example](https://github.com/izhaoo/hexo-theme-zhaoo/tree/master/_example) 进行配置
 
 ## 更新
 
@@ -142,6 +150,12 @@ $ git pull
 * 小程序：[hexo-weapp-zhaoo](https://github.com/izhaoo/hexo-weapp-zhaoo) (为 Hexo 定制的博客小程序)
 * 插件：[hexo-generator-restful](https://github.com/izhaoo/hexo-generator-restful) (Hexo RESTful 接口)
 * 交流群：550262893
+
+## 贡献
+
+[![contributors](https://opencollective.com/hexo-theme-zhaoo/contributors.svg?button=false)](https://github.com/izhaoo/hexo-theme-zhaoo/graphs/contributors)
+
+感谢所有贡献者！欢迎提交代码~
 
 ## 趋势
 

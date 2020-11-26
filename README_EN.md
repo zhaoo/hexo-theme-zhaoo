@@ -14,7 +14,7 @@
 
 <div align="center">
   <a href="https://github.com/izhaoo/hexo-theme-zhaoo/releases" target="_blank" rel="noopener noreferrer">
-    <img alt="releases" src="https://img.shields.io/badge/releases-v1.4.0-blue.svg?style=flat-square&longCache=true">
+    <img alt="releases" src="https://img.shields.io/badge/releases-v1.6.0-blue.svg?style=flat-square&longCache=true">
   </a>
   <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">
     <img alt="hexo" src="https://img.shields.io/badge/hexo-%3E=4.0.0-blue.svg?style=flat-square&logo=hexo&longCache=true">
@@ -27,7 +27,11 @@
   </a>
 </div>
 
-## Rreview
+<div align="center">
+  Documents: <a href="https://www.izhaoo.com/2020/05/05/hexo-theme-zhaoo-doc/" target="_blank" rel="noopener noreferrer">Documents</a>&nbsp;&nbsp;&nbsp;&nbsp;Preview:<a href="https://www.izhaoo.com/" target="_blank" rel="noopener noreferrer">zhaoo</a>
+</div>
+
+## Preview
 
 - [zhaoo's Blog](https://www.izhaoo.com)
 - [Handwer's Blog](https://blog.handwer-std.top/)
@@ -43,25 +47,26 @@
 - [卞卞不是便便](https://www.bianxr.com/)
 - [你好我是王日天@](http://www.rt95.ink/)
 - [iaosee's Blog](https://www.iaosee.com/)
+- [少年民仔](https://www.feminzai.com/)
 
 （If you are using the zhaoo theme, welcome to show your blog, just add your blog to the `README.md` and PR.）
 
 ## Characteristic
 
-- [x] Simple & Responsive & Animation
-- [x] `highlight` code highlighting
-- [x] `Gitalk`、`Valine`、`ChangYan` comment
-- [x] `DaoVoice` IM
-- [x] `FancyBox` lightbox
+- [x] Design concept: Simple & Responsive & Animation
+- [x] Comment: `Gitalk`、`Valine`、`ChangYan`
+- [x] Feedback: [DaoVoice](http://www.daovoice.io/)、[Tencent Chao](https://txc.qq.com/)
+- [x] Analytics: `LeanCloud`、`Baidu`、`CNZZ`、`google` and SEO
 - [x] Dark scheme
+- [x] Motto, support [Hitokoto](https://hitokoto.cn/)、[Poems Today](https://www.jinrishici.com/) and another dynamic mottos
+- [x] Preview，support [Unsplash](https://unsplash.com/)、[Bing Pictures](https://cn.bing.com/) and another dynamic pictures
+- [x] Galleries, pictures support waterfall
+- [x] `highlight` code highlighting
+- [x] `FancyBox` lightbox
 - [x] `Pjax`
 - [x] `lazyload`
-- [x] `LeanCloud` statistical pv & uv
 - [x] `Alipay, Wechat` donate
-- [x] Galleries, pictures support waterfall
-- [x] Motto, can use plugin `hexo-plug-motto`to achieve dynamic motto
-- [x] `Baidu`、`CNZZ`、`google` analytics and SEO
-- [x] Customized `Theme Style`、`CDN`、`Embedded Script`、`Social Link`、`Copyright` and more
+- [x] Customized `Theme Style`、`CDN`、`Embedded Script`、`Social Link`、`Copyright`、`QRCode` and more
 
 ## Screenshots
 
@@ -72,6 +77,8 @@
 ![article](./screenshots/article.png)
 
 ![galleries](./screenshots/galleries.png)
+
+![menu](./screenshots/menu.png)
 
 ## Install
 
@@ -121,7 +128,7 @@ $ hexo clean && hexo s
 
 Modify the file `_config.yml` in the theme directory to configure related functions:
 
-It is recommended to refer to [_config.yml](https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/_config.yml) and [_example](https://github.com/izhaoo/hexo-theme-zhaoo/tree/master/_example) for configuration
+It is recommended to refer to [documents](https://www.izhaoo.com/2020/05/05/hexo-theme-zhaoo-doc/)、[_config.yml](https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/_config.yml)、[_example](https://github.com/izhaoo/hexo-theme-zhaoo/tree/master/_example) for configuration
 
 ## Update
 
@@ -142,6 +149,12 @@ $ git pull
 * Weapp: [hexo-weapp-zhaoo](https://github.com/izhaoo/hexo-weapp-zhaoo) (Weapp for Hexo)
 * Plugin: [hexo-generator-restful](https://github.com/izhaoo/hexo-generator-restful) (RESTful API for Hexo)
 * Exchange group: 550262893
+
+## Contributors
+
+[![contributors](https://opencollective.com/hexo-theme-zhaoo/contributors.svg?button=false)](https://github.com/izhaoo/hexo-theme-zhaoo/graphs/contributors)
+
+Thanks to all contributors! Welcome to PR.
 
 ## Stargazers
 

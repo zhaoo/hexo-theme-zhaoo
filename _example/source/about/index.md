@@ -1,7 +1,7 @@
 ---
 title: 关于
 date: 2019-12-26 12:54:27
-image: https://pic.izhaoo.com/20200127213033.jpg
+image: /images/theme/post-image.jpg
 ---
 
 # hexo-theme-zhaoo

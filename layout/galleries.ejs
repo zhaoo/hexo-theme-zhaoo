@@ -1,21 +1,21 @@
 <main id="main">
   <section class="container galleries">
-    <%- partial('_partial/header', {title: theme.galleries.title, subtitle: theme.galleries.subtitle}) %>
+    <%- partial('_partial/components/header', {title: theme.galleries.title, subtitle: theme.galleries.subtitle}) %>
     <% if (site.data && site.data.galleries) { %>
-    <% var galleries = site.data.galleries; %>
-    <div class="wrap">
+      <% var galleries = site.data.galleries; %>
+      <div class="wrap">
       <% for (var i = 0, len = galleries.length; i < len; i++) { %>
-      <% var gallery = galleries[i]; %>
-      <a href="./<%- gallery.name %>" class="item">
-        <img src="<%- gallery.cover %>" alt="<%- gallery.name %>">
-        <div class="title-wrap">
-          <div class="mask">
-            <h3 class="title"><%- gallery.name %></h3>
+        <% var gallery = galleries[i]; %>
+        <a href="./<%- gallery.name %>" class="item">
+          <img src="<%- gallery.cover %>" alt="<%= gallery.name %>">
+          <div class="title-wrap">
+            <div class="mask">
+              <h3 class="title"><%= gallery.name %></h3>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
       <% } %>
-    </div>
+      </div>
     <% } %>
   </section>
 </main>

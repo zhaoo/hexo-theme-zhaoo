@@ -1,3 +1,10 @@
+<%
+  var src = 'lib/daovoice/daovoice.js';
+  if (theme.vendors.daovoice_js) {
+    src = theme.vendors.daovoice_js;
+  }
+%>
+
 <script>
   (function (i, s, o, g, r, a, m) {
     i["DaoVoiceObject"] = r;
@@ -9,8 +16,7 @@
     a.src = g;
     a.charset = "utf-8";
     m.parentNode.insertBefore(a, m)
-  })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
-    "//widget.daovoice.io/widget/0f81ff2f.js", "daovoice")
+  })(window, document, "script", "<%- src %>", "daovoice")
   daovoice('init', {
     app_id: "<%- theme.daovoice.appId %>"
   }, {

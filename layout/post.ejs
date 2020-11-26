@@ -1,5 +1,13 @@
 <main id="main">
-  <div class="container" id="container">
-    <%- partial('_partial/post/article') %>
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><%- partial('_partial/post/article') %></div>
+      <div class="col-xl-3">
+        <% if (theme.toc.enable) { %>
+          <%- partial('_partial/post/toc') %>
+        <% } %>
+      </div>
+    </div>
   </div>
 </main>

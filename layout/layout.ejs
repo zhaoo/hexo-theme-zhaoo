@@ -1,12 +1,15 @@
 <%- partial('_partial/head') %>
 <body class="lock-screen">
-  <%- partial('_partial/common/loading') %>
-  <%- partial('_partial/navbar') %>
-  <%- partial('_partial/menu') %>
+  <%- partial('_partial/components/loading') %>
+  <%- partial('_partial/components/navbar') %>
+  <%- partial('_partial/components/menu') %>
   <%- body %>
-  <%- partial('_partial/footer') %>
+  <%- partial('_partial/components/footer') %>
   <% if (theme.fab.enable) { %>
-    <%- partial('_partial/common/fab') %>
+    <%- partial('_partial/components/fab') %>
+  <% } %>
+  <% if (theme.scrollbar.model === 'simple') { %>
+    <%- partial('_partial/components/scrollbar') %>
   <% } %>
   <% if (theme.color_mode.enable) { %>
     <%- js('js/color-mode') %>
