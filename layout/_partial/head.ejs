@@ -39,7 +39,7 @@ var description = '';
     <meta rel="msapplication-TileImage" content="<%- theme.favicon.msapplication %>">
     <meta rel="msapplication-TileColor" content="#000000">
   <% } %>
-  
+
   <%- css(['css/style']) %>
 
   <% if (theme.vendors.iconfont_css) { %>
@@ -96,6 +96,7 @@ var description = '';
           api: '<%= theme.preview.background.api %>'
         },
         motto: {
+          jinrishici: <%= theme.preview.motto.jinrishici || false %>,
           default: '<%= theme.preview.motto.default %>',
           api: '<%- theme.preview.motto.api %>'
         },

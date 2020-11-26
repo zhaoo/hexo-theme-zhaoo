@@ -87,11 +87,20 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       },
     },
     motto: function () {
-      if (CONFIG.preview.motto.api) {
+      if ( CONFIG.preview.motto.jinrishici ) {
+        jinrishici && jinrishici.load(function(result) {
+          var data = result.data;
+          if ( !data || !data.content )  {
+            return;
+          }
+          $("#motto").text(data.content);
+        });
+      } else if (CONFIG.preview.motto.api) {
         $.get(CONFIG.preview.motto.api, function (data) {
           data && $("#motto").text(data);
         });
       }
+
     },
     background: function () {
       if (CONFIG.preview.background.api) {
