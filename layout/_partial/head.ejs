@@ -111,6 +111,13 @@ var description = '';
       },
       scrollbar: {
         model: '<%= theme.scrollbar.model %>'
+      },
+      notification: {
+        enable: <%= theme.notification.enable %>,
+        delay: <%= theme.notification.delay %>,
+        list: '<%- site.data.notification && JSON.stringify(site.data.notification) %>',
+        page_white_list: '<%= theme.notification.page_white_list %>',
+        page_black_list: '<%= theme.notification.page_black_list %>'
       }
     }
   </script>

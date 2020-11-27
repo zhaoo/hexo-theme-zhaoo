@@ -184,6 +184,13 @@ changyan:
 # Plugin settings
 # --------------------------------------------------
 
+# Notification
+notification:
+  enable: true
+  delay: 4500
+  page_white_list:
+  page_black_list:
+
 # Daovoice
 daovoice:
   enable: false

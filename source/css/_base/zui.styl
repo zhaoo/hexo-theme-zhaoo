@@ -6,6 +6,48 @@ $color-info-bgc = #edf2fc
 $color-success-bgc = #f0f9eb
 $color-danger-bgc = #fef0f0
 $color-warning-bgc = #fdf6ec
+.zui-notification
+  position fixed
+  margin 0
+  padding 16px 24px
+  top 70px
+  right 15px
+  width 350px
+  display flex
+  flex-direction column
+  overflow hidden
+  z-index 2020
+  opacity 0
+  transform translateX(400px)
+  transition opacity 0.3s, transform 0.4s, top 0.4s
+  background-color rgba(255, 255, 255, 0.7)
+  box-shadow 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05)
+  -webkit-backdrop-filter blur(10px)
+  backdrop-filter blur(10px)
+  border-radius 2px
+  span
+    font-size 1.05em
+    font-weight bold
+    margin-bottom 8px
+    padding-right 20px
+    color var(--color-text)
+  p
+    color var(--color-text)
+    text-align justify
+    margin 0
+  i
+    position absolute
+    top 16px
+    right 24px
+    font-size 1.2em
+    line-height 22px
+    color var(--color-text-third)
+    &:hover
+      cursor pointer
+      color var(--color-text)
+  &.in
+    transform translateX(0)
+    opacity 1
 .zui-message
   position fixed
   margin 0

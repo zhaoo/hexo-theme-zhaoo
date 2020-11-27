@@ -87,10 +87,10 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       },
     },
     motto: function () {
-      if ( CONFIG.preview.motto.jinrishici ) {
-        jinrishici && jinrishici.load(function(result) {
+      if (CONFIG.preview.motto.jinrishici) {
+        jinrishici && jinrishici.load(function (result) {
           var data = result.data;
-          if ( !data || !data.content )  {
+          if (!data || !data.content) {
             return;
           }
           $("#motto").text(data.content);
@@ -283,12 +283,25 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         $(document).mousemove(function (e) {
           var scrollH = (1 - ((clientH - e.clientY) / clientH)) * totalH;
           $("html,body").scrollTop(scrollH);
-          $("html,body").css({"user-select": "none", "cursor": "move"});
+          $("html,body").css({ "user-select": "none", "cursor": "move" });
         });
         $(document).mouseup(function () {
           $(document).off('mousemove');
-          $("html,body").css({"user-select": "auto", "cursor": "default"});
+          $("html,body").css({ "user-select": "auto", "cursor": "default" });
         });
+      });
+    },
+    notification: function () {
+      if (!CONFIG.notification.list) return;
+      var delay = CONFIG.notification.delay;
+      var page_white_list = CONFIG.notification.page_white_list;
+      var page_black_list = CONFIG.notification.page_black_list;
+      var list = JSON.parse(CONFIG.notification.list);
+      var playList = list.filter(function (item) {
+        return item.enable && ZHAOO.utils.isDuringDate(item.startTime, item.endTime) && item;
+      });
+      playList.forEach(function (item) {
+        ZHAOO.zui.notification({ title: item.title, content: item.content, delay: delay });
       });
     }
   }
@@ -310,6 +323,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     CONFIG.qrcode.enable && action.qrcode();
     CONFIG.toc.enable && action.toc();
     CONFIG.scrollbar.model === 'simple' && action.scrollbar();
+    CONFIG.notification.enable && action.notification();
   });
 
 })(jQuery);
