@@ -186,7 +186,7 @@ changyan:
 
 # Notification
 notification:
-  enable: true
+  enable: false
   delay: 4500
   page_white_list:
   page_black_list:

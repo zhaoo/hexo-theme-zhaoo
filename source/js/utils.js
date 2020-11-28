@@ -98,7 +98,7 @@
     },
     notification: function ({ title, content, type, delay }) {
       var storage = JSON.parse(localStorage.getItem("notification-closed"));
-      if (storage.indexOf(title) >= 0) return;
+      if (storage && storage.indexOf(title) >= 0) return;
       var notification = '<div class="zui-notification ' + (type || "info") + '"><span>' + title + '</span><p>' + content + '</p><i class="j-notification-close iconfont iconbaseline-close-px"></i></div>';
       $("body").append(notification);
       var e = $(".zui-notification");

@@ -293,9 +293,11 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     },
     notification: function () {
       if (!CONFIG.notification.list) return;
+      var page_white_list = CONFIG.notification.page_white_list && JSON.parse(CONFIG.notification.page_white_list);
+      var page_black_list = CONFIG.notification.page_black_list && JSON.parse(CONFIG.notification.page_black_list);
+      var path = window.location.pathname;
+      if ((page_white_list && page_white_list.indexOf(path) < 0) || (page_black_list && page_black_list.indexOf(path) >= 0)) return;
       var delay = CONFIG.notification.delay;
-      var page_white_list = CONFIG.notification.page_white_list;
-      var page_black_list = CONFIG.notification.page_black_list;
       var list = JSON.parse(CONFIG.notification.list);
       var playList = list.filter(function (item) {
         return item.enable && ZHAOO.utils.isDuringDate(item.startTime, item.endTime) && item;
