@@ -96,9 +96,9 @@ var description = '';
           api: '<%= theme.preview.background.api %>'
         },
         motto: {
-          jinrishici: <%= theme.preview.motto.jinrishici || false %>,
           default: '<%= theme.preview.motto.default %>',
-          api: '<%- theme.preview.motto.api %>'
+          api: '<%- theme.preview.motto.api %>',
+          data_contents: '<%- theme.preview.motto.data_contents && JSON.stringify(theme.preview.motto.data_contents) %>'
         },
       },
       qrcode: {

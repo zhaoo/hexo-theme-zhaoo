@@ -87,25 +87,20 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       },
     },
     motto: function () {
-      if (CONFIG.preview.motto.jinrishici) {
-        jinrishici && jinrishici.load(function (result) {
-          var data = result.data;
-          if (!data || !data.content) {
-            return;
-          }
-          $("#motto").text(data.content);
-        });
-      } else if (CONFIG.preview.motto.api) {
-        $.get(CONFIG.preview.motto.api, function (data) {
-          data && $("#motto").text(data);
-        });
-      }
-
+      if (!CONFIG.preview.motto.api) return;
+      var data_contents = CONFIG.preview.motto.data_contents && JSON.parse(CONFIG.preview.motto.data_contents);
+      $.get(CONFIG.preview.motto.api, function (result) {
+        if (data_contents.length > 0) {
+          data_contents.forEach(function (item) {
+            result = result[item];
+          });
+        }
+        result && $("#motto").text(result);
+      });
     },
     background: function () {
-      if (CONFIG.preview.background.api) {
-        $(".preview-image").css("background-image", "url(" + CONFIG.preview.background.api + ")");
-      }
+      if (!CONFIG.preview.background.api) return;
+      $(".preview-image").css("background-image", "url(" + CONFIG.preview.background.api + ")");
     }
   }
 

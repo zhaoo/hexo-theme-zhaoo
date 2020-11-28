@@ -4,10 +4,6 @@
   <%- theme.vendors.lazyload_js ? js(theme.vendors.lazyload_js) : js('lib/lazyload/lazyload.js') %>
 <% } %>
 
-<% if(theme.preview.motto.jinrishici){ %>
-  <%- js('https://sdk.jinrishici.com/v2/browser/jinrishici.js') %>
-<% } %>
-
 <% if (theme.fancybox) { %>
   <%- theme.vendors.fancybox_js ? js(theme.vendors.fancybox_js) : js('lib/fancybox/fancybox.js') %>
 <% } %>
