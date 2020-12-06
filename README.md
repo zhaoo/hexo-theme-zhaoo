@@ -52,6 +52,7 @@
 - [少年民仔](https://www.feminzai.com/)
 - [刘超智](https://www.insidentally.com/)
 - [与李的个人博客](https://blog.javayuli.cn)
+- [破壁人的小站](https://m.stubborner.xyz/)
 
 （如果您正在使用 zhaoo 主题，欢迎展示您的博客哦，只需在 `README.md` 文件中加入您的博客，提交 PR 即可。）
 
