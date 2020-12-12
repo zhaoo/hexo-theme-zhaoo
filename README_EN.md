@@ -50,6 +50,7 @@
 - [你好我是王日天@](http://www.rt95.ink/)
 - [iaosee's Blog](https://www.iaosee.com/)
 - [少年民仔](https://www.feminzai.com/)
+- [阿蓝故事](https://blog.zhangxiaocai.cn/)
 
 （If you are using the zhaoo theme, welcome to show your blog, just add your blog to the `README.md` and PR.）
 
