@@ -51,6 +51,7 @@
 - [iaosee's Blog](https://www.iaosee.com/)
 - [少年民仔](https://www.feminzai.com/)
 - [刘超智](https://www.insidentally.com/)
+- [阿蓝故事](https://blog.zhangxiaocai.cn/)
 
 （如果您正在使用 zhaoo 主题，欢迎展示您的博客哦，只需在 `README.md` 文件中加入您的博客，提交 PR 即可。）
 
