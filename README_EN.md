@@ -51,6 +51,8 @@
 - [iaosee's Blog](https://www.iaosee.com/)
 - [少年民仔](https://www.feminzai.com/)
 - [阿蓝故事](https://blog.zhangxiaocai.cn/)
+- [与李的个人博客](https://blog.javayuli.cn)
+- [破壁人的小站](https://m.stubborner.xyz/)
 
 （If you are using the zhaoo theme, welcome to show your blog, just add your blog to the `README.md` and PR.）
 
