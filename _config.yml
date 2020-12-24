@@ -150,6 +150,7 @@ galleries:
   enable: true
   title: 摄影
   subtitle: Photography
+  columns: "3"
 
 # --------------------------------------------------
 # Comment Settings
