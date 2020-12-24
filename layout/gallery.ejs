@@ -12,7 +12,7 @@ function initWrap(photoList) {
   var images = ''
   for(var i = 0; i < photoList.length; i++){
     var photo = photoList[i]
-   images += `<a data-fancybox="images" href="${photo}" class="item"><img src="${photo}" alt="${photo}" class="img" /></a>`
+   images += `<a data-fancybox="images" style="width:${(100 / (theme.galleries.columns || 3))}%" href="${photo}" class="item"><img src="${photo}" alt="${photo}" class="img" /></a>`
   }
   return images
 }
