@@ -360,6 +360,7 @@ galleries:
   enable: true  #开启相册
   title: 相册  #相册标题
   subtitle: Galleries  #相册副标题
+  columns: 3 #瀑布流列数，默认为3
 ```
 
 5. 在 `/data` 目录下新建 `galleries.json` 文件，创建分目录相册及图片内容：
