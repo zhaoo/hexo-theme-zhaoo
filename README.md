@@ -51,6 +51,7 @@
 - [Yin Blog](http://xuzhimo.top/)
 - [卞卞不是便便](https://www.bianxr.com/)
 - [CodeGorgeous](https://codegorgeous.github.io/)
+- [Winterchen's Blog](https://blog.winterchen.com/)
 
 （如果您正在使用 zhaoo 主题，欢迎展示您的博客哦，只需在 `README.md` 文件中加入您的博客，提交 PR 即可。）
 
