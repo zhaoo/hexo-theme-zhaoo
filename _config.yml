@@ -150,7 +150,9 @@ galleries:
   enable: true
   title: 摄影
   subtitle: Photography
-  columns: 3
+  type: 'waterfall' # waterfall | grid
+  columns: 3 #瀑布流列数，当type为waterfall时生效
+
 
 # --------------------------------------------------
 # Comment Settings
