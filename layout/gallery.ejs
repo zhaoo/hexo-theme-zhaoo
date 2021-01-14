@@ -10,16 +10,16 @@ var images = initWrap(photos);
 
 function initWrap(photoList) {
   var images = ''
-  for(var i = 0; i < photoList.length; i++){
+  for(var i = 0; i < photoList.length; i++) {
     var photo = photoList[i]
-   images += `<a data-fancybox="images" style="width:${(100 / (theme.galleries.columns || 3))}%" href="${photo}" class="item"><img src="${photo}" alt="${photo}" class="img" /></a>`
+    images += `<a data-fancybox="images" style=${ theme.galleries.type === 'waterfall' ? `width:${(100 / (theme.galleries.columns || 3))}%` : ""} href="${photo}" class="item"><img src="${photo}" alt="${photo}" /></a>`
   }
   return images
 }
 
 function getCurrentGallery(galleries, pageTitle) {
   for (let i = 0; i < galleries.length; i++) {
-    if ( galleries[i]['name'] == pageTitle ) {
+    if (galleries[i]['name'] == pageTitle) {
       return galleries[i];
     }
   }
@@ -30,16 +30,19 @@ function getCurrentGallery(galleries, pageTitle) {
 <main id="main">
   <section class="gallery container">
     <%- partial('_partial/components/header', {title: page.title, subtitle: currentGallery.description}) %>
-    <div class="wrap" default-col="<%= theme.galleries.columns%>">
+    <div id="wrap" class=<%= theme.galleries.type === 'waterfall' ? "waterfallWrap" : "wrap" %> default-type="<%= theme.galleries.type %>" default-col="<%= theme.galleries.columns %>">
       <%- images %>
     </div>
   </section>
 </main>
 
+<%
+
+%>
 <script type="text/javascript">
   var gap = 10;
   var items = document.getElementsByClassName('item')
-  var wrap = document.getElementsByClassName('wrap')[0]
+  var wrap = document.getElementById("wrap")
 
   window.onload = function () {
       waterFall();
@@ -51,11 +54,12 @@ function getCurrentGallery(galleries, pageTitle) {
   }
 
   function waterFall() {
+    if(!(wrap.getAttribute('default-type') === 'waterfall')) return;
     var wrapWidth = getClientWidth();
     var columns;
-    if( wrapWidth < 768 && wrapWidth >= 576 ){
+    if(wrapWidth < 768 && wrapWidth >= 576) {
       columns = 2;
-    } else if ( wrapWidth < 576 ){
+    } else if (wrapWidth < 576) {
       columns = 1;
     } else {
       columns = parseInt(wrap.getAttribute('default-col'));
@@ -68,7 +72,7 @@ function getCurrentGallery(galleries, pageTitle) {
     var maxHeight = 0;
     const itemWidth = (100 / col) + '%'
     for( var i = 0;i < items.length; i++ ){
-        if ( i < col ) {
+        if (i < col) {
             items[i].style.top = 0;
             items[i].style.left = ( pageWidth / col  + gap) * i + 'px';
             items[i].style.width = itemWidth;
@@ -76,7 +80,7 @@ function getCurrentGallery(galleries, pageTitle) {
         } else {
             var minHeight = arr[0];
             var index = 0;
-            for( var j = 0; j < arr.length; j++ ){
+            for(var j = 0; j < arr.length; j++) {
               if ( minHeight > arr[j] ) {
                 minHeight = arr[j];
                 index = j;
@@ -88,8 +92,8 @@ function getCurrentGallery(galleries, pageTitle) {
             arr[index] = arr[index] + items[i].offsetHeight + gap;
         }
     }
-    for( var m = 0; m < arr.length; m++ ){
-      if ( maxHeight < arr[m] ) {
+    for(var m = 0; m < arr.length; m++) {
+      if (maxHeight < arr[m]) {
         maxHeight = arr[m];
       } 
     }
