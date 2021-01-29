@@ -9,14 +9,18 @@ body
   font-size unquote(hexo-config('font.size') || 14px)
   color var(--color-text)
   font-family unquote(hexo-config('font.family') || 'Hiragino Sans GB', 'Hiragino Sans GB W3', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif)
-  background var(--color-background) url(hexo-config('background_image')) fixed no-repeat
+  background-color var(--color-background)
+  background-repeat no-repeat
+  background-attachment fixed
+  if (hexo-config('background_image'))
+    background-image url(hexo-config('background_image'))
   a
     color var(--color-text)
     text-decoration none
-  a:hover
-    color $color-link
-  a, a:hover
-    transition all 0.15s cubic-bezier(0.25, 0.5, 0.5, 0.9)
+    &:hover
+      color $color-link
+    &, &:hover
+      transition all 0.15s cubic-bezier(0.25, 0.5, 0.5, 0.9)
   img
     max-width 100%
     max-height 100%
@@ -35,10 +39,10 @@ body
   a, div, span
     -webkit-tap-highlight-color transparent
 /* ScrollBar */
-if (hexo-config('scrollbar.model') == 'none' || 'simple')
+if (hexo-config('scrollbar.type') == 'none' || 'simple')
   ::-webkit-scrollbar
     display none
-if (hexo-config('scrollbar.model') == 'normal')
+if (hexo-config('scrollbar.type') == 'normal')
   ::-webkit-scrollbar, ::-webkit-scrollbar-track
     width 6px
     height 6px
@@ -49,7 +53,6 @@ if (hexo-config('scrollbar.model') == 'normal')
     background-color var(--color-text)
   ::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb:hover
     transition $transition
-/* Selection */
 *::selection
   background $color-link
   color #ffffff

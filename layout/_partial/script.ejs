@@ -22,6 +22,10 @@
   <%- partial('_partial/plugins/visitors') %>
 <% } %>
 
+<% if (theme.daovoice.enable) { %>
+  <%- partial('_partial/plugins/daovoice') %>
+<% } %>
+
 <%- partial('_partial/plugins/seo') %>
 
 <%- partial('_partial/plugins/analytics') %>

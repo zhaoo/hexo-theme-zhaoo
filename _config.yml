@@ -49,7 +49,7 @@ loading: /images/theme/loading.gif
 # Preview
 preview:
   enable: true
-  model: wave  # wave cloud
+  type: wave  # wave | cloud
   background:
     default: /images/theme/welcome-image.jpg
     api: # https://source.unsplash.com/random/1920x1080
@@ -76,7 +76,7 @@ social:
 
 # Override Scrollbar
 scrollbar:
-  model: simple # default simple normal none
+  type: simple # default | simple | normal | none
 
 # Fab (Float Action Button)
 fab:
@@ -86,7 +86,7 @@ fab:
 # QR Code
 qrcode:
   enable: true
-  type: url # url image
+  type: url # url | image
   image: https://pic.izhaoo.com/weapp-code.jpg
 
 # Color Mode
@@ -139,7 +139,7 @@ post_copyright:
 # Carrier（copy article with one click）
 carrier:
   enable: true
-  type: html # html markdown text
+  type: html # html | markdown | text
 
 # --------------------------------------------------
 # Page Settings
@@ -150,8 +150,8 @@ galleries:
   enable: true
   title: 摄影
   subtitle: Photography
-  type: 'waterfall' # waterfall | grid
-  columns: 3 #瀑布流列数，当type为waterfall时生效
+  type: waterfall # waterfall | grid
+  columns: 3
 
 
 # --------------------------------------------------
@@ -160,7 +160,7 @@ galleries:
 
 comments:
   enable: false
-  type: valine
+  type: valine # gitalk | valine | changyan
   button: true
 
 # Gitalk

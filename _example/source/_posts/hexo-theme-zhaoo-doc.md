@@ -163,7 +163,7 @@ post_image: /image/post-image.jpg  #设置默认封面图片
 ```yml
 preview:
   enable: true  #是否开启展示页面
-  model: wave   #效果模式，wave 或 cloud
+  type: wave   #效果模式，wave 或 cloud
 ```
 
 若关闭展示页面，**欢迎图片** 和 **格言** 也不会显示。
@@ -360,7 +360,7 @@ galleries:
   enable: true  #开启相册
   title: 相册  #相册标题
   subtitle: Galleries  #相册副标题
-  columns: 3 #瀑布流列数，默认为3
+  columns: 3 #瀑布流列数，默认为 3
 ```
 
 5. 在 `/data` 目录下新建 `galleries.json` 文件，创建分目录相册及图片内容：

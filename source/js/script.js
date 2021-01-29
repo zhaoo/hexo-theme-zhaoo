@@ -319,7 +319,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     CONFIG.carrier.enable && action.carrier();
     CONFIG.qrcode.enable && action.qrcode();
     CONFIG.toc.enable && action.toc();
-    CONFIG.scrollbar.model === 'simple' && action.scrollbar();
+    CONFIG.scrollbar.type === 'simple' && action.scrollbar();
     CONFIG.notification.enable && action.notification();
   });
 

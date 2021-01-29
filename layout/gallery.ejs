@@ -36,17 +36,15 @@ function getCurrentGallery(galleries, pageTitle) {
   </section>
 </main>
 
-<%
-
-%>
-<script type="text/javascript">
+<script>
   var gap = 10;
-  var items = document.getElementsByClassName('item')
-  var wrap = document.getElementById("wrap")
+  var items = document.getElementsByClassName('item');
+  var wrap = document.getElementById("wrap");
 
   window.onload = function () {
-      waterFall();
+    waterFall();
   }
+
   window.onresize = function () {
     setTimeout(() => {
       waterFall();
@@ -54,7 +52,7 @@ function getCurrentGallery(galleries, pageTitle) {
   }
 
   function waterFall() {
-    if(!(wrap.getAttribute('default-type') === 'waterfall')) return;
+    if (!(wrap.getAttribute('default-type') === 'waterfall')) return;
     var wrapWidth = getClientWidth();
     var columns;
     if(wrapWidth < 768 && wrapWidth >= 576) {
@@ -70,29 +68,29 @@ function getCurrentGallery(galleries, pageTitle) {
   function rerenderImage(col, pageWidth) {
     var arr = [];
     var maxHeight = 0;
-    const itemWidth = (100 / col) + '%'
-    for( var i = 0;i < items.length; i++ ){
-        if (i < col) {
-            items[i].style.top = 0;
-            items[i].style.left = ( pageWidth / col  + gap) * i + 'px';
-            items[i].style.width = itemWidth;
-            arr.push(items[i].offsetHeight);
-        } else {
-            var minHeight = arr[0];
-            var index = 0;
-            for(var j = 0; j < arr.length; j++) {
-              if ( minHeight > arr[j] ) {
-                minHeight = arr[j];
-                index = j;
-              } 
-            }
-            items[i].style.top = arr[index] + gap + 'px';
-            items[i].style.left = items[index].offsetLeft + 'px';
-            items[i].style.width = itemWidth;
-            arr[index] = arr[index] + items[i].offsetHeight + gap;
+    const itemWidth = (100 / col) + '%';
+    for (var i = 0;i < items.length; i++){
+      if (i < col) {
+        items[i].style.top = 0;
+        items[i].style.left = (pageWidth / col  + gap) * i + 'px';
+        items[i].style.width = itemWidth;
+        arr.push(items[i].offsetHeight);
+      } else {
+        var minHeight = arr[0];
+        var index = 0;
+        for (var j = 0; j < arr.length; j++) {
+          if (minHeight > arr[j]) {
+            minHeight = arr[j];
+            index = j;
+          } 
         }
+        items[i].style.top = arr[index] + gap + 'px';
+        items[i].style.left = items[index].offsetLeft + 'px';
+        items[i].style.width = itemWidth;
+        arr[index] = arr[index] + items[i].offsetHeight + gap;
+      }
     }
-    for(var m = 0; m < arr.length; m++) {
+    for (var m = 0; m < arr.length; m++) {
       if (maxHeight < arr[m]) {
         maxHeight = arr[m];
       } 
@@ -101,6 +99,6 @@ function getCurrentGallery(galleries, pageTitle) {
   }
 
   function getClientWidth() {
-      return wrap.getBoundingClientRect().width;
+    return wrap.getBoundingClientRect().width;
   }
 </script>

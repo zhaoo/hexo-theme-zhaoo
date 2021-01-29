@@ -14,7 +14,7 @@
 
 <div align="center">
   <a href="https://github.com/izhaoo/hexo-theme-zhaoo/releases" target="_blank" rel="noopener noreferrer">
-    <img alt="releases" src="https://img.shields.io/badge/releases-v1.6.0-blue.svg?style=flat-square&longCache=true">
+    <img alt="releases" src="https://img.shields.io/badge/releases-v2.0.0-blue.svg?style=flat-square&longCache=true">
   </a>
   <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">
     <img alt="hexo" src="https://img.shields.io/badge/hexo-%3E=4.0.0-blue.svg?style=flat-square&logo=hexo&longCache=true">
@@ -51,6 +51,10 @@
 - [Yin Blog](http://xuzhimo.top/)
 - [卞卞不是便便](https://www.bianxr.com/)
 - [CodeGorgeous](https://codegorgeous.github.io/)
+- [Winterchen's Blog](https://blog.winterchen.com/)
+- [rt](https://rt95.gitee.io)
+- [杨某人的FOB](http://www.yzpdot.com/)
+- [小州的博客](http://xiaozhoujun.gitee.io/)
 
 （If you are using the zhaoo theme, welcome to show your blog, just add your blog to the `README.md` and PR.）
 
