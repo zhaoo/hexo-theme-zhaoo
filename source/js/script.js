@@ -87,16 +87,34 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       },
     },
     motto: function () {
-      if (!CONFIG.preview.motto.api) return;
-      var data_contents = CONFIG.preview.motto.data_contents && JSON.parse(CONFIG.preview.motto.data_contents);
-      $.get(CONFIG.preview.motto.api, function (result) {
-        if (data_contents.length > 0) {
-          data_contents.forEach(function (item) {
-            result = result[item];
-          });
-        }
-        result && $("#motto").text(result);
-      });
+      if (CONFIG.preview.motto.api) {
+        var data_contents = CONFIG.preview.motto.data_contents && JSON.parse(CONFIG.preview.motto.data_contents);
+        $.get(CONFIG.preview.motto.api, function (result) {
+          if (data_contents.length > 0) {
+            data_contents.forEach(function (item) {
+              result = result[item];
+            });
+          }
+          if (result) {
+            fn.printMotto(result);
+          }
+        });
+      } else {
+        fn.printMotto(CONFIG.preview.motto.default);
+      }
+    },
+    printMotto: function (text) {
+      if (CONFIG.preview.motto.typing) {
+        var i = 0;
+        var timer = setInterval(function () {
+          if (i >= text.length) {
+            clearInterval(timer);
+          }
+          $("#motto").text(text.slice(0, i++));
+        }, 100);
+      } else {
+        $("#motto").text(text);
+      }
     },
     background: function () {
       if (!CONFIG.preview.background.api) return;

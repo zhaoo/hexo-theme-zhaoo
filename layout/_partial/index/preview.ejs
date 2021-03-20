@@ -3,7 +3,6 @@
     <i class="iconfont iconmenu"></i>
   </nav>
   <div class="preview-image">
-    <h2 class="preview-motto" id="motto"><%= theme.preview.motto.default %></h2>
     <% if (theme.preview.type === 'cloud') { %>
       <%- image_tag("/images/theme/cloud.png", {class: "preview-overlay", draggable:"false"}) %>
     <% } else { %>
@@ -21,6 +20,16 @@
           </g>
         </svg>
       </div>
+    <% } %>
+  </div>
+  <div class="preview-motto-wrapper">
+    <h2 class="preview-motto" id="motto">
+      <% if (!theme.preview.motto.typing) { %>
+        <%= theme.preview.motto.default %>
+      <% } %>
+    </h2>
+    <% if (theme.preview.motto.typing) { %>
+      <span class="preview-cursor">_</span>
     <% } %>
   </div>
   <div class="preview-scroll">
