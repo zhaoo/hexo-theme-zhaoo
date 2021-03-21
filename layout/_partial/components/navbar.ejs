@@ -1,5 +1,5 @@
 <% 
-  var title = null;
+  var title = null, style = null;
   if (is_post() || is_page()) {
     title = page.title;
   } else if (is_archive()) {
@@ -8,11 +8,14 @@
     title = '分类';
   } else if (is_tag()) {
     title = '标签';
-  } 
+  } else if (is_home()) {
+    title = ' ';
+    style = 'background-color: rgba(0, 0, 0, 0) !important; backdrop-filter: none;'
+  }
 %>
 
 <% if (title) { %>
-  <nav class="navbar">
+  <nav class="navbar" style="<%= style %>">
     <div class="left">
       <% if (theme.qrcode.enable) { %>
         <i class="iconfont iconqrcode j-navbar-qrcode"></i>
