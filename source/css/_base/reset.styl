@@ -39,7 +39,7 @@ body
   a, div, span
     -webkit-tap-highlight-color transparent
 /* ScrollBar */
-if (hexo-config('scrollbar.type') == 'none' || 'simple')
+if (hexo-config('scrollbar.type') == 'none' || hexo-config('scrollbar.type') == 'simple')
   ::-webkit-scrollbar
     display none
 if (hexo-config('scrollbar.type') == 'normal')

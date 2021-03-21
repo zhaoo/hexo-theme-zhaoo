@@ -51,7 +51,9 @@ preview:
   enable: true
   type: wave  # wave | cloud
   background:
-    default: /images/theme/welcome-image.jpg
+    default:
+      light: /images/theme/welcome-image.jpg
+      dark: /images/theme/welcome-image.jpg
     api: # https://source.unsplash.com/random/1920x1080
     size: cover # css: background-size
     position: center # css: background-position
@@ -77,7 +79,7 @@ social:
 
 # Override Scrollbar
 scrollbar:
-  type: simple # default | simple | normal | none
+  type: default # default | simple | normal | none
 
 # Fab (Float Action Button)
 fab:
