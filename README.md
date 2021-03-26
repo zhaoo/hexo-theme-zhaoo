@@ -55,6 +55,7 @@
 - [rt](https://rt95.gitee.io)
 - [杨某人的FOB](http://www.yzpdot.com/)
 - [小州的博客](http://xiaozhoujun.gitee.io/)
+- [DesnLee的博客](https://www.desnlee.com/)
 
 （如果您正在使用 zhaoo 主题，欢迎展示您的博客哦，只需在 `README.md` 文件中加入您的博客，提交 PR 即可。）
 
