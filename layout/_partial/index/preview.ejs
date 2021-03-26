@@ -3,34 +3,38 @@
     <i class="iconfont iconmenu"></i>
   </nav> -->
   <div class="preview-image">
-    <% if (theme.preview.type === 'cloud') { %>
-      <%- image_tag("/images/theme/cloud.png", {class: "preview-overlay", draggable:"false"}) %>
-    <% } else { %>
-      <div class="preview-overlay">
-        <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-          viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-          <defs>
-            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-          </defs>
-          <g class="preview-parallax">
-            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(var(--color-background-rgb),0.7"></use>
-            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(var(--color-background-rgb),0.5)"></use>
-            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(var(--color-background-rgb),0.3)"></use>
-            <use xlink:href="#gentle-wave" x="48" y="7" fill="var(--color-background)"></use>
-          </g>
-        </svg>
-      </div>
-    <% } %>
+    <% if (theme.preview.background.type==='video' ) { %>
+      <video src="<%- theme.preview.background.video %>" class="preview-video" autoplay loop muted draggable="false"></video>
+      <% } %>
+        <% if (theme.preview.type==='cloud' ) { %>
+          <%- image_tag("/images/theme/cloud.png", {class: "preview-overlay" , draggable:"false"}) %>
+            <% } else { %>
+              <div class="preview-overlay">
+                <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                  <defs>
+                    <path id="gentle-wave"
+                      d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                  </defs>
+                  <g class="preview-parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(var(--color-background-rgb),0.7"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(var(--color-background-rgb),0.5)"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(var(--color-background-rgb),0.3)"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="var(--color-background)"></use>
+                  </g>
+                </svg>
+              </div>
+              <% } %>
   </div>
   <div class="preview-motto-wrapper">
     <h2 class="preview-motto" id="motto">
       <% if (!theme.preview.motto.typing) { %>
         <%= theme.preview.motto.default %>
-      <% } %>
+          <% } %>
     </h2>
     <% if (theme.preview.motto.typing) { %>
       <span class="preview-cursor">_</span>
-    <% } %>
+      <% } %>
   </div>
   <div class="preview-scroll">
     <a href="#container" class="smooth-scroll"><i class="iconfont iconMouse"></i></a>
