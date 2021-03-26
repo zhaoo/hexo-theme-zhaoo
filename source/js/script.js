@@ -228,6 +228,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       $(window).resize(ZHAOO.utils.throttle(function () {
         ZHAOO.utils.isDesktop() && fn.navbar.desktop();
         (ZHAOO.utils.isMobile() && !CONFIG.isHome) && fn.navbar.mobile();
+        (ZHAOO.utils.isMobile() && CONFIG.isHome) && fn.navbar.desktop();
       }, 1000)).resize();
       $(".j-navbar-menu").on("click", function () {
         fn.showMenu();
