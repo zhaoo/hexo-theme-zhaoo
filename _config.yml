@@ -51,9 +51,11 @@ preview:
   enable: true
   type: wave  # wave | cloud
   background:
+    type: image # image video
     default:
       light: /images/theme/welcome-image.jpg
       dark: /images/theme/welcome-image.jpg
+    video:
     api: # https://source.unsplash.com/random/1920x1080
     size: cover # css: background-size
     position: center # css: background-position
