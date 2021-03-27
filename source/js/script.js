@@ -70,6 +70,10 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
                 $(".navbar").removeClass("transparent");
               } else if (before > after && after < height) {
                 $(".navbar").addClass("transparent");
+              } else if (before > after) {
+                $(".navbar").addClass("hide");
+              } else if (before < after) {
+                $(".navbar").removeClass("hide");
               }
             }
             before = after;
@@ -77,6 +81,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         }, 500));
       },
       desktop: function () {
+        $(".navbar").addClass("transparent");
         function center() {
           if ($(window).scrollTop() > 60) {
             $(".navbar .center").addClass("hide");
