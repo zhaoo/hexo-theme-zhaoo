@@ -162,7 +162,7 @@ $ git pull
 
 [![contributors](https://opencollective.com/hexo-theme-zhaoo/contributors.svg?button=false)](https://github.com/izhaoo/hexo-theme-zhaoo/graphs/contributors)
 
-Thanks to all contributors! Welcome to PR.
+Thanks to all contributors! Welcome to PR. (Please push to `develop` branch)
 
 ## Stargazers
 

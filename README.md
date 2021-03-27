@@ -162,7 +162,7 @@ $ git pull
 
 [![contributors](https://opencollective.com/hexo-theme-zhaoo/contributors.svg?button=false)](https://github.com/izhaoo/hexo-theme-zhaoo/graphs/contributors)
 
-感谢所有贡献者！欢迎提交代码~
+感谢所有贡献者！欢迎提交代码~ （请提交至 `develop` 分支）
 
 ## 趋势
 
