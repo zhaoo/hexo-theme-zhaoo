@@ -133,6 +133,9 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     },
     printMotto: function (text) {
       if (CONFIG.preview.motto.typing) {
+        if (text.charAt(text.length - 1) === '。') {
+          text = text.substr(0, text.length - 1);
+        }
         var i = 0;
         var timer = setInterval(function () {
           if (i >= text.length) {
