@@ -13,6 +13,9 @@
   transition transform 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9)
   &.hide
     transform translateY(-55px)
+  &.transparent
+    background-color: rgba(255, 255, 255, 0) !important;
+    backdrop-filter: none;
   > div
     flex 1
     display inline-flex
