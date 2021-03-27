@@ -260,6 +260,9 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
           $("#qrcode-navbar").fadeOut(300);
         }
       });
+      $(".j-navbar-back-home").on("click", function () {
+        window.location.href = "/";
+      });
     },
     preview: function () {
       fn.background();

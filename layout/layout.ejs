@@ -1,7 +1,9 @@
 <%- partial('_partial/head') %>
 <body class="lock-screen">
   <%- partial('_partial/components/loading') %>
-  <%- partial('_partial/components/navbar') %>
+  <% if (theme.navbar.enable) { %>
+    <%- partial('_partial/components/navbar') %>
+  <% } %>
   <%- partial('_partial/components/menu') %>
   <%- body %>
   <%- partial('_partial/components/footer') %>

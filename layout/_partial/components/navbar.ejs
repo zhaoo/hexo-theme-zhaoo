@@ -16,6 +16,9 @@
 <% if (title) { %>
   <nav class="navbar">
     <div class="left">
+      <% if (theme.navbar.back_home && !is_home()) { %>
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      <% } %>
       <% if (theme.qrcode.enable) { %>
         <i class="iconfont iconqrcode j-navbar-qrcode"></i>
       <% } %>
