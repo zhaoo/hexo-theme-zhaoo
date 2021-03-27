@@ -16,6 +16,9 @@
   <% if (theme.color_mode.enable) { %>
     <%- js('js/color-mode') %>
   <% } %>
+  <% if (theme.search.enable) { %>
+    <%- partial('_partial/components/search') %>
+  <% } %>
 </body>
 <%- partial('_partial/script') %>
 </html>

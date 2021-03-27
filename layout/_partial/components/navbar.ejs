@@ -25,6 +25,9 @@
       <% if (theme.color_mode.enable) { %>
         <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
       <% } %>
+      <% if (theme.search.enable && config.search.path) { %>
+        <i class="iconfont iconsearch j-navbar-search"></i>
+      <% } %>
     </div>
     <div class="center"><%= title %></div>
     <div class="right">
