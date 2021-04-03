@@ -51,9 +51,11 @@ preview:
   enable: true
   type: wave  # wave | cloud
   background:
+    type: image # image video
     default_image:
       light: /images/theme/welcome-image.jpg
       dark: /images/theme/welcome-image.jpg
+    video:
     api: # https://source.unsplash.com/random/1920x1080
     size: cover # css: background-size
     position: center # css: background-position
@@ -66,6 +68,11 @@ preview:
     # ex.one  =>  apl: https://v1.hitokoto.cn/?encode=text&c=i  data_contents:
     # ex.two  =>  api: https://v2.jinrishici.com/one.json  data_contents: ['data', 'content']
 
+# Navbar
+navbar:
+  enable: true
+  back_home: true
+
 # Copyright
 copyright: <p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p>
 
@@ -74,7 +81,7 @@ social:
   qq: tencent://message/?Menu=yes&uin=894519210 || iconQQ || '#12B7F5'
   wechat: javascript:; || iconwechat-fill || '#09BB07'
   instagram: https://www.instagram.com/izhaoo/ || iconinstagram || '#DA2E76'
-  github: https://github.com/izhaoo || icongithub-fill || '#9f7be1'
+  github: https://github.com/zhaoo || icongithub-fill || '#9f7be1'
   email: mailto:izhaoo@163.com || iconmail
 
 # Override Scrollbar

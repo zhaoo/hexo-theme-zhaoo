@@ -55,6 +55,7 @@
 - [rt](https://rt95.gitee.io)
 - [杨某人的FOB](http://www.yzpdot.com/)
 - [小州的博客](http://xiaozhoujun.gitee.io/)
+- [DesnLee的博客](https://www.desnlee.com/)
 
 （If you are using the zhaoo theme, welcome to show your blog, just add your blog to the `README.md` and PR.）
 
@@ -161,7 +162,7 @@ $ git pull
 
 [![contributors](https://opencollective.com/hexo-theme-zhaoo/contributors.svg?button=false)](https://github.com/izhaoo/hexo-theme-zhaoo/graphs/contributors)
 
-Thanks to all contributors! Welcome to PR.
+Thanks to all contributors! Welcome to PR. (Please push to `develop` branch)
 
 ## Stargazers
 

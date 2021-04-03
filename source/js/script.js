@@ -48,21 +48,40 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     },
     navbar: {
       mobile: function () {
-        $(".navbar").addClass("hide");
+        var height = $(window).height();
+        if (CONFIG.isHome) {
+          $(".navbar").addClass("transparent");
+        } else {
+          $(".navbar").addClass("hide");
+        }
         $(window).on("scroll", ZHAOO.utils.throttle(function () {
           var before = $(this).scrollTop();
           $(window).on("scroll", function () {
             var after = $(this).scrollTop();
-            if (before > after && after > 300) {
-              $(".navbar").removeClass("hide");
-            } else if (before < after || after < 300) {
-              $(".navbar").addClass("hide");
+            if (!CONFIG.isHome) {
+              if (before > after && after > 300) {
+                $(".navbar").removeClass("hide");
+              } else if (before < after || after < 300) {
+                $(".navbar").addClass("hide");
+              }
+            }
+            if (CONFIG.isHome) {
+              if (before < after && after > height) {
+                $(".navbar").removeClass("transparent");
+              } else if (before > after && after < height) {
+                $(".navbar").addClass("transparent");
+              } else if (before > after) {
+                $(".navbar").addClass("hide");
+              } else if (before < after) {
+                $(".navbar").removeClass("hide");
+              }
             }
             before = after;
           })
         }, 500));
       },
       desktop: function () {
+        $(".navbar").addClass("transparent");
         function center() {
           if ($(window).scrollTop() > 60) {
             $(".navbar .center").addClass("hide");
@@ -227,7 +246,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     navbar: function () {
       $(window).resize(ZHAOO.utils.throttle(function () {
         ZHAOO.utils.isDesktop() && fn.navbar.desktop();
-        (ZHAOO.utils.isMobile() && !CONFIG.isHome) && fn.navbar.mobile();
+        ZHAOO.utils.isMobile() && fn.navbar.mobile();
       }, 1000)).resize();
       $(".j-navbar-menu").on("click", function () {
         fn.showMenu();
@@ -240,6 +259,9 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         } else {
           $("#qrcode-navbar").fadeOut(300);
         }
+      });
+      $(".j-navbar-back-home").on("click", function () {
+        window.location.href = "/";
       });
     },
     preview: function () {

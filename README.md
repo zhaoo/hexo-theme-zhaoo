@@ -55,6 +55,7 @@
 - [rt](https://rt95.gitee.io)
 - [杨某人的FOB](http://www.yzpdot.com/)
 - [小州的博客](http://xiaozhoujun.gitee.io/)
+- [DesnLee的博客](https://www.desnlee.com/)
 
 （如果您正在使用 zhaoo 主题，欢迎展示您的博客哦，只需在 `README.md` 文件中加入您的博客，提交 PR 即可。）
 
@@ -161,7 +162,7 @@ $ git pull
 
 [![contributors](https://opencollective.com/hexo-theme-zhaoo/contributors.svg?button=false)](https://github.com/izhaoo/hexo-theme-zhaoo/graphs/contributors)
 
-感谢所有贡献者！欢迎提交代码~
+感谢所有贡献者！欢迎提交代码~ （请提交至 `develop` 分支）
 
 ## 趋势
 
