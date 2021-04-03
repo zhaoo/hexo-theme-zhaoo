@@ -51,7 +51,7 @@ preview:
   enable: true
   type: wave  # wave | cloud
   background:
-    default:
+    default_image:
       light: /images/theme/welcome-image.jpg
       dark: /images/theme/welcome-image.jpg
     api: # https://source.unsplash.com/random/1920x1080
