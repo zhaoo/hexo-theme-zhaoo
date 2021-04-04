@@ -52,7 +52,7 @@ preview:
   type: wave  # wave | cloud
   background:
     type: image # image video
-    default:
+    default_image:
       light: /images/theme/welcome-image.jpg
       dark: /images/theme/welcome-image.jpg
     video:

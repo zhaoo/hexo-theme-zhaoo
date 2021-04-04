@@ -8,6 +8,9 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       $(".menu").fadeIn(300);
       $("body").addClass("lock-screen");
       fn.hideFab();
+      ZHAOO.utils.bindKeyup(27, function () {
+        fn.hideMenu();
+      });
     },
     hideMenu: function () {
       $(".menu").fadeOut(300);
@@ -17,6 +20,9 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       $(".search").fadeIn(300);
       $("body").addClass("lock-screen");
       fn.hideFab();
+      ZHAOO.utils.bindKeyup(27, function () {
+        fn.hideSearch();
+      });
     },
     hideSearch: function () {
       $(".search").fadeOut(300);
@@ -80,9 +86,9 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
               } else if (before > after && after < height) {
                 $(".navbar").addClass("transparent");
               } else if (before > after) {
-                $(".navbar").addClass("hide");
-              } else if (before < after) {
                 $(".navbar").removeClass("hide");
+              } else if (before < after) {
+                $(".navbar").addClass("hide");
               }
             }
             before = after;
@@ -199,7 +205,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
                 });
               }
               if (isMatch) {
-                str += "<li><a href='" + data_url + "' class='search-result-title' target='_blank'>" + "> " + data_title + "</a>";
+                str += "<li><a href='" + data_url + "' class='search-result-title' target='_blank'>" + data_title + "</a>";
                 var content = data.content.trim().replace(/<[^>]+>/g, "");
                 if (first_occur >= 0) {
                   var start = first_occur - 6;
