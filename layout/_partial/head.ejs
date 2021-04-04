@@ -119,6 +119,10 @@ var description = '';
         list: '<%- site.data.notification && JSON.stringify(site.data.notification) %>',
         page_white_list: '<%- theme.notification.page_white_list && JSON.stringify(theme.notification.page_white_list) %>',
         page_black_list: '<%- theme.notification.page_black_list && JSON.stringify(theme.notification.page_black_list) %>'
+      },
+      search: {
+        enable: <%= theme.search.enable %>,
+        path: '<%- config.search.path %>'
       }
     }
   </script>

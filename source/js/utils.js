@@ -78,6 +78,14 @@
         return true;
       }
       return false;
+    },
+    bindKeyup: function (code, fn) {
+      $(document).keyup(function (e) {
+        var key = e.which || e.keyCode;;
+        if (key == code) {
+          fn();
+        }
+      });
     }
   }
 

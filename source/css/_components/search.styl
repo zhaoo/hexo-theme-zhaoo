@@ -1,0 +1,65 @@
+.search
+  position fixed
+  display none
+  width 100vw
+  height 100vh
+  top 0
+  left 0
+  background-color rgba(255, 255, 255, 0.7)
+  -webkit-backdrop-filter saturate(180%) blur(10px)
+  backdrop-filter saturate(180%) blur(10px)
+  z-index 300
+  .search-container
+    width 100%
+    max-width 800px
+    margin 0 auto
+    height 100%
+    padding 40px 30px
+    display flex
+    flex-direction column
+    align-items center
+    .search-input-wrapper
+      width 100%
+      padding 20px 0
+      display flex
+      align-items center
+      .search-input
+        width 100%
+        font-size 1.5em
+        padding 1px 2px
+        vertical-align middle
+        color var(--color-text)
+      .search-input-icon
+        margin-right 10px
+        font-size 1.8em
+        color var(--color-text)
+    .search-output
+      width 100%
+      overflow-y scroll
+      .search-result-list
+        padding-left 0
+        li
+          padding 1em 0
+          list-style-type none
+          border-bottom #ddd dashed 1px
+        li:last-child
+          border-bottom none
+        .search-result-title
+          font-size 1.2em
+          font-weight bold
+        .search-result
+          margin-bottom 0
+          font-size 1em
+          text-align justify
+          .search-keyword
+            color $color-link
+            font-style normal
+    .search-close
+      position absolute
+      right 15px
+      top 15px
+      cursor pointer
+      i
+        color var(--color-text)
+        font-size 24px
+    

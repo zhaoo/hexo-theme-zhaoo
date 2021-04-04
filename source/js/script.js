@@ -8,9 +8,24 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       $(".menu").fadeIn(300);
       $("body").addClass("lock-screen");
       fn.hideFab();
+      ZHAOO.utils.bindKeyup(27, function () {
+        fn.hideMenu();
+      });
     },
     hideMenu: function () {
       $(".menu").fadeOut(300);
+      $("body").removeClass("lock-screen");
+    },
+    showSearch: function () {
+      $(".search").fadeIn(300);
+      $("body").addClass("lock-screen");
+      fn.hideFab();
+      ZHAOO.utils.bindKeyup(27, function () {
+        fn.hideSearch();
+      });
+    },
+    hideSearch: function () {
+      $(".search").fadeOut(300);
       $("body").removeClass("lock-screen");
     },
     activeFab: function () {
@@ -71,9 +86,9 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
               } else if (before > after && after < height) {
                 $(".navbar").addClass("transparent");
               } else if (before > after) {
-                $(".navbar").addClass("hide");
-              } else if (before < after) {
                 $(".navbar").removeClass("hide");
+              } else if (before < after) {
+                $(".navbar").addClass("hide");
               }
             }
             before = after;
@@ -86,6 +101,9 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
           if ($(window).scrollTop() > 60) {
             $(".navbar .center").addClass("hide");
           } else {
+            if (!CONFIG.isHome) {
+              $(".navbar").removeClass("transparent");
+            }
             $(".navbar .center").removeClass("hide");
           }
         }
@@ -124,6 +142,9 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     },
     printMotto: function (text) {
       if (CONFIG.preview.motto.typing) {
+        if (text.charAt(text.length - 1) === '。') {
+          text = text.substr(0, text.length - 1);
+        }
         var i = 0;
         var timer = setInterval(function () {
           if (i >= text.length) {
@@ -138,6 +159,82 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     background: function () {
       if (!CONFIG.preview.background.api) return;
       $(".preview-image").css("background-image", "url(" + CONFIG.preview.background.api + ")");
+    },
+    doSearch: function (path, search_id, content_id) {
+      // https://segmentfault.com/a/1190000011917419
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function () {
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              var data_title = data.title.trim().toLowerCase();
+              var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              if (data_title != '' && data_content != '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                  }
+                });
+              }
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title' target='_blank'>" + data_title + "</a>";
+                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                if (first_occur >= 0) {
+                  var start = first_occur - 6;
+                  var end = first_occur + 6;
+                  if (start < 0) {
+                    start = 0;
+                  }
+                  if (start == 0) {
+                    end = 10;
+                  }
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+                  var match_content = content.substr(start, end);
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                  })
+                  str += "<p class=\"search-result\">" + match_content + "...</p>"
+                }
+              }
+            })
+            $resultContent.innerHTML = str;
+          })
+        }
+      })
     }
   }
 
@@ -263,6 +360,11 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       $(".j-navbar-back-home").on("click", function () {
         window.location.href = "/";
       });
+      $(".j-navbar-search").on("click", function () {
+        fn.showSearch();
+        $(".navbar").addClass("hide");
+        $(".qrcode").fadeOut(300);
+      });
     },
     preview: function () {
       fn.background();
@@ -340,6 +442,15 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       playList.forEach(function (item) {
         ZHAOO.zui.notification({ title: item.title, content: item.content, delay: delay });
       });
+    },
+    search: function () {
+      var path = CONFIG.search.path;
+      if (!path) return;
+      $(".search-close").on("click", function () {
+        fn.hideSearch();
+        $(".navbar").removeClass("hide");
+      });
+      fn.doSearch(path, 'search-input', 'search-output');
     }
   }
 
@@ -361,6 +472,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     CONFIG.toc.enable && action.toc();
     CONFIG.scrollbar.type === 'simple' && action.scrollbar();
     CONFIG.notification.enable && action.notification();
+    CONFIG.search.enable && action.search();
   });
 
 })(jQuery);
