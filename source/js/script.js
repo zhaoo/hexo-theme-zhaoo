@@ -101,6 +101,9 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
           if ($(window).scrollTop() > 60) {
             $(".navbar .center").addClass("hide");
           } else {
+            if (!CONFIG.isHome) {
+              $(".navbar").removeClass("transparent");
+            }
             $(".navbar .center").removeClass("hide");
           }
         }
