@@ -44,7 +44,9 @@ font:
 background_image:
 
 # Loading
-loading: /images/theme/loading.gif
+loading: 
+  light: /images/theme/loading.gif
+  dark: /images/theme/loading.gif
 
 # Preview
 preview:
@@ -231,7 +233,9 @@ leancloud:
 lazyload:
   enable: true
   only_post: false
-  loading: /images/theme/loading.gif
+  loading: 
+    light: /images/theme/loading.gif
+    dark: /images/theme/loading.gif
 
 # FancyBox
 fancybox: true
