@@ -65,30 +65,30 @@ var description = '';
     var ZHAOO = window.ZHAOO || {};
     CONFIG = {
       isHome: <%= is_home() %>,
-      fancybox: <%= theme.fancybox || true %>,
+      fancybox: <%= theme.fancybox %>,
       pjax: <%= theme.pjax || false %>,
       lazyload: {
-        enable: <%= theme.lazyload.enable || true %>,
+        enable: <%= theme.lazyload.enable %>,
         only_post: '<%= theme.lazyload.only_post %>',
         loading: '<%= theme.lazyload.loading %>'
       },
       donate: {
-        enable: <%= theme.donate.enable || true %>,
+        enable: <%= theme.donate.enable %>,
         alipay: '<%= theme.donate.alipay %>',
         wechat: '<%= theme.donate.wechat %>'
       },
       galleries: {
-        enable: <%= theme.galleries.enable || false %>
+        enable: <%= theme.galleries.enable %>
       },
       fab: {
-        enable: <%= theme.fab.enable || true %>,
-        always_show: <%= theme.fab.always_show || false %>
+        enable: <%= theme.fab.enable %>,
+        always_show: <%= theme.fab.always_show %>
       },
       carrier: {
-        enable: <%= theme.carrier.enable || false %>
+        enable: <%= theme.carrier.enable %>
       },
       daovoice: {
-        enable: <%= theme.daovoice.enable || false %>
+        enable: <%= theme.daovoice.enable %>
       },
       preview: {
         background: {
@@ -97,31 +97,31 @@ var description = '';
         },
         motto: {
           default: '<%= theme.preview.motto.default %>',
-          typing: <%= theme.preview.motto.typing || true %>,
+          typing: <%= theme.preview.motto.typing %>,
           api: '<%- theme.preview.motto.api %>',
           data_contents: '<%- theme.preview.motto.data_contents && JSON.stringify(theme.preview.motto.data_contents) %>'
         },
       },
       qrcode: {
-        enable: <%= theme.qrcode.enable || true %>,
+        enable: <%= theme.qrcode.enable %>,
         type: '<%= theme.qrcode.type %>',
         image: '<%= theme.qrcode.image %>',
       },
       toc: {
-        enable: <%= theme.toc.enable || true %>
+        enable: <%= theme.toc.enable %>
       },
       scrollbar: {
         type: '<%= theme.scrollbar.type %>'
       },
       notification: {
-        enable: <%= theme.notification.enable || false %>,
+        enable: <%= theme.notification.enable %>,
         delay: <%= theme.notification.delay || 4500 %>,
         list: '<%- site.data.notification && JSON.stringify(site.data.notification) %>',
         page_white_list: '<%- theme.notification.page_white_list && JSON.stringify(theme.notification.page_white_list) %>',
         page_black_list: '<%- theme.notification.page_black_list && JSON.stringify(theme.notification.page_black_list) %>'
       },
       search: {
-        enable: <%= theme.search.enable || false %>,
+        enable: <%= theme.search.enable %>,
         path: <%- config.search && config.search.path ? `'${config.search.path}'` : null %>
       }
     }
