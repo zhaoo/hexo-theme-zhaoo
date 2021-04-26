@@ -19,7 +19,7 @@ var description = '';
 %>
 
 <!DOCTYPE html>
-<html lang="<%= config.language %>" <%- theme.color_mode.enable ? `color-mode=light` : `` %>>
+<html lang="<%= config.language || zh-CN %>" <%- theme.color_mode.enable || false ? `color-mode=light` : `` %>>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -28,13 +28,13 @@ var description = '';
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
-  <%- keywords ? `<meta name="keywords" content="${keywords}">` : `` %>
-  <%- description ? `<meta name="description" content="${description}">` : `` %>
-  <%- config.author ? `<meta name="author" content="${config.author}">` : `` %>
-  <%- theme.favicon.small ? `<link rel="icon" href="${theme.favicon.small}" type="image/png" sizes="16x16">` : `` %>
-  <%- theme.favicon.medium ? `<link rel="icon" href="${theme.favicon.medium}" type="image/png" sizes="32x32">` : `` %>
-  <%- theme.favicon.apple_touch_icon ? `<link rel="apple-touch-icon" href="${theme.favicon.apple_touch_icon}" sizes="180x180">` : `` %>
-  <%- theme.favicon.safari_pinned_tab ? `<meta rel="mask-icon" href="${theme.favicon.safari_pinned_tab}" color="#333333">` : `` %>
+  <%- keywords ? `<meta name="keywords" content="${keywords}">` : null %>
+  <%- description ? `<meta name="description" content="${description}">` : null %>
+  <%- config.author ? `<meta name="author" content="${config.author}">` : null %>
+  <%- theme.favicon.small ? `<link rel="icon" href="${theme.favicon.small}" type="image/png" sizes="16x16">` : null %>
+  <%- theme.favicon.medium ? `<link rel="icon" href="${theme.favicon.medium}" type="image/png" sizes="32x32">` : null %>
+  <%- theme.favicon.apple_touch_icon ? `<link rel="apple-touch-icon" href="${theme.favicon.apple_touch_icon}" sizes="180x180">` : null %>
+  <%- theme.favicon.safari_pinned_tab ? `<meta rel="mask-icon" href="${theme.favicon.safari_pinned_tab}" color="#333333">` : null %>
   <% if (theme.favicon.msapplication) { %>
     <meta rel="msapplication-TileImage" content="<%- theme.favicon.msapplication %>">
     <meta rel="msapplication-TileColor" content="#000000">
@@ -65,30 +65,30 @@ var description = '';
     var ZHAOO = window.ZHAOO || {};
     CONFIG = {
       isHome: <%= is_home() %>,
-      fancybox: <%= theme.fancybox %>,
-      pjax: <%= theme.pjax %>,
+      fancybox: <%= theme.fancybox || true %>,
+      pjax: <%= theme.pjax || false %>,
       lazyload: {
-        enable: <%= theme.lazyload.enable %>,
+        enable: <%= theme.lazyload.enable || true %>,
         only_post: '<%= theme.lazyload.only_post %>',
         loading: '<%= theme.lazyload.loading %>'
       },
       donate: {
-        enable: <%= theme.donate.enable %>,
+        enable: <%= theme.donate.enable || true %>,
         alipay: '<%= theme.donate.alipay %>',
         wechat: '<%= theme.donate.wechat %>'
       },
       galleries: {
-        enable: <%= theme.galleries.enable %>
+        enable: <%= theme.galleries.enable || false %>
       },
       fab: {
-        enable: <%= theme.fab.enable %>,
-        always_show: <%= theme.fab.always_show %>
+        enable: <%= theme.fab.enable || true %>,
+        always_show: <%= theme.fab.always_show || false %>
       },
       carrier: {
-        enable: <%= theme.carrier.enable %>
+        enable: <%= theme.carrier.enable || false %>
       },
       daovoice: {
-        enable: <%= theme.daovoice.enable %>
+        enable: <%= theme.daovoice.enable || false %>
       },
       preview: {
         background: {
@@ -97,32 +97,32 @@ var description = '';
         },
         motto: {
           default: '<%= theme.preview.motto.default %>',
-          typing: <%= theme.preview.motto.typing %>,
+          typing: <%= theme.preview.motto.typing || true %>,
           api: '<%- theme.preview.motto.api %>',
           data_contents: '<%- theme.preview.motto.data_contents && JSON.stringify(theme.preview.motto.data_contents) %>'
         },
       },
       qrcode: {
-        enable: <%= theme.qrcode.enable %>,
+        enable: <%= theme.qrcode.enable || true %>,
         type: '<%= theme.qrcode.type %>',
         image: '<%= theme.qrcode.image %>',
       },
       toc: {
-        enable: <%= theme.toc.enable %>
+        enable: <%= theme.toc.enable || true %>
       },
       scrollbar: {
         type: '<%= theme.scrollbar.type %>'
       },
       notification: {
-        enable: <%= theme.notification.enable %>,
-        delay: <%= theme.notification.delay %>,
+        enable: <%= theme.notification.enable || false %>,
+        delay: <%= theme.notification.delay || 4500 %>,
         list: '<%- site.data.notification && JSON.stringify(site.data.notification) %>',
         page_white_list: '<%- theme.notification.page_white_list && JSON.stringify(theme.notification.page_white_list) %>',
         page_black_list: '<%- theme.notification.page_black_list && JSON.stringify(theme.notification.page_black_list) %>'
       },
       search: {
-        enable: <%= theme.search.enable %>,
-        path: '<%- config.search.path %>'
+        enable: <%= theme.search.enable || false %>,
+        path: '<%- config?.search?.path %>'
       }
     }
   </script>
