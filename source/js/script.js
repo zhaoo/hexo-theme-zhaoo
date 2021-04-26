@@ -23,6 +23,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       fn.hideFab();
       ZHAOO.utils.bindKeyup(27, function () {
         fn.hideSearch();
+        $(".navbar").removeClass("hide");
       });
     },
     hideSearch: function () {
