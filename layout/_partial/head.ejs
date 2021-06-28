@@ -122,7 +122,7 @@ var description = '';
       },
       search: {
         enable: <%= theme.search.enable %>,
-        path: <%- config.search && config.search.path ? `'${config.search.path}'` : null %>
+        path: <%- config.search && config.search.path ? `'${config.search.path}'` : `''` %>
       }
     }
   </script>
