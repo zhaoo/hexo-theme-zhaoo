@@ -1,11 +1,11 @@
 <div align="right">
   Language:
-  <a title="简体中文" href="https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/README.md">🇨🇳</a>
-  <a title="English" href="https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/README_EN.md">🇺🇸</a>
+  <a title="简体中文" href="https://github.com/zhaoo/hexo-theme-zhaoo/blob/master/README.md">🇨🇳</a>
+  <a title="English" href="https://github.com/zhaoo/hexo-theme-zhaoo/blob/master/README_EN.md">🇺🇸</a>
 </div>
 
 <div align="center">
-  <a href="https://github.com/izhaoo/hexo-theme-zhaoo/" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/zhaoo/hexo-theme-zhaoo/" target="_blank" rel="noopener noreferrer">
     <img src="./source/images/icons/zhaoo-logo.png" alt="zhaoo logo" width="100">
   </a>
 </div>
@@ -13,7 +13,7 @@
 <h3 align="center">A simple theme for Hexo</h3>  
 
 <div align="center">
-  <a href="https://github.com/izhaoo/hexo-theme-zhaoo/releases" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/zhaoo/hexo-theme-zhaoo/releases" target="_blank" rel="noopener noreferrer">
     <img alt="releases" src="https://img.shields.io/badge/releases-v2.0.0-blue.svg?style=flat-square&longCache=true">
   </a>
   <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">
@@ -22,7 +22,7 @@
   <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer">
     <img alt="node" src="https://img.shields.io/badge/node-%3E=10.9.0-green.svg?style=flat-square&logo=Node.js&longCache=true">
   </a>
-  <a href="(https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">
+  <a href="(https://github.com/zhaoo/hexo-theme-zhaoo/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">
     <img alt="license" src="https://img.shields.io/badge/license-MIT-green.svg?style=flat-square&longCache=true">
   </a>
 </div>
@@ -99,7 +99,7 @@ $ cd hexo
 To install zhaoo themes:
 
 ```bash
-$ git clone https://github.com/izhaoo/hexo-theme-zhaoo.git themes/zhaoo
+$ git clone https://github.com/zhaoo/hexo-theme-zhaoo.git themes/zhaoo
 ```
 
 ## Use
@@ -136,7 +136,7 @@ $ hexo clean && hexo s
 
 Modify the file `_config.yml` in the theme directory to configure related functions:
 
-It is recommended to refer to [documents](https://www.izhaoo.com/2020/05/05/hexo-theme-zhaoo-doc/)、[_config.yml](https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/_config.yml)、[_example](https://github.com/izhaoo/hexo-theme-zhaoo/tree/master/_example) for configuration
+It is recommended to refer to [documents](https://www.izhaoo.com/2020/05/05/hexo-theme-zhaoo-doc/)、[_config.yml](https://github.com/zhaoo/hexo-theme-zhaoo/blob/master/_config.yml)、[_example](https://github.com/zhaoo/hexo-theme-zhaoo/tree/master/_example) for configuration
 
 ## Update
 
@@ -154,20 +154,20 @@ $ git pull
 
 ## Related
 
-* Weapp: [hexo-weapp-zhaoo](https://github.com/izhaoo/hexo-weapp-zhaoo) (Weapp for Hexo)
-* Plugin: [hexo-generator-restful](https://github.com/izhaoo/hexo-generator-restful) (RESTful API for Hexo)
+* Weapp: [hexo-weapp-zhaoo](https://github.com/zhaoo/hexo-weapp-zhaoo) (Weapp for Hexo)
+* Plugin: [hexo-generator-restful-zhaoo](https://github.com/zhaoo/hexo-generator-restful-zhaoo) (RESTful API for Hexo)
 * Exchange group: 550262893
 
 ## Contributors
 
-[![contributors](https://opencollective.com/hexo-theme-zhaoo/contributors.svg?button=false)](https://github.com/izhaoo/hexo-theme-zhaoo/graphs/contributors)
+[![contributors](https://opencollective.com/hexo-theme-zhaoo/contributors.svg?button=false)](https://github.com/zhaoo/hexo-theme-zhaoo/graphs/contributors)
 
 Thanks to all contributors! Welcome to PR. (Please push to `develop` branch)
 
 ## Stargazers
 
-[![Stargazers over time](https://starchart.cc/izhaoo/hexo-theme-zhaoo.svg)](https://starchart.cc/izhaoo/hexo-theme-zhaoo)
+[![Stargazers over time](https://starchart.cc/zhaoo/hexo-theme-zhaoo.svg)](https://starchart.cc/zhaoo/hexo-theme-zhaoo)
 
 ## License
 
-[MIT](https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/LICENSE) License
+[MIT](https://github.com/zhaoo/hexo-theme-zhaoo/blob/master/LICENSE) License

@@ -1,7 +1,8 @@
 .galleries
   min-height calc(100vh - 350px)
-  max-width 100%
-  padding 0 10px
+  @media (max-width 768px)
+    max-width 100%
+    padding 0 10px
   .wrap
     display grid
     grid-template-columns repeat(auto-fit, minmax(100px, 300px))
