@@ -1,11 +1,11 @@
 <div align="right">
   语言:
-  <a title="简体中文" href="https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/README.md">🇨🇳</a>
-  <a title="English" href="https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/README_EN.md">🇺🇸</a>
+  <a title="简体中文" href="https://github.com/zhaoo/hexo-theme-zhaoo/blob/master/README.md">🇨🇳</a>
+  <a title="English" href="https://github.com/zhaoo/hexo-theme-zhaoo/blob/master/README_EN.md">🇺🇸</a>
 </div>
 
 <div align="center">
-  <a href="https://github.com/izhaoo/hexo-theme-zhaoo/" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/zhaoo/hexo-theme-zhaoo/" target="_blank" rel="noopener noreferrer">
     <img src="./source/images/icons/zhaoo-logo.png" alt="zhaoo logo" width="100">
   </a>
 </div>
@@ -13,7 +13,7 @@
 <h3 align="center">一款简约的 Hexo 主题</h3>  
 
 <div align="center">
-  <a href="https://github.com/izhaoo/hexo-theme-zhaoo/releases" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/zhaoo/hexo-theme-zhaoo/releases" target="_blank" rel="noopener noreferrer">
     <img alt="releases" src="https://img.shields.io/badge/releases-v2.0.0-blue.svg?style=flat-square&longCache=true">
   </a>
   <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">
@@ -22,7 +22,7 @@
   <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer">
     <img alt="node" src="https://img.shields.io/badge/node-%3E=10.9.0-green.svg?style=flat-square&logo=Node.js&longCache=true">
   </a>
-  <a href="(https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">
+  <a href="(https://github.com/zhaoo/hexo-theme-zhaoo/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">
     <img alt="license" src="https://img.shields.io/badge/license-MIT-green.svg?style=flat-square&longCache=true">
   </a>
 </div>
@@ -99,7 +99,7 @@ $ cd hexo
 安装 zhaoo 主题：
 
 ```bash
-$ git clone https://github.com/izhaoo/hexo-theme-zhaoo.git themes/zhaoo
+$ git clone https://github.com/zhaoo/hexo-theme-zhaoo.git themes/zhaoo
 ```
 
 ## 使用
@@ -136,7 +136,7 @@ $ hexo clean && hexo s
 
 修改主题目录下的 `_config.yml` 文件，配置相关功能：
 
-建议参考 [配置文档](https://www.izhaoo.com/2020/05/05/hexo-theme-zhaoo-doc/)、[_config.yml](https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/_config.yml)、[_example](https://github.com/izhaoo/hexo-theme-zhaoo/tree/master/_example) 进行配置
+建议参考 [配置文档](https://www.izhaoo.com/2020/05/05/hexo-theme-zhaoo-doc/)、[_config.yml](https://github.com/zhaoo/hexo-theme-zhaoo/blob/master/_config.yml)、[_example](https://github.com/zhaoo/hexo-theme-zhaoo/tree/master/_example) 进行配置
 
 ## 更新
 
@@ -154,20 +154,20 @@ $ git pull
 
 ## 相关
 
-* 小程序：[hexo-weapp-zhaoo](https://github.com/izhaoo/hexo-weapp-zhaoo) (为 Hexo 定制的博客小程序)
-* 插件：[hexo-generator-restful](https://github.com/izhaoo/hexo-generator-restful) (Hexo RESTful 接口)
+* 小程序：[hexo-weapp-zhaoo](https://github.com/zhaoo/hexo-weapp-zhaoo) (为 Hexo 定制的博客小程序)
+* 插件：[hexo-generator-restful-zhaoo](https://github.com/zhaoo/hexo-generator-restful-zhaoo) (Hexo RESTful 接口)
 * 交流群：550262893
 
 ## 贡献
 
-[![contributors](https://opencollective.com/hexo-theme-zhaoo/contributors.svg?button=false)](https://github.com/izhaoo/hexo-theme-zhaoo/graphs/contributors)
+[![contributors](https://opencollective.com/hexo-theme-zhaoo/contributors.svg?button=false)](https://github.com/zhaoo/hexo-theme-zhaoo/graphs/contributors)
 
 感谢所有贡献者！欢迎提交代码~ （请提交至 `develop` 分支）
 
 ## 趋势
 
-[![趋势](https://starchart.cc/izhaoo/hexo-theme-zhaoo.svg)](https://starchart.cc/izhaoo/hexo-theme-zhaoo)
+[![趋势](https://starchart.cc/zhaoo/hexo-theme-zhaoo.svg)](https://starchart.cc/zhaoo/hexo-theme-zhaoo)
 
 ## 协议
 
-[MIT](https://github.com/izhaoo/hexo-theme-zhaoo/blob/master/LICENSE) License
+[MIT](https://github.com/zhaoo/hexo-theme-zhaoo/blob/master/LICENSE) License
