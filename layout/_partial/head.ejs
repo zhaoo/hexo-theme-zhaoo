@@ -67,10 +67,17 @@ var description = '';
       isHome: <%= is_home() %>,
       fancybox: <%= theme.fancybox %>,
       pjax: <%= theme.pjax || false %>,
+      loading: {
+        gif: '<%= theme.loading.gif %>',
+        lottie: '<%= theme.loading.lottie %>'
+      },
       lazyload: {
         enable: <%= theme.lazyload.enable %>,
         only_post: '<%= theme.lazyload.only_post %>',
-        loading: '<%= theme.lazyload.loading %>'
+        loading: {
+          gif: '<%= theme.lazyload.loading.gif %>',
+          lottie: '<%= theme.lazyload.loading.lottie %>'
+        }
       },
       donate: {
         enable: <%= theme.donate.enable %>,

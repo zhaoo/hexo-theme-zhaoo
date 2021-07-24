@@ -453,6 +453,15 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
         $(".navbar").removeClass("hide");
       });
       fn.doSearch(path, 'search-input', 'search-output');
+    },
+    lottie: function () {
+      lottie.loadAnimation({
+        container: document.getElementById("loading"),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: CONFIG.loading.lottie
+      });
     }
   }
 
@@ -475,6 +484,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
     CONFIG.scrollbar.type === 'simple' && action.scrollbar();
     CONFIG.notification.enable && action.notification();
     CONFIG.search.enable && action.search();
+    CONFIG.loading.lottie && action.lottie();
   });
 
 })(jQuery);

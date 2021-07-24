@@ -44,9 +44,9 @@ font:
 background_image:
 
 # Loading
-loading: 
-  light: /images/theme/loading.gif
-  dark: /images/theme/loading.gif
+loading:
+  gif: /images/theme/loading.gif
+  lottie:
 
 # Preview
 preview:
@@ -233,9 +233,9 @@ leancloud:
 lazyload:
   enable: true
   only_post: false
-  loading: 
-    light: /images/theme/loading.gif
-    dark: /images/theme/loading.gif
+  loading:
+    gif: /images/theme/loading.gif
+    lottie:
 
 # FancyBox
 fancybox: true
@@ -273,6 +273,7 @@ vendors:
   lazyload_js: https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js
   qrcode_js: https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js
   daovoice_js: https://widget.daovoice.io/widget/0f81ff2f.js
+  lottie_js: https://cdn.bootcdn.net/ajax/libs/lottie-web/5.7.12/lottie.js
   fancybox_css: https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css
   highlight_css: https://cdn.bootcss.com/highlight.js/9.18.1/styles/
   iconfont_css: //at.alicdn.com/t/font_1445822_r673sha78lq.css
