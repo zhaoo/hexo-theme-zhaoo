@@ -56,6 +56,7 @@
 - [杨某人的FOB](http://www.yzpdot.com/)
 - [小州的博客](http://xiaozhoujun.gitee.io/)
 - [DesnLee的博客](https://www.desnlee.com/)
+- [米斯特乌小站](https://m.wuzhiping.top/)
 
 （If you are using the zhaoo theme, welcome to show your blog, just add your blog to the `README.md` and PR.）
 
