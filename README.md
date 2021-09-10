@@ -30,7 +30,7 @@
 <br/>
 
 <div align="center">
-  文档：<a href="https://www.izhaoo.com/2020/05/05/hexo-theme-zhaoo-doc/" target="_blank" rel="noopener noreferrer">配置文档</a>&nbsp;&nbsp;&nbsp;&nbsp;预览：<a href="https://www.izhaoo.com/" target="_blank" rel="noopener noreferrer">zhaoo</a>
+  文档：<a href="https://www.izhaoo.com/2020/05/05/hexo-theme-zhaoo-doc/" target="_blank" rel="noopener noreferrer">配置文档</a>&nbsp;&nbsp;&nbsp;&nbsp;预览：<a href="https://www.izhaoo.com/" target="_blank" rel="noopener noreferrer">zhaoo</a>&nbsp;&nbsp;&nbsp;&nbsp;小程序：<a href="https://github.com/zhaoo/hexo-weapp-zhaoo" target="_blank" rel="noopener noreferrer">hexo-weapp-zhaoo</a>
 </div>
 
 ## 预览
