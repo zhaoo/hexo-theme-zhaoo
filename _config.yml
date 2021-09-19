@@ -26,6 +26,7 @@ color:
   background-secondary-dark: '#1a1d22'
   border-dark: '#2b3038'
   link: '#FF3B00'
+  link-gradient: 'linear-gradient(-60deg, #ff5858 0%, #f09819 100%)'
 
 # Favicon
 favicon:
