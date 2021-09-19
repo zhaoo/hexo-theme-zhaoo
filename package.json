@@ -1,0 +1,28 @@
+{
+  "name": "hexo-theme-zhaoo",
+  "version": "2.0.2",
+  "description": "A simple theme for Hexo",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhaoo/hexo-theme-zhaoo.git"
+  },
+  "keywords": [
+    "hexo-theme-zhaoo",
+    "hexo",
+    "theme",
+    "simple"
+  ],
+  "author": {
+    "name": "zhaoo",
+    "email": "izhaoo@163.com",
+    "url": "https://www.izhaoo.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhaoo/hexo-theme-zhaoo/issues"
+  },
+  "homepage": "https://github.com/zhaoo/hexo-theme-zhaoo#readme"
+}

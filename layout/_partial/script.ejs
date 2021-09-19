@@ -1,5 +1,9 @@
 <%- theme.vendors.jquery_js ? js(theme.vendors.jquery_js) : js('lib/jquery/jquery.js') %>
 
+<% if (theme.loading.lottie) { %>
+  <%- theme.vendors.lottie_js ? js(theme.vendors.lottie_js) : js('lib/lottie/lottie.js') %>
+<% } %>
+
 <% if (theme.lazyload) { %>
   <%- theme.vendors.lazyload_js ? js(theme.vendors.lazyload_js) : js('lib/lazyload/lazyload.js') %>
 <% } %>
@@ -19,7 +23,7 @@
 <%- js(['js/utils', 'js/script']) %>
 
 <% if (theme.leancloud.enable) { %>
-  <%- partial('_partial/plugins/visitors') %>
+  <%- partial('_partial/plugins/leancloud') %>
 <% } %>
 
 <% if (theme.daovoice.enable) { %>
