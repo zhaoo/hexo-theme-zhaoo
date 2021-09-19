@@ -19,10 +19,12 @@
         <span class="post-info-item"><i class="iconfont iconcalendar"></i><%= date(post.date, "MMMM DD, YYYY") %></span>
         <% if (theme.leancloud.enable) { %>
           <span class="post-info-item">
-            <i class="iconfont iconeye"></i><span id="<%= url_for(post.path) %>" class="leancloud" data-flag-title="<%- post.title %>"></span>
+            <i class="iconfont iconeye"></i><span id="<%= url_for(post.path) %>" class="leancloud-counter" data-flag-title="<%- post.title %>"></span>
+          </span>
+          <span class="post-info-item">
+            <i class="iconfont iconheart"></i><span id="<%= url_for(post.path) %>" class="leancloud-like" data-flag-title="<%- post.title %>"></span>
           </span>
         <% } %>
-        <span class="post-info-item"><i class="iconfont iconfont-size"></i><%= strip_html(post.content).length %></span>
       </div>
     </div>
   </div>
