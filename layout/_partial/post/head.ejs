@@ -1,7 +1,7 @@
 <section class="head">
   <%- image_tag(post_image(page.image), { draggable: "false" }) %>
   <div class="head-mask">
-    <h1 class="head-title"><%= page.title %></h1>
+    <h1 class="head-title"><%- page.title %></h1>
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i><%= date(page.date, "MMMM DD, YYYY") %></span>
       <% if (theme.leancloud.enable) { %>

@@ -118,6 +118,10 @@ gray:
 # Post Settings
 # --------------------------------------------------
 
+# Excerpt
+excerpt: 
+  enable: true
+
 # Post Image
 post_image:
   random: local # local galleries

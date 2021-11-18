@@ -10,9 +10,9 @@
     </a>
     <div class="post-content">
       <div class="post-content-wrap">
-        <h3 class="post-title"><a href="<%- url_for(post.path) %>" title="<%= post.title %>" ><%= post.title %></a></h3>
+        <h3 class="post-title"><a href="<%- url_for(post.path) %>" title="<%- post.title %>" ><%- post.title %></a></h3>
         <div class="post-excerpt">
-          <p class="substr-3"><%= excerpt %></p>
+          <p class="substr-3"><%- excerpt %></p>
         </div>
       </div>
       <div class="post-info">
