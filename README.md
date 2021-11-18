@@ -30,7 +30,7 @@
 <br/>
 
 <div align="center">
-  文档：<a href="https://www.izhaoo.com/2020/05/05/hexo-theme-zhaoo-doc/" target="_blank" rel="noopener noreferrer">配置文档</a>&nbsp;&nbsp;&nbsp;&nbsp;预览：<a href="https://www.izhaoo.com/" target="_blank" rel="noopener noreferrer">zhaoo</a>
+  文档：<a href="https://www.izhaoo.com/2020/05/05/hexo-theme-zhaoo-doc/" target="_blank" rel="noopener noreferrer">配置文档</a>&nbsp;&nbsp;&nbsp;&nbsp;预览：<a href="https://www.izhaoo.com/" target="_blank" rel="noopener noreferrer">zhaoo</a>&nbsp;&nbsp;&nbsp;&nbsp;小程序：<a href="https://github.com/zhaoo/hexo-weapp-zhaoo" target="_blank" rel="noopener noreferrer">hexo-weapp-zhaoo</a>
 </div>
 
 ## 预览
@@ -57,6 +57,8 @@
 - [小州的博客](http://xiaozhoujun.gitee.io/)
 - [DesnLee的博客](https://www.desnlee.com/)
 - [米斯特乌小站](https://m.wuzhiping.top/)
+- [冷星的博客-前端荣耀](https://lengxing.club)
+- [JIACHENG的博客-leetcode mark](https://leetcode-mark.herokuapp.com/index.html)
 
 （如果您正在使用 zhaoo 主题，欢迎展示您的博客哦，只需在 `README.md` 文件中加入您的博客，提交 PR 即可。）
 
