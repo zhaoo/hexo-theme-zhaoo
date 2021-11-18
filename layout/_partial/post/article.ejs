@@ -3,6 +3,9 @@
     <%- partial('_partial/post/head') %>
     <section class="main">
       <section class="content">
+        <% if (theme.excerpt.enable && page.excerpt) { %>
+          <p><%- page.excerpt %></p>
+        <% } %>
         <%- page.more %>
       </section>
       <section class="extra">
