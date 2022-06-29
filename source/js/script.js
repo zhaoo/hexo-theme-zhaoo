@@ -391,8 +391,13 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       $("article .content h1,h2,h3,h4,h5,h6").each(function () {
         var title = $(this).attr("id");
         var height = $(this).offset().top;
-        titleList.set(height, title);
+        if (height && title) {
+          titleList.set(height, title);
+        }
       });
+      if (!titleList.length) {
+        $(".toc-wrap").remove();
+      }
       $(window).on("scroll", f);
       function f() {
         var height = $(this).scrollTop() || $(window).scrollTop();
