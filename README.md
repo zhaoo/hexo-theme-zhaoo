@@ -61,6 +61,7 @@
 - [JIACHENG的博客-leetcode mark](https://leetcode-mark.herokuapp.com/index.html)
 - [中国的中古](https://medieval-china.club/)
 - [樱白](https://cherry-white.github.io/)
+- [隨遇而安](https://yuweikuo.github.io/)
 
 （如果您正在使用 zhaoo 主题，欢迎展示您的博客哦，只需在 `README.md` 文件中加入您的博客，提交 PR 即可。）
 
