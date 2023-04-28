@@ -263,7 +263,6 @@ seo:
 analytics:
   baidu: # id
   google: # id
-  tencent: # id
   cnzz: # id
 
 # --------------------------------------------------
