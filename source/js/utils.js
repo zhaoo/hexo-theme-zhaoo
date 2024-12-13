@@ -86,7 +86,21 @@
           fn();
         }
       });
-    }
+    },
+    getValueByPath: function (data, path, defaultValue = null) {
+      let result = data;
+      if (!path.length) {
+        return defaultValue;
+      }
+      for (let i = 0; i < path.length; i++) {
+        const key = path[i];
+        if(!result[key]) {
+          return defaultValue;
+        }
+        result = result[key];
+      }
+      return result || defaultValue;
+    },
   }
 
   ZHAOO.zui = {

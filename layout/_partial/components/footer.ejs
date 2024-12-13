@@ -1,20 +1,23 @@
 <%
   var socialList = '';
-  for (var i in theme.social) { 
+  for (var i in theme.social) {
+    if( !theme.social[i] ) {
+      continue;
+    }
     var arr = theme.social[i].split('||');
     var url = arr[0];
     var iconfont = arr[1];
     var color = arr[2] || theme.color.link;
-    socialList += 
-      `<a 
+    socialList +=
+      `<a
         href="${url}"
         target="_blank"
         class="footer-social-item"
-        onMouseOver="this.style.color=${color}" 
+        onMouseOver="this.style.color=${color}"
         onMouseOut="this.style.color='${theme.color.text}'">
           <i class="iconfont ${iconfont}"></i>
       </a>`;
-  } 
+  }
 %>
 
 <footer class="footer">

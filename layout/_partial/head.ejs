@@ -100,7 +100,9 @@ var description = '';
       preview: {
         background: {
           default: '<%= theme.preview.background.default %>',
-          api: '<%= theme.preview.background.api %>'
+          api: '<%- theme.preview.background.api %>',
+          return_type: '<%= theme.preview.background.return_type %>',
+          data_contents: '<%- theme.preview.background.data_contents && JSON.stringify(theme.preview.background.data_contents) %>'
         },
         motto: {
           default: '<%= theme.preview.motto.default %>',

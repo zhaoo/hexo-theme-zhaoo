@@ -59,13 +59,17 @@
 - [米斯特乌小站](https://m.wuzhiping.top/)
 - [冷星的博客-前端荣耀](https://lengxing.club)
 - [JIACHENG的博客-leetcode mark](https://leetcode-mark.herokuapp.com/index.html)
+- [中国的中古](https://medieval-china.club/)
+- [樱白](https://cherry-white.github.io/)
+- [隨遇而安](https://yuweikuo.github.io/)
+- [Aljen Blog](https://jsregret.cn/)
 
 （如果您正在使用 zhaoo 主题，欢迎展示您的博客哦，只需在 `README.md` 文件中加入您的博客，提交 PR 即可。）
 
 ## 特性
 
 - [x] 设计理念：简约 & 响应式 & 动效
-- [x] 评论：`Gitalk`、`Valine`、`畅言`
+- [x] 评论：`Gitalk`、`Valine`、`畅言`、`Giscus`
 - [x] 反馈：[DaoVoice](http://www.daovoice.io/)、[腾讯兔小巢](https://txc.qq.com/)
 - [x] 统计：`LeanCloud`、`百度`、`CNZZ`、`谷歌` 及 SEO优化
 - [x] 深色模式

@@ -1,0 +1,68 @@
+<% if (theme.giscus.repo && theme.giscus.repoId) { %>
+<div id="giscus" class="giscus"></div>
+<script>
+window.onload = function() {
+
+  function loadGiscus() {
+    var script = document.createElement("script");
+    script.src = 'https://giscus.app/client.js';
+    script.type = 'text/javascript';
+    script.crossorigin = 'anonymous';
+    script.async = true;
+    script.dataset.loading = 'lazy';
+    script.dataset.repo = '<%= theme.giscus.repo %>';
+    script.dataset.repoId = '<%= theme.giscus.repoId %>';
+    script.dataset.mapping = '<%= theme.giscus.mapping %>';
+    script.dataset.category = '<%= theme.giscus.category %>';
+    script.dataset.categoryId = '<%= theme.giscus.categoryId %>';
+    script.dataset.inputPosition = '<%= theme.giscus.inputPosition %>';
+    script.dataset.reactionsEnabled = '<%= theme.giscus.reactionsEnabled %>';
+    script.dataset.emitMetadata = '<%= theme.giscus.emitMetadata %>';
+    script.dataset.lang = '<%= theme.giscus.lang %>';
+    script.dataset.theme = localStorage.getItem('color-mode') || 'preferred_color_scheme';
+    document.getElementById('giscus').parentElement.appendChild(script);
+  }
+
+  function sendGiscusMessage(message) {
+    var iframe = document.querySelector('iframe.giscus-frame');
+    if (!iframe) return;
+    var msgData = { giscus: message };
+    // console.log('send message -- ', msgData);
+    iframe.contentWindow.postMessage(msgData, 'https://giscus.app');
+  }
+  // window.sendGiscusMessage = sendGiscusMessage;
+
+  function handleMessage(event) {
+    if (event.origin !== 'https://giscus.app') return;
+    if (!(typeof event.data === 'object' && event.data.giscus)) return;
+    const giscusData = event.data.giscus;
+    // console.log('recived giscus message -- ', giscusData)
+  }
+  window.addEventListener('message', handleMessage);
+  window.addEventListener('beforeunload', function() {
+    window.removeEventListener('message', handleMessage);
+  });
+
+  var toggleElement = document.getElementById('color-toggle');
+  if (toggleElement) {
+    toggleElement.addEventListener('click', function () {
+      const mode = localStorage.getItem('color-mode');
+      sendGiscusMessage({
+        setConfig: {
+          theme: mode,
+        }
+      });
+    });
+  }
+
+  if ( <%- theme.comments.button %> ) {
+    $("#comments-btn").on("click", function (e) {
+      $(this).hide();
+      loadGiscus();
+    });
+  } else {
+    loadGiscus();
+  }
+}
+</script>
+<% } %>

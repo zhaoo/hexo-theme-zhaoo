@@ -128,17 +128,14 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       },
     },
     motto: function () {
+      if(!$("#motto").length) {
+        return;
+      }
       if (CONFIG.preview.motto.api) {
         var data_contents = CONFIG.preview.motto.data_contents && JSON.parse(CONFIG.preview.motto.data_contents);
         $.get(CONFIG.preview.motto.api, function (result) {
-          if (data_contents.length > 0) {
-            data_contents.forEach(function (item) {
-              result = result[item];
-            });
-          }
-          if (result) {
-            fn.printMotto(result);
-          }
+          var result = ZHAOO.utils.getValueByPath(result, data_contents, '')
+          fn.printMotto(result);
         });
       } else {
         fn.printMotto(CONFIG.preview.motto.default);
@@ -161,8 +158,22 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "https://gi
       }
     },
     background: function () {
+      // fix: If the DOM element is null, the API will not be called.
+      var previewImage = $(".preview-image");
+      if(!previewImage.length) {
+        return;
+      }
       if (!CONFIG.preview.background.api) return;
-      $(".preview-image").css("background-image", "url(" + CONFIG.preview.background.api + ")");
+      previewImage.css("background-image", "url(" + CONFIG.preview.background.api + ")");
+
+      // FIX unsplash api url
+      if (CONFIG.preview.background.return_type === 'json') {
+        var data_contents = CONFIG.preview.background.data_contents && JSON.parse(CONFIG.preview.background.data_contents);
+        $.get(CONFIG.preview.background.api, function(resData, status, response) {
+          var result = ZHAOO.utils.getValueByPath(resData, data_contents, '')
+          previewImage.css("background-image", "url(" + result + ")");
+        });
+      }
     },
     doSearch: function (path, search_id, content_id) {
       // https://segmentfault.com/a/1190000011917419
