@@ -63,6 +63,7 @@
 - [樱白](https://cherry-white.github.io/)
 - [隨遇而安](https://yuweikuo.github.io/)
 - [Aljen Blog](https://jsregret.cn/)
+- [学术文化时报 Times Academicculture](https://www.arlby.com/)
 
 （如果您正在使用 zhaoo 主题，欢迎展示您的博客哦，只需在 `README.md` 文件中加入您的博客，提交 PR 即可。）
 
