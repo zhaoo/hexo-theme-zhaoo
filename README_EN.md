@@ -60,6 +60,7 @@
 - [中国的中古](https://medieval-china.club/)
 - [樱白](https://cherry-white.github.io/)
 - [隨遇而安](https://yuweikuo.github.io/)
+- [学术文化时报 Times Academicculture](https://www.arlby.com/)
 
 （If you are using the zhaoo theme, welcome to show your blog, just add your blog to the `README.md` and PR.）
 
